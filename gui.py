@@ -19,16 +19,18 @@ class MainWindow(QMainWindow):
         self.setWindowIcon(QIcon('logo.png'))
         self.setStyleSheet("background-color: #FFFFFF;")
 
-        label = QLabel("AFL", self)
-        label.setFont(QFont('Arial', 30))
-        label.setGeometry(50, 425, 294, 109)
-        label.setStyleSheet("font-weight: bold;"
-                            "color: black;"
-                            "background color: #F5F5F5;"
-                            "border: 2px solid #D9D9D9;"
-                            "border-radius: 8px;"
-                            "padding: 10px;")
-        label.setAlignment(Qt.AlignCenter)
+        afl = QLabel("AFL", self)
+        sport_button(afl, 50, 284)
+        nrl = QLabel("NRL", self)
+        sport_button(nrl, 50, 425)
+        aleague = QLabel("A League", self)
+        sport_button(aleague, 50, 566)
+        nba = QLabel("NBA", self)
+        sport_button(nba, 50, 707)
+        nhl = QLabel("NHL", self)
+        sport_button(nhl, 50, 848)
+
+
 
         # Window centering method
         self.center()
@@ -55,3 +57,27 @@ def init_gui():
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
+
+
+def sport_button(sport, x_pos, y_pos):
+    sport.setFont(QFont('Arial', 30))
+    sport.setGeometry(x_pos, y_pos, 294, 109)
+    sport.setStyleSheet("""
+                        QLabel {
+                            font-weight: bold;
+                            color: black;
+                            background-color: #F5F5F5;
+                            border: 2px solid #D9D9D9;
+                            border-radius: 8px;
+                            padding: 10px;
+                            }
+                        QLabel:hover {
+                            background-color: #007AFF;
+                            border: 2px solid #007AFF;
+                            }
+                        QLabel:pressed {
+                            background-color: #FFFFFF;
+                            border: 2px solid #007AFF;
+                            }
+                        """)
+    sport.setAlignment(Qt.AlignCenter)
