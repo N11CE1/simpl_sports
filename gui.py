@@ -1,14 +1,17 @@
+from prefs import user_prefs
 import sys
 # Importing QApplication for the main application QMain Window for the window
 # and QLabel for objects within the window
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QVBoxLayout, QLabel, QScrollArea
 # Importing QIcon for window icon, QPixmap for images withing the app
 # and QFont for font in the app
 from PyQt5.QtGui import QIcon, QPixmap, QFont
 # importing Qt for alignment
 from PyQt5.QtCore import Qt
 
+import prefs
 
+'''
 class MainWindow(QMainWindow):
     def __init__(self):
         # Inheriting from the superclass
@@ -50,14 +53,14 @@ class MainWindow(QMainWindow):
         # Moving window to dead centre of screen
         self.move(window_x, window_y)
 
-
+'''
 def init_gui():
     # Creating the app and main window for said app
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
-
+'''
 
 def sport_button(sport, x_pos, y_pos):
     sport.setFont(QFont('Arial', 30))
@@ -81,3 +84,31 @@ def sport_button(sport, x_pos, y_pos):
                             }
                         """)
     sport.setAlignment(Qt.AlignCenter)
+'''
+class MainWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle('Scrollable List of Labels')
+        self.setGeometry(100, 100, 300, 200)
+        self.initUI()
+
+    def initUI(self):
+        # Create a QVBoxLayout to hold the scroll area
+        layout = QVBoxLayout(self)
+
+        # Create a QScrollArea
+        scroll_area = QScrollArea(self)
+        scroll_area.setWidgetResizable(True)
+        layout.addWidget(scroll_area)
+
+        # Create a QWidget to act as a container for the labels
+        container = QWidget()
+        scroll_area.setWidget(container)
+
+        # Create a QVBoxLayout for the container
+        container_layout = QVBoxLayout(container)
+
+        # Add multiple QLabel widgets to the container
+        for i in range(1, user_prefs.sports_num):
+            label = QLabel(f'Label {i}', self)
+            container_layout.addWidget(label)
