@@ -1,6 +1,8 @@
 import configparser
 import os
 
+PREFS_FILE = "user_prefs.ini"
+
 
 def write_prefs():
     prefs_file = "user_prefs.ini"
@@ -34,13 +36,26 @@ def write_prefs():
 def read_prefs():
     config = configparser.ConfigParser()
     config.read("user_prefs.ini")
+
     sports = config["sports_enabled"]
     sports_dict = {key: sports.getboolean(key) for key in sports}
-    # print(sports_dict)
+    print(sports_dict)
+
     sports_order = config["sports_order"]
     sports_order_dict = {key: sports_order.getint(key) for key in sports_order}
-    # print(sports_order_dict)
+    print(sports_order_dict)
+
+    spoilers_enabled = config.getboolean('spoilers', 'spoilers_enabled')
+    print(f"Spoilers Enabled: {spoilers_enabled}")
 
 
-write_prefs()
-read_prefs()
+def check_prefs():
+    if not os.path.exists(PREFS_FILE):
+        write_prefs()
+        print(f"Preferences file {PREFS_FILE} created")
+    else:
+        read_prefs()
+        print("Preferences loaded successfully.")
+
+
+check_prefs()
