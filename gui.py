@@ -93,22 +93,17 @@ class MainWindow(QWidget):
         self.initUI()
 
     def initUI(self):
-        # Create a QVBoxLayout to hold the scroll area
         layout = QVBoxLayout(self)
 
-        # Create a QScrollArea
         scroll_area = QScrollArea(self)
         scroll_area.setWidgetResizable(True)
         layout.addWidget(scroll_area)
 
-        # Create a QWidget to act as a container for the labels
         container = QWidget()
         scroll_area.setWidget(container)
 
-        # Create a QVBoxLayout for the container
         container_layout = QVBoxLayout(container)
 
-        # Add multiple QLabel widgets to the container
         for i in range(1, user_prefs.sports_num):
             label = QLabel(f'Label {i}', self)
             container_layout.addWidget(label)
