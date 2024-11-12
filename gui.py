@@ -1,17 +1,21 @@
-from prefs import user_prefs
+import buttons
+import gui_prefs
+import labels
+import prefs
 import sys
 # Importing QApplication for the main application QMain Window for the window
 # and QLabel for objects within the window
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QVBoxLayout, QLabel, QScrollArea
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QVBoxLayout, QLabel, QScrollArea, QHBoxLayout
 # Importing QIcon for window icon, QPixmap for images withing the app
 # and QFont for font in the app
 from PyQt5.QtGui import QIcon, QPixmap, QFont
 # importing Qt for alignment
 from PyQt5.QtCore import Qt
+# from gui_prefs import
 
 import prefs
 
-'''
+
 class MainWindow(QMainWindow):
     def __init__(self):
         # Inheriting from the superclass
@@ -22,17 +26,21 @@ class MainWindow(QMainWindow):
         self.setWindowIcon(QIcon('logo.png'))
         self.setStyleSheet("background-color: #FFFFFF;")
 
-        afl = QLabel("AFL", self)
-        sport_button(afl, 50, 284)
-        nrl = QLabel("NRL", self)
-        sport_button(nrl, 50, 425)
-        a_league = QLabel("A League", self)
-        sport_button(a_league, 50, 566)
-        nba = QLabel("NBA", self)
-        sport_button(nba, 50, 707)
-        nhl = QLabel("NHL", self)
-        sport_button(nhl, 50, 848)
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
 
+        main_layout = QVBoxLayout(central_widget)
+
+        sports_widget = gui_prefs.sport_select()
+
+        question = labels.large_text_label("What sports do you want to follow?")
+        main_layout.addWidget(question)
+
+        main_layout.addWidget(sports_widget)
+        central_widget.setLayout(main_layout)
+
+
+        gui_prefs.sport_select()
 
 
         # Window centering method
@@ -53,57 +61,16 @@ class MainWindow(QMainWindow):
         # Moving window to dead centre of screen
         self.move(window_x, window_y)
 
-'''
+    def clear_layout(self):
+        while self.layout.count():
+            child = self.layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+
+
 def init_gui():
     # Creating the app and main window for said app
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
-'''
-
-def sport_button(sport, x_pos, y_pos):
-    sport.setFont(QFont('Arial', 30))
-    sport.setGeometry(x_pos, y_pos, 294, 109)
-    sport.setStyleSheet("""
-                        QLabel {
-                            font-weight: bold;
-                            color: black;
-                            background-color: #F5F5F5;
-                            border: 2px solid #D9D9D9;
-                            border-radius: 8px;
-                            padding: 10px;
-                            }
-                        QLabel:hover {
-                            background-color: #007AFF;
-                            border: 2px solid #007AFF;
-                            }
-                        QLabel:pressed {
-                            background-color: #FFFFFF;
-                            border: 2px solid #007AFF;
-                            }
-                        """)
-    sport.setAlignment(Qt.AlignCenter)
-'''
-class MainWindow(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle('Scrollable List of Labels')
-        self.setGeometry(100, 100, 300, 200)
-        self.initUI()
-
-    def initUI(self):
-        layout = QVBoxLayout(self)
-
-        scroll_area = QScrollArea(self)
-        scroll_area.setWidgetResizable(True)
-        layout.addWidget(scroll_area)
-
-        container = QWidget()
-        scroll_area.setWidget(container)
-
-        container_layout = QVBoxLayout(container)
-
-        for i in range(1, user_prefs.sports_num):
-            label = QLabel(f'Label {i}', self)
-            container_layout.addWidget(label)

@@ -4,6 +4,13 @@ import os
 PREFS_FILE = "user_prefs.ini"
 
 
+class Prefs:
+    def __init__(self, sports_enabled, sports_num, spoilers):
+        self.sports_enabled = sports_enabled
+        self.sports_order = sports_num
+        self.spoilers = spoilers
+
+
 def write_prefs():
     prefs_file = "user_prefs.ini"
 
@@ -12,7 +19,7 @@ def write_prefs():
     sports_dict = {"nba": True,
                    "nfl": True,
                    "nhl": True,
-                   "epl": False
+                   "epl": True
                    }
 
     config["sports_enabled"] = {key: str(value).lower() for key, value in sports_dict.items()}
@@ -48,14 +55,22 @@ def read_prefs():
     spoilers_enabled = config.getboolean('spoilers', 'spoilers_enabled')
     print(f"Spoilers Enabled: {spoilers_enabled}")
 
+    return Prefs(sports_dict, sports_order_dict, spoilers_enabled)
+
 
 def check_prefs():
     if not os.path.exists(PREFS_FILE):
         write_prefs()
         print(f"Preferences file {PREFS_FILE} created")
+        return read_prefs()
     else:
-        read_prefs()
+        returnable = read_prefs()
         print("Preferences loaded successfully.")
+        return returnable
 
 
-check_prefs()
+def get_sports_num():
+    return sum(value is True for value in user_preferences.sports_enabled.values()) + 1
+
+
+user_preferences = check_prefs()
