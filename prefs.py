@@ -1,6 +1,7 @@
 import configparser
 import os
 
+
 PREFS_FILE = "user_prefs.ini"
 
 
@@ -12,31 +13,13 @@ class Prefs:
 
 
 def write_prefs():
-    prefs_file = "user_prefs.ini"
-
     config = configparser.ConfigParser()
 
-    sports_dict = {"nba": True,
-                   "nfl": True,
-                   "nhl": True,
-                   "epl": True
-                   }
+    config["sports_enabled"] = {key: str(value).lower() for key, value in user_preferences.sports_enabled.items()}
+    config["sports_order"] = {key: str(value).lower() for key, value in user_preferences.sports_order.items()}
+    config["spoilers"] = {"spoilers_enabled": str(user_preferences.spoilers).lower()}
 
-    config["sports_enabled"] = {key: str(value).lower() for key, value in sports_dict.items()}
-
-    sports_order = {key: value for key, value in sports_dict.items() if value}
-    sports_order = {key: index + 1 for index, key in enumerate(sports_order)}
-
-    config["sports_order"] = {key: str(value).lower() for key, value in sports_order.items()}
-
-    spoilers_section = "spoilers"
-    key_name = "spoilers_enabled"
-    default_value = "false"
-
-    config.add_section(spoilers_section)
-    config.set(spoilers_section, key_name, default_value)
-
-    with open(prefs_file, "w") as configfile:
+    with open(PREFS_FILE, "w") as configfile:
         config.write(configfile)
 
 
@@ -59,7 +42,19 @@ def read_prefs():
 
 
 def check_prefs():
+    default_sports_enabled = {
+        "nba": False,
+        "nfl": False,
+        "nhl": False,
+        "epl": False
+    }
+    default_sports_order = {key: index + 1 for index, key in enumerate(default_sports_enabled) if
+                            default_sports_enabled[key]}
+    default_spoilers = False
+
     if not os.path.exists(PREFS_FILE):
+        global user_preferences
+        user_preferences = Prefs(default_sports_enabled, default_sports_order,default_spoilers)
         write_prefs()
         print(f"Preferences file {PREFS_FILE} created")
         return read_prefs()
@@ -67,6 +62,11 @@ def check_prefs():
         returnable = read_prefs()
         print("Preferences loaded successfully.")
         return returnable
+
+
+def write_on_exit():
+    print("Saving preferences...")
+    write_prefs()
 
 
 def get_sports_num():

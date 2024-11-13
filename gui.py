@@ -11,7 +11,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QVBoxLay
 from PyQt5.QtGui import QIcon, QPixmap, QFont
 # importing Qt for alignment
 from PyQt5.QtCore import Qt
-# from gui_prefs import
+from prefs import write_on_exit
+from gui_prefs import save_sport_num
 
 import prefs
 
@@ -22,26 +23,13 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Setting window name and size
         self.setWindowTitle('Simpl Sports')
-        self.setFixedSize(1400, 1000)
+        self.setFixedSize(1200, 800)
         self.setWindowIcon(QIcon('logo.png'))
         self.setStyleSheet("background-color: #FFFFFF;")
 
-        central_widget = QWidget()
+        # setting page to preferences page 1
+        central_widget = gui_prefs.preferences_page1(self.clear_layout)
         self.setCentralWidget(central_widget)
-
-        main_layout = QVBoxLayout(central_widget)
-
-        sports_widget = gui_prefs.sport_select()
-
-        question = labels.large_text_label("What sports do you want to follow?")
-        main_layout.addWidget(question)
-
-        main_layout.addWidget(sports_widget)
-        central_widget.setLayout(main_layout)
-
-
-        gui_prefs.sport_select()
-
 
         # Window centering method
         self.center()
@@ -62,15 +50,13 @@ class MainWindow(QMainWindow):
         self.move(window_x, window_y)
 
     def clear_layout(self):
-        while self.layout.count():
-            child = self.layout.takeAt(0)
-            if child.widget():
-                child.widget().deleteLater()
+        pass
 
 
 def init_gui():
     # Creating the app and main window for said app
     app = QApplication(sys.argv)
+    app.aboutToQuit.connect(write_on_exit)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
