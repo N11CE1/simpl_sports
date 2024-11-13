@@ -1,7 +1,6 @@
 import buttons
 import gui_prefs
 import labels
-import prefs
 import sys
 # Importing QApplication for the main application QMain Window for the window
 # and QLabel for objects within the window
@@ -13,8 +12,6 @@ from PyQt5.QtGui import QIcon, QPixmap, QFont
 from PyQt5.QtCore import Qt
 from prefs import write_on_exit
 from gui_prefs import save_sport_num
-
-import prefs
 
 
 class MainWindow(QMainWindow):
@@ -28,8 +25,8 @@ class MainWindow(QMainWindow):
         self.setStyleSheet("background-color: #FFFFFF;")
 
         # setting page to preferences page 1
-        central_widget = gui_prefs.preferences_page1(self.clear_layout)
-        self.setCentralWidget(central_widget)
+        page = gui_prefs.preferences_page1(self.clear_layout)
+        self.setCentralWidget(page)
 
         # Window centering method
         self.center()
