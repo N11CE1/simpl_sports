@@ -14,8 +14,6 @@ from PyQt5.QtCore import Qt
 from prefs import write_on_exit
 from gui_prefs import save_sport_num
 
-import prefs
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
