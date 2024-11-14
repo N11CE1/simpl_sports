@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QPushButton  # importing QPushButton to be the basis of our buttons
 from PyQt5.QtCore import Qt
+from prefs import user_preferences
 
 
 # defining toggle button (has on/off state)
@@ -56,8 +57,9 @@ class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'
 
 # defining sports button as a type of toggle button which takes 2 arguments
 # (the text it will display and the action it takes)
-def sports_button(text, action):
+def sports_button(key, text, action):
     s_button = ToggleButton(text, action)
+    s_button.setChecked(user_preferences.sports_enabled[key])  # setting checked state with data in user_preferences
     s_button.setFixedSize(400, 150)  # defining the size of the sports button
     return s_button  # returns the s_button object to the caller
 

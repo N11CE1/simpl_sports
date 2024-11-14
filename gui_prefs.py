@@ -32,11 +32,12 @@ def sport_select():
 
     # creating a button for each sport in the sports selection screen
     # because each button is on object of the sports_button class we defined in buttons.py they each take
-    # 2 arguments (the text to be displayed on the button and the action that clicking the button will trigger)
-    nba_button = buttons.sports_button("NBA", lambda checked: set_sport(checked, "nba"))
-    nfl_button = buttons.sports_button("NFL", lambda checked: set_sport(checked, "nfl"))
-    nhl_button = buttons.sports_button("NHL", lambda checked: set_sport(checked, "nhl"))
-    epl_button = buttons.sports_button("EPL", lambda checked: set_sport(checked, "epl"))
+    # 3 arguments (the dictionary key to affect the state of the correct sport,
+    # the text to be displayed on the button and the action that clicking the button will trigger)
+    nba_button = buttons.sports_button("nba", "NBA", lambda checked: set_sport(checked, "nba"))
+    nfl_button = buttons.sports_button("nfl", "NFL", lambda checked: set_sport(checked, "nfl"))
+    nhl_button = buttons.sports_button("nhl", "NHL", lambda checked: set_sport(checked, "nhl"))
+    epl_button = buttons.sports_button("epl", "EPL", lambda checked: set_sport(checked, "epl"))
     # lambda just allow me to define and execute code on 1 line
     # in this case it calls the set_sport function and passes the
     # checked status and the key to search the sport dictionary for
