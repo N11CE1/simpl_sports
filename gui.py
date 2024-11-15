@@ -1,18 +1,13 @@
-import buttons
 import gui_prefs
-import labels
-import prefs
 import sys
 # Importing QApplication for the main application QMain Window for the window
 # and QLabel for objects within the window
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QVBoxLayout, QLabel, QScrollArea, QHBoxLayout
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 # Importing QIcon for window icon, QPixmap for images withing the app
 # and QFont for font in the app
-from PyQt5.QtGui import QIcon, QPixmap, QFont
+from PyQt5.QtGui import QIcon
 # importing Qt for alignment
-from PyQt5.QtCore import Qt
 from prefs import write_on_exit
-from gui_prefs import save_sport_num
 
 
 class MainWindow(QMainWindow):
@@ -26,7 +21,7 @@ class MainWindow(QMainWindow):
         self.setStyleSheet("background-color: #FFFFFF;")
 
         # setting page to preferences page 1
-        central_widget = gui_prefs.preferences_page1(self.clear_layout)
+        central_widget = gui_prefs.PreferencesSelection()
         self.setCentralWidget(central_widget)
 
         # Window centering method
@@ -34,7 +29,7 @@ class MainWindow(QMainWindow):
 
     def center(self):
         # fetching the screen's geometry
-        screen_geometry = QApplication.desktop().screenGeometry()
+        screen_geometry = QApplication.primaryScreen().availableGeometry()
 
         # Calculating the middle
         screen_center_x = screen_geometry.width() // 2
@@ -47,8 +42,11 @@ class MainWindow(QMainWindow):
         # Moving window to dead centre of screen
         self.move(window_x, window_y)
 
-    def clear_layout(self):
-        pass
+
+def clear_layout(elements):
+    for child in elements.findChildren(QWidget):
+        child.setParent(None)
+        child.deleteLater()
 
 
 def init_gui():
