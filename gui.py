@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt5.QtGui import QIcon
 # importing Qt for alignment
 from prefs import write_on_exit
+from shared import user_preferences
 
 
 class MainWindow(QMainWindow):
@@ -52,7 +53,7 @@ def clear_layout(elements):
 def init_gui():
     # Creating the app and main window for said app
     app = QApplication(sys.argv)
-    app.aboutToQuit.connect(write_on_exit)
+    app.aboutToQuit.connect(lambda: write_on_exit(user_preferences))
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())

@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QPushButton  # importing QPushButton to be the basis of our buttons
 from PyQt5.QtCore import Qt
-from prefs import user_preferences
+from shared import user_preferences
 
 
 # defining toggle button (has on/off state)

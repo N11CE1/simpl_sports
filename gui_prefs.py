@@ -2,9 +2,9 @@ from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
     QAbstractItemView, QListWidgetItem, QLabel  # importing main widget class,
 # grid layout class and vertical out class
 from PyQt5.QtCore import Qt  # importing Qt for alignment abilities
-from prefs import user_preferences  # importing user_preferences object from prefs to read and write preferences to
 import labels  # importing the labels file for use of our custom labels
 import buttons  # importing the buttons file for use of our custom buttons
+from shared import user_preferences
 
 
 class PreferencesSelection(QWidget):  # creating preference selection as a class using QWidget as a base to customise
@@ -26,7 +26,7 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         # text label we defined in labels.py and giving the text we want displayed as an argument
         self.main_layout.addWidget(question)  # adding the question to the "main_layout" vertical layout
         self.main_layout.addWidget(sports_widget)  # adding the sports selection grid to the "main_layout vertical layout
-        next_button = buttons.push_button("Next", self.on_next_click)  # creating a push button and passing the text
+        next_button = buttons.push_button("Next", self.page1_next_click)  # creating a push button and passing the text
         # we want displayed on it and the action we want it to do which it gets from the argument given to the function
         self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)  # adding the next button to the "main_layout"
         # vertical layout box and setting the alignment, so it appears on the right
@@ -37,12 +37,18 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         title_text.setAlignment(Qt.AlignCenter)
         selected_items = self.get_selected_sports()
         self.order_list = OrderList(selected_items)
+        next_button = buttons.push_button("Next", self.page2_next_click)
         self.main_layout.addWidget(title_text)
         self.main_layout.addWidget(self.order_list)
+        self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)
 
 
-    def on_next_click(self):
+    def page1_next_click(self):
         self.preferences_page2()
+
+    def page2_next_click(self):
+        user_preferences.sports_order = self.order_list.get_order_list()
+        self.clear_layout(self.main_layout)
 
     def clear_layout(self, layout):
         while layout.count():
@@ -135,11 +141,5 @@ class OrderList(QListWidget):  # creating order list class
             self.data_dict[index] = unique_key
         print("dictionary:", self.data_dict)
 
-    # def populate(self):
-    #     self.items = [
-    #         {"display_test": "NBA", "key": "nba"},
-    #         {"display_test": "NFL", "key": "nfl"},
-    #         {"display_test": "NHL", "key": "nhl"},
-    #         {"display_test": "EPL", "key": "epl"}
-    #     ]
-
+    def get_order_list(self):
+        return self.data_dict
