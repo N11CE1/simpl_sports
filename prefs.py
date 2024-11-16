@@ -37,7 +37,7 @@ def read_prefs():
 
     user_preferences.sports_enabled = sports_enabled
     user_preferences.sports_order = sports_order
-    user_preferences.spoilers_enabled = spoilers_enabled
+    user_preferences.spoilers = spoilers_enabled
     return user_preferences
 
 

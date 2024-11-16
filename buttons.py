@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QPushButton  # importing QPushButton to be the basis of our buttons
+from PyQt5.QtWidgets import QPushButton, QRadioButton, QWidget, \
+    QVBoxLayout, QHBoxLayout, QLabel  # importing QPushButton to be the basis of our buttons
 from PyQt5.QtCore import Qt
 from shared import user_preferences
 
@@ -23,7 +24,7 @@ class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'
                     background-color: #F5F5F5;
                     font: helvetica;
                     font-size: 50px;
-                    border: 2px solid #D9D9D9;
+                    border: 5px solid #D9D9D9;
                     border-radius: 15px;
                 }
                 """
@@ -34,10 +35,11 @@ class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'
         return """
                 QPushButton{
                     color: black;
-                    background-color: lightblue;
+                    background-color: #F5F5F5;
                     font: helvetica;
                     font-size: 50px;
-                    border: 2px solid #D9D9D9;
+                    border: 5px solid #D9D9D9;
+                    border-color: #007AFF;
                     border-radius: 15px;
                 }
                 """
@@ -53,6 +55,70 @@ class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'
     def execute_custom_action(self, checked):
         if self.custom_action:  # checks for existence of self.custom_action
             self.custom_action(checked)  # if self.custom_action exists, execute the custom action if button is checked
+
+class RadioButton(QRadioButton):
+    def __init__(self, parent=None, action=None, initial_state=None):
+        super().__init__(parent)
+        self.setCheckable(True)
+        self.setFixedSize(230, 80)
+
+        if initial_state is not None:
+            self.setChecked(initial_state)
+
+        self.update_style(self.isChecked())
+
+        self.toggled.connect(self.update_style)
+
+        self.custom_action = action
+        if self.custom_action:
+            self.toggled.connect(self.execute_custom_action)
+
+    def update_style(self, checked):
+        if checked:
+            self.setStyleSheet(self.checked_style())
+        else:
+            self.setStyleSheet(self.unchecked_style())
+
+    def execute_custom_action(self, checked):
+        if self.custom_action:
+            self.custom_action(checked)
+
+    @staticmethod
+    def unchecked_style():
+        return """
+            QRadioButton{
+                font: Helvetica;
+                font-size: 30px;
+                color: black;
+                background-color: #F5F5F5;
+                border: 3px solid #D9D9D9;
+                border-radius: 15px;
+                padding: 10px;
+            }
+            QRadioButton::indicator {
+                color: #007AFF;
+                width: 0px;
+            }
+        """
+
+    @staticmethod
+    def checked_style():
+        return """
+            QRadioButton{
+                font: Helvetica;
+                font-size: 30px;
+                color: black;
+                background-color: #F5F5F5;
+                border: 3px solid #007AFF;
+                border-radius: 15px;
+                padding: 10px;
+            }
+            QRadioButton::indicator {
+                color: #007AFF;
+                background-color: #007AFF;
+                width: 0px;
+            }
+        """
 
 
 # defining sports button as a type of toggle button which takes 2 arguments
@@ -70,7 +136,7 @@ def sports_button(key, text, action):
 def push_button(text, action):  # takes text and action arguments
     p_button = QPushButton(text)
     p_button.clicked.connect(action)  # performs action on click
-    p_button.setFixedSize(200, 100)  # setting dimensions
+    p_button.setFixedSize(150, 80)  # setting dimensions
     p_button.setStyleSheet("""
         color: black;
         background-color: #F5F5F5;
