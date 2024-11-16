@@ -1,4 +1,5 @@
 import gui_prefs
+import gui_main
 import sys
 # Importing QApplication for the main application QMain Window for the window
 # and QLabel for objects within the window

@@ -1,7 +1,8 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
-    QAbstractItemView, QListWidgetItem, QLabel  # importing main widget class,
+    QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem  # importing main
+# widget class,
 # grid layout class and vertical out class
-from PyQt5.QtCore import Qt  # importing Qt for alignment abilities
+from PyQt5.QtCore import Qt, QSize  # importing Qt for alignment abilities
 import labels  # importing the labels file for use of our custom labels
 import buttons  # importing the buttons file for use of our custom buttons
 from shared import user_preferences
@@ -11,6 +12,12 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
     def __init__(self):  # initialising class
         super().__init__()  # calling super to give class all properties of QWidgets
         self.main_layout = None  # adding main layout attribute which will have everything in it
+        self.hbox = None
+        self.right_vbox = None
+        self.left_vbox = None
+        self.order_list = None
+        self.spoiler_buttons = None
+        self.spoiler_button_group = None
         self.init_ui()  # triggering init_ui
 
     def init_ui(self):  # sets the start point of the ui when an object of this class is triggered
@@ -25,7 +32,8 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         question = labels.large_text_label("What sports do you want to follow?")  # creating a label using the large
         # text label we defined in labels.py and giving the text we want displayed as an argument
         self.main_layout.addWidget(question)  # adding the question to the "main_layout" vertical layout
-        self.main_layout.addWidget(sports_widget)  # adding the sports selection grid to the "main_layout vertical layout
+        self.main_layout.addWidget(
+            sports_widget)  # adding the sports selection grid to the "main_layout vertical layout
         next_button = buttons.push_button("Next", self.page1_next_click)  # creating a push button and passing the text
         # we want displayed on it and the action we want it to do which it gets from the argument given to the function
         self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)  # adding the next button to the "main_layout"
@@ -33,22 +41,69 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
 
     def preferences_page2(self):
         self.clear_layout(self.main_layout)
-        title_text = labels.large_text_label("Order your selected sport from most to least important")
-        title_text.setAlignment(Qt.AlignCenter)
+
+        order_text = labels.large_text_label("Order your selected sport"
+                                             "\nfrom most to least important")
+        spoiler_text = labels.large_text_label("Do you want spoilers"
+                                               "\nenabled for live games?")
+
         selected_items = self.get_selected_sports()
         self.order_list = OrderList(selected_items)
-        next_button = buttons.push_button("Next", self.page2_next_click)
-        self.main_layout.addWidget(title_text)
-        self.main_layout.addWidget(self.order_list)
-        self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)
 
+        scroll_area = QScrollArea()
+        scroll_area.setWidget(self.order_list)
+        scroll_area.setWidgetResizable(True)
+        scroll_area.setMinimumHeight(200)
+
+        next_button = buttons.push_button("Next", self.page2_next_click)
+
+        self.spoiler_button_group = QButtonGroup(self)
+        self.spoiler_button_group.setExclusive(True)
+        spoiler_on_action = lambda checked: setattr(user_preferences, "spoilers", True)
+        spoiler_off_action = lambda checked: setattr(user_preferences, "spoilers", False)
+        spoiler_on = buttons.RadioButton(
+            "   Spoilers On",
+            action=spoiler_on_action,
+            initial_state=user_preferences.spoilers)
+        spoiler_off = buttons.RadioButton(
+            "   Spoilers Off",
+            action=spoiler_off_action,
+            initial_state=not user_preferences.spoilers)
+        self.spoiler_button_group.addButton(spoiler_on)
+        self.spoiler_button_group.addButton(spoiler_off)
+
+        self.left_vbox = QVBoxLayout()
+        self.left_vbox.addWidget(order_text, alignment=(Qt.AlignTop | Qt.AlignHCenter))
+        self.left_vbox.addWidget(self.order_list, alignment=Qt.AlignCenter)
+
+        self.right_vbox = QVBoxLayout()
+        right_vbox_spacer = QSpacerItem(0, 120)
+        self.right_vbox.addWidget(spoiler_text, alignment=(Qt.AlignTop | Qt.AlignHCenter))
+        self.right_vbox.addSpacerItem(right_vbox_spacer)
+        self.right_vbox.addWidget(spoiler_on, alignment=Qt.AlignCenter)
+        self.right_vbox.addWidget(spoiler_off, alignment=Qt.AlignCenter)
+        self.right_vbox.addSpacerItem(right_vbox_spacer)
+
+        self.hbox = QHBoxLayout()
+        self.hbox.addLayout(self.left_vbox)
+        spacer_item = QSpacerItem(100, 0)
+        self.hbox.addSpacerItem(spacer_item)
+        self.hbox.addLayout(self.right_vbox)
+        self.hbox.setAlignment(Qt.AlignCenter)
+
+        container = QWidget()
+        container.setLayout(self.hbox)
+
+        self.main_layout.addWidget(container)
+        self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)
 
     def page1_next_click(self):
         self.preferences_page2()
 
     def page2_next_click(self):
         user_preferences.sports_order = self.order_list.get_order_list()
-        self.clear_layout(self.main_layout)
+        global preferences_done
+        preferences_done = True
 
     def clear_layout(self, layout):
         while layout.count():
@@ -60,7 +115,8 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
             elif item.layout() is not None:
                 self.clear_layout(item.layout())
 
-    def get_selected_sports(self):
+    @staticmethod
+    def get_selected_sports():
         selected_items = []
         for key, enabled in user_preferences.sports_enabled.items():
             if enabled:
@@ -118,6 +174,50 @@ class OrderList(QListWidget):  # creating order list class
         self.setDragEnabled(True)
         self.setDragDropMode(QAbstractItemView.InternalMove)
         self.data_dict = {}  # dictionary data will be stored in
+        self.setFixedSize(300, 500)
+        self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.setStyleSheet("""
+            QListWidget {
+                background-color: white;
+                border: 5px solid #D9D9D9;
+                border-radius: 20px;
+                font-size: 30px;
+            }
+            QListWidget::item {
+                color: black;
+                background-color: #F5F5F5;
+                border: 2px solid #D9D9D9;
+                border-radius: 15px;
+                padding: 10px;    
+            }
+            QListWidget::item:selected {
+                border: 2px solid #007AFF;
+                border-radius: 15px;
+            }
+            QScrollBar:vertical {
+                border: none;
+                background: transparent;
+                width: 12px;
+                margin: 0px 0px 0px 0px;
+                padding: 0px;
+            }
+            QScrollBar::handle:vertical {
+                background: #888;
+                min-height: 20px;
+                border-radius: 6px;
+            }
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                border: none;
+                background: none;
+                height: 0px;
+            }
+            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+                background: none;
+            }
+            QScrollBar::handle:vertical:hover {
+                background: #666;
+            }
+        """)
         self.set_items(items)
 
     def set_items(self, items):  # setting default order of list
@@ -125,6 +225,8 @@ class OrderList(QListWidget):  # creating order list class
         for item in items:
             list_item = QListWidgetItem(item["display_text"])
             list_item.setData(Qt.UserRole, item["unique_key"])
+            list_item.setTextAlignment(Qt.AlignCenter)
+            list_item.setSizeHint(QSize(30, 100))
             self.addItem(list_item)
         self.update_data()
 
