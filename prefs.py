@@ -29,7 +29,7 @@ def read_prefs():
     print(sports_enabled)
 
     # sports_order = dict(config["sports_order"])
-    sports_order = {key: config.get("sports_order",key) for key in config["sports_order"]}
+    sports_order = {key: config.get("sports_order", key) for key in config["sports_order"]}
     print(sports_order)
 
     spoilers_enabled = config.getboolean('spoilers', 'spoilers_enabled')
