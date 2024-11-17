@@ -103,7 +103,7 @@ class SpoilersButton(ToggleButton):
 def sports_button(key, text, action):
     s_button = ToggleButton(text, action)
     s_button.setChecked(user_preferences.sports_enabled[key])  # setting checked state with data in user_preferences
-    s_button.setFixedSize(400, 150)  # defining the size of the sports button
+    s_button.setFixedSize(350, 120)  # defining the size of the sports button
     return s_button  # returns the s_button object to the caller
 
 
