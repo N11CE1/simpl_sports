@@ -3,10 +3,12 @@ import gui_main
 import sys
 # Importing QApplication for the main application QMain Window for the window
 # and QLabel for objects within the window
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QStackedWidget
 # Importing QIcon for window icon, QPixmap for images withing the app
 # and QFont for font in the app
 from PyQt5.QtGui import QIcon
+
+import shared
 # importing Qt for alignment
 from prefs import write_on_exit
 from shared import user_preferences
@@ -22,9 +24,19 @@ class MainWindow(QMainWindow):
         self.setWindowIcon(QIcon('logo.png'))
         self.setStyleSheet("background-color: #FFFFFF;")
 
+        self.central_widget = QStackedWidget()
+        self.setCentralWidget(self.central_widget)
+
+        self.prefs_ui = gui_prefs.PreferencesSelection()
+        self.main_ui = gui_main.MainMenu()
         # setting page to preferences page 1
-        central_widget = gui_prefs.PreferencesSelection()
-        self.setCentralWidget(central_widget)
+        self.central_widget.addWidget(self.main_ui)
+        self.central_widget.addWidget(self.prefs_ui)
+
+        self.prefs_ui.next_button_clicked.connect(self.show_main_ui)
+        self.main_ui.prefs_button_clicked.connect(self.show_prefs_ui)
+        if not shared.prefs_existed:
+            self.show_prefs_ui()
 
         # Window centering method
         self.center()
@@ -43,6 +55,13 @@ class MainWindow(QMainWindow):
 
         # Moving window to dead centre of screen
         self.move(window_x, window_y)
+
+    def show_main_ui(self):
+        self.central_widget.setCurrentWidget(self.main_ui)
+
+    def show_prefs_ui(self):
+        self.prefs_ui.reset_to_page1()
+        self.central_widget.setCurrentWidget(self.prefs_ui)
 
 
 def clear_layout(elements):
