@@ -56,70 +56,47 @@ class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'
         if self.custom_action:  # checks for existence of self.custom_action
             self.custom_action(checked)  # if self.custom_action exists, execute the custom action if button is checked
 
-class RadioButton(QRadioButton):
-    def __init__(self, parent=None, action=None, initial_state=None):
-        super().__init__(parent)
-        self.setCheckable(True)
+
+class SpoilersButton(ToggleButton):
+    def __init__(self, text, action=None, initial_state=None):
+        super().__init__(text)
         self.setFixedSize(230, 80)
-
-        if initial_state is not None:
-            self.setChecked(initial_state)
-
-        self.update_style(self.isChecked())
-
-        self.toggled.connect(self.update_style)
-
         self.custom_action = action
-        if self.custom_action:
-            self.toggled.connect(self.execute_custom_action)
 
     def update_style(self, checked):
         if checked:
-            self.setStyleSheet(self.checked_style())
+            self.setStyleSheet(self.true_style())
         else:
-            self.setStyleSheet(self.unchecked_style())
+            self.setStyleSheet(self.false_style())
+
+    def true_style(self):
+        return """
+            QPushButton{
+                    color: black;
+                    background-color: #F5F5F5;
+                    font: helvetica;
+                    font-size: 30px;
+                    border: 5px solid #007AFF;
+                    border-radius: 15px;
+                }
+                """
+
+    def false_style(self):
+        return """
+            QPushButton{
+                    color: black;
+                    background-color: #F5F5F5;
+                    font: helvetica;
+                    font-size: 30px;
+                    border: 5px solid #D9D9D9;
+                    border-radius: 15px;
+                }
+                """
 
     def execute_custom_action(self, checked):
         if self.custom_action:
             self.custom_action(checked)
-
-    @staticmethod
-    def unchecked_style():
-        return """
-            QRadioButton{
-                font: Helvetica;
-                font-size: 30px;
-                color: black;
-                background-color: #F5F5F5;
-                border: 3px solid #D9D9D9;
-                border-radius: 15px;
-                padding: 10px;
-            }
-            QRadioButton::indicator {
-                color: #007AFF;
-                width: 0px;
-            }
-        """
-
-    @staticmethod
-    def checked_style():
-        return """
-            QRadioButton{
-                font: Helvetica;
-                font-size: 30px;
-                color: black;
-                background-color: #F5F5F5;
-                border: 3px solid #007AFF;
-                border-radius: 15px;
-                padding: 10px;
-            }
-            QRadioButton::indicator {
-                color: #007AFF;
-                background-color: #007AFF;
-                width: 0px;
-            }
-        """
-
+        
 
 # defining sports button as a type of toggle button which takes 2 arguments
 # (the text it will display and the action it takes)

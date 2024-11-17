@@ -63,14 +63,14 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.spoiler_button_group.setExclusive(True)
         spoiler_on_action = lambda checked: setattr(user_preferences, "spoilers", True)
         spoiler_off_action = lambda checked: setattr(user_preferences, "spoilers", False)
-        spoiler_on = buttons.RadioButton(
-            "   Spoilers On",
-            action=spoiler_on_action,
-            initial_state=user_preferences.spoilers)
-        spoiler_off = buttons.RadioButton(
-            "   Spoilers Off",
-            action=spoiler_off_action,
-            initial_state=not user_preferences.spoilers)
+        spoiler_on = buttons.SpoilersButton(
+            "Spoilers On",
+            action=lambda checked: setattr(user_preferences, "spoilers", True))
+        spoiler_on.setChecked(user_preferences.spoilers)
+        spoiler_off = buttons.SpoilersButton(
+            "Spoilers Off",
+            action=lambda checked: setattr(user_preferences, "spoilers", False))
+        spoiler_off.setChecked(not user_preferences.spoilers)
         self.spoiler_button_group.addButton(spoiler_on)
         self.spoiler_button_group.addButton(spoiler_off)
 
