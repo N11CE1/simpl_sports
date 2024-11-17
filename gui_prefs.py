@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
 # widget class,
 # grid layout class and vertical out class
 from PyQt5.QtCore import Qt, QSize  # importing Qt for alignment abilities
+
+import gui_main
 import labels  # importing the labels file for use of our custom labels
 import buttons  # importing the buttons file for use of our custom buttons
 from shared import user_preferences
@@ -77,12 +79,13 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.left_vbox.addWidget(self.order_list, alignment=Qt.AlignCenter)
 
         self.right_vbox = QVBoxLayout()
-        right_vbox_spacer = QSpacerItem(0, 120)
+        right_vbox_spacer1 = QSpacerItem(0, 120)
         self.right_vbox.addWidget(spoiler_text, alignment=(Qt.AlignTop | Qt.AlignHCenter))
-        self.right_vbox.addSpacerItem(right_vbox_spacer)
+        self.right_vbox.addSpacerItem(right_vbox_spacer1)
         self.right_vbox.addWidget(spoiler_on, alignment=Qt.AlignCenter)
         self.right_vbox.addWidget(spoiler_off, alignment=Qt.AlignCenter)
-        self.right_vbox.addSpacerItem(right_vbox_spacer)
+        right_vbox_spacer2 = QSpacerItem(0, 120)
+        self.right_vbox.addSpacerItem(right_vbox_spacer2)
 
         self.hbox = QHBoxLayout()
         self.hbox.addLayout(self.left_vbox)
@@ -97,13 +100,15 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.main_layout.addWidget(container)
         self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)
 
+    def preferences_done(self):
+        self.clear_layout(self.main_layout)
+
     def page1_next_click(self):
         self.preferences_page2()
 
     def page2_next_click(self):
         user_preferences.sports_order = self.order_list.get_order_list()
-        global preferences_done
-        preferences_done = True
+        self.preferences_done()
 
     def clear_layout(self, layout):
         while layout.count():
