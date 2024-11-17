@@ -1,16 +1,21 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
-    QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem  # importing main
+    QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem, \
+    QPushButton  # importing main
 # widget class,
 # grid layout class and vertical out class
-from PyQt5.QtCore import Qt, QSize  # importing Qt for alignment abilities
+from PyQt5.QtCore import Qt, QSize, pyqtSignal  # importing Qt for alignment abilities
 
 import gui_main
 import labels  # importing the labels file for use of our custom labels
 import buttons  # importing the buttons file for use of our custom buttons
-from shared import user_preferences
+import shared
+from shared import user_preferences, default_prefs
 
 
 class PreferencesSelection(QWidget):  # creating preference selection as a class using QWidget as a base to customise
+
+    next_button_clicked = pyqtSignal()
+
     def __init__(self):  # initialising class
         super().__init__()  # calling super to give class all properties of QWidgets
         self.main_layout = None  # adding main layout attribute which will have everything in it
@@ -20,6 +25,8 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.order_list = None
         self.spoiler_buttons = None
         self.spoiler_button_group = None
+        self.page2_next_button = None
+        self.page1_buttons_box = None
         self.init_ui()  # triggering init_ui
 
     def init_ui(self):  # sets the start point of the ui when an object of this class is triggered
@@ -36,10 +43,26 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.main_layout.addWidget(question)  # adding the question to the "main_layout" vertical layout
         self.main_layout.addWidget(
             sports_widget)  # adding the sports selection grid to the "main_layout vertical layout
-        next_button = buttons.push_button("Next", self.page1_next_click)  # creating a push button and passing the text
+
+        self.page1_buttons_box = QHBoxLayout()
+        self.main_layout.addLayout(self.page1_buttons_box)
+        skip_button = buttons.push_button(f"SKIP\n(use defaults) ", self.skip_button_action)
+        skip_button.setFixedSize(250, 100)
+        skip_button.clicked.connect(self.emit_next_signal)
+        page1_next_button = buttons.push_button("Next", self.page1_next_click)  # creating a push button and passing the text
         # we want displayed on it and the action we want it to do which it gets from the argument given to the function
-        self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)  # adding the next button to the "main_layout"
+        self.page1_buttons_box.addWidget(skip_button, alignment=Qt.AlignLeft)
+        self.page1_buttons_box.addWidget(page1_next_button, alignment=Qt.AlignRight)  # adding the next button to the "main_layout"
         # vertical layout box and setting the alignment, so it appears on the right
+
+    @staticmethod
+    def skip_button_action(self):
+        user_preferences.sports_enabled = default_prefs.sports_enabled
+        user_preferences.sports_order = default_prefs.sports_order
+        user_preferences.spoilers = default_prefs.spoilers
+
+    def page1_next_click(self):
+        self.preferences_page2()
 
     def preferences_page2(self):
         self.clear_layout(self.main_layout)
@@ -57,12 +80,16 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         scroll_area.setWidgetResizable(True)
         scroll_area.setMinimumHeight(200)
 
-        next_button = buttons.push_button("Next", self.page2_next_click)
+        self.page2_buttons_box = QHBoxLayout()
+        self.page2_back_button = buttons.push_button("Back", self.go_back)
+        self.page2_next_button = buttons.push_button("Save", self.page2_next_click)
+        self.page2_next_button.clicked.connect(self.emit_next_signal)
+
+        self.page2_buttons_box.addWidget(self.page2_back_button, alignment=Qt.AlignLeft)
+        self.page2_buttons_box.addWidget(self.page2_next_button, alignment=Qt.AlignRight)
 
         self.spoiler_button_group = QButtonGroup(self)
         self.spoiler_button_group.setExclusive(True)
-        spoiler_on_action = lambda checked: setattr(user_preferences, "spoilers", True)
-        spoiler_off_action = lambda checked: setattr(user_preferences, "spoilers", False)
         spoiler_on = buttons.SpoilersButton(
             "Spoilers On",
             action=lambda checked: setattr(user_preferences, "spoilers", True))
@@ -98,17 +125,15 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         container.setLayout(self.hbox)
 
         self.main_layout.addWidget(container)
-        self.main_layout.addWidget(next_button, alignment=Qt.AlignRight)
+        buttons_container = QWidget()
+        buttons_container.setLayout(self.page2_buttons_box)
+        self.main_layout.addWidget(buttons_container)
 
-    def preferences_done(self):
-        self.clear_layout(self.main_layout)
-
-    def page1_next_click(self):
-        self.preferences_page2()
+    def go_back(self):
+        self.preferences_page1()
 
     def page2_next_click(self):
         user_preferences.sports_order = self.order_list.get_order_list()
-        self.preferences_done()
 
     def clear_layout(self, layout):
         while layout.count():
@@ -128,6 +153,12 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
                 display_text = key.upper()
                 selected_items.append({"display_text": display_text, "unique_key": key})
         return selected_items
+
+    def reset_to_page1(self):
+        self.preferences_page1()
+
+    def emit_next_signal(self):
+        self.next_button_clicked.emit()
 
 
 # defining set_sport which will be the functionality of our sports selection buttons

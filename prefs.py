@@ -43,6 +43,7 @@ def read_prefs():
 
 def check_prefs():
     if not os.path.exists(PREFS_FILE):
+        shared.prefs_existed = False
         write_prefs(user_preferences)
         print(f"Preferences file {PREFS_FILE} created")
         return read_prefs()
