@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
     QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem, \
-    QPushButton  # importing main
+    QPushButton, QSizePolicy  # importing main
 # widget class,
 # grid layout class and vertical out class
 from PyQt5.QtCore import Qt, QSize, pyqtSignal  # importing Qt for alignment abilities
@@ -40,7 +40,15 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         sports_widget = sport_select()  # creating an instance of the sports selection grid
         question = labels.large_text_label("What sports do you want to follow?")  # creating a label using the large
         # text label we defined in labels.py and giving the text we want displayed as an argument
+        question.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.not_enough = labels.large_text_label("You need to select at least 2 sports")
+        self.not_enough.setStyleSheet("""
+                                 color: transparent;
+                                 font-size: 30px;
+                                 """)
+        self.main_layout.addSpacing(100)
         self.main_layout.addWidget(question)  # adding the question to the "main_layout" vertical layout
+        self.main_layout.addWidget(self.not_enough)
         self.main_layout.addWidget(
             sports_widget)  # adding the sports selection grid to the "main_layout vertical layout
 
@@ -62,7 +70,14 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         user_preferences.spoilers = default_prefs.spoilers
 
     def page1_next_click(self):
-        self.preferences_page2()
+        selected_sports_count = sum(1 for key, value in user_preferences.sports_enabled.items() if value)
+        if selected_sports_count > 1:
+            print(selected_sports_count)
+            self.preferences_page2()
+        else:
+            self.not_enough.setStyleSheet("""color: red;
+                                          font-size: 30px;
+                                          """)
 
     def preferences_page2(self):
         self.clear_layout(self.main_layout)
