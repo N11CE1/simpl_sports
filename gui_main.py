@@ -19,7 +19,7 @@ class MainMenu(QWidget):
         self.set_main_layout()
 
     def set_main_layout(self):
-        prefs_button = buttons.push_button("Preferences", self.preferences_click)
+        prefs_button = buttons.PushButton("Preferences", self.preferences_click)
         prefs_button.setFixedSize(200, 100)
         prefs_button.clicked.connect(self.emit_prefs_signal)
         self.main_layout.addWidget(prefs_button)

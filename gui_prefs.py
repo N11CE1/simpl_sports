@@ -54,10 +54,10 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
 
         self.page1_buttons_box = QHBoxLayout()
         self.main_layout.addLayout(self.page1_buttons_box)
-        skip_button = buttons.push_button(f"SKIP\n(use defaults) ", self.skip_button_action)
+        skip_button = buttons.PushButton(f"SKIP\n(use defaults) ", self.skip_button_action)
         skip_button.setFixedSize(250, 100)
         skip_button.clicked.connect(self.emit_next_signal)
-        page1_next_button = buttons.push_button("Next", self.page1_next_click)  # creating a push button and passing the text
+        page1_next_button = buttons.PushButton("Next", self.page1_next_click)  # creating a push button and passing the text
         # we want displayed on it and the action we want it to do which it gets from the argument given to the function
         self.page1_buttons_box.addWidget(skip_button, alignment=Qt.AlignLeft)
         self.page1_buttons_box.addWidget(page1_next_button, alignment=Qt.AlignRight)  # adding the next button to the "main_layout"
@@ -96,8 +96,8 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         scroll_area.setMinimumHeight(200)
 
         self.page2_buttons_box = QHBoxLayout()
-        self.page2_back_button = buttons.push_button("Back", self.go_back)
-        self.page2_next_button = buttons.push_button("Save", self.page2_next_click)
+        self.page2_back_button = buttons.PushButton("Back", self.go_back)
+        self.page2_next_button = buttons.PushButton("Save", self.page2_next_click)
         self.page2_next_button.clicked.connect(self.emit_next_signal)
 
         self.page2_buttons_box.addWidget(self.page2_back_button, alignment=Qt.AlignLeft)
@@ -197,10 +197,10 @@ def sport_select():
     # because each button is on object of the sports_button class we defined in buttons.py they each take
     # 3 arguments (the dictionary key to affect the state of the correct sport,
     # the text to be displayed on the button and the action that clicking the button will trigger)
-    nba_button = buttons.sports_button("nba", "NBA", lambda checked: set_sport(checked, "nba"))
-    nfl_button = buttons.sports_button("nfl", "NFL", lambda checked: set_sport(checked, "nfl"))
-    nhl_button = buttons.sports_button("nhl", "NHL", lambda checked: set_sport(checked, "nhl"))
-    epl_button = buttons.sports_button("epl", "EPL", lambda checked: set_sport(checked, "epl"))
+    nba_button = buttons.SportsButton("nba", "NBA", lambda checked: set_sport(checked, "nba"))
+    nfl_button = buttons.SportsButton("nfl", "NFL", lambda checked: set_sport(checked, "nfl"))
+    nhl_button = buttons.SportsButton("nhl", "NHL", lambda checked: set_sport(checked, "nhl"))
+    epl_button = buttons.SportsButton("epl", "EPL", lambda checked: set_sport(checked, "epl"))
     # lambda just allow me to define and execute code on 1 line
     # in this case it calls the set_sport function and passes the
     # checked status and the key to search the sport dictionary for
