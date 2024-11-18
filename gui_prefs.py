@@ -15,6 +15,7 @@ from shared import user_preferences, default_prefs
 class PreferencesSelection(QWidget):  # creating preference selection as a class using QWidget as a base to customise
 
     next_button_clicked = pyqtSignal()
+    preferences_updated = pyqtSignal()
 
     def __init__(self):  # initialising class
         super().__init__()  # calling super to give class all properties of QWidgets
@@ -176,6 +177,7 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.next_button_clicked.emit()
 
 
+
 # defining set_sport which will be the functionality of our sports selection buttons
 def set_sport(checked, key):  # takes the arguments of checked (whether the button is on or off)
     user_preferences.sports_enabled[key] = checked
@@ -296,3 +298,6 @@ class OrderList(QListWidget):  # creating order list class
 
     def get_order_list(self):
         return self.data_dict
+
+    def update_user_preferences(self):
+        self.user_preferences_updated.emit()

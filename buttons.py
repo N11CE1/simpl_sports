@@ -1,5 +1,6 @@
+from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QPushButton, QRadioButton, QWidget, \
-    QVBoxLayout, QHBoxLayout, QLabel  # importing QPushButton to be the basis of our buttons
+    QVBoxLayout, QHBoxLayout, QLabel, QGridLayout  # importing QPushButton to be the basis of our buttons
 from PyQt5.QtCore import Qt
 from shared import user_preferences
 
@@ -105,6 +106,56 @@ def sports_button(key, text, action):
     s_button.setChecked(user_preferences.sports_enabled[key])  # setting checked state with data in user_preferences
     s_button.setFixedSize(350, 120)  # defining the size of the sports button
     return s_button  # returns the s_button object to the caller
+
+
+class RadioSportsButton(ToggleButton):
+    def __init__(self, text=None, action=None):
+        super().__init__(text, action)
+        self.text = text
+        self.action = action
+        self.setChecked(False)
+        self.setFixedSize(350, 120)  # defining the size of the sports button
+
+
+class RadioGameButton(ToggleButton):
+    def __init__(self, date=None, home=None, home_score=None, away=None, away_score=None, time=None, action=None):
+        super().__init__(action)
+        self.set_font()
+        self.layout = QVBoxLayout()
+        self.score = QGridLayout()
+
+        self.date_label = QLabel(date)
+        self.home_label = QLabel(home)
+        self.home_score_label = QLabel(home_score)
+        self.away_label = QLabel(away)
+        self.away_score_label = QLabel(away_score)
+        self.time_label = QLabel(time)
+        for items in [self.date_label, self.home_label, self.home_score_label,
+                      self.away_label, self.away_score_label, self.time_label]:
+            items.setStyleSheet(self.set_font())
+
+        self.score.addWidget(self.home_label, 0, 0)
+        self.score.addWidget(self.home_score_label, 0, 1)
+        self.score.addWidget(self.away_label, 1, 0)
+        self.score.addWidget(self.away_score_label, 1, 1)
+
+        self.layout.addWidget(self.date_label)
+        self.layout.addLayout(self.score)
+        self.layout.addWidget(self.time_label)
+
+        self.setLayout(self.layout)
+
+        self.action = action
+        self.setChecked(False)
+        self.setFixedSize(150, 150)
+
+    def set_font(self):
+        return """
+        font: helvetica;
+        font-size: 20px;
+        color: black;
+        background-color: transparent;
+        """
 
 
 # defining standard push button
