@@ -178,14 +178,15 @@ def push_button(text, action):  # takes text and action arguments
 
 
 class PictureButton(ToggleButton):
-    def __init__(self, display_image, action=None):
+    def __init__(self, display_image, x, y, action=None):
         super().__init__()
         self.main_layout = QHBoxLayout()
         self.main_layout.setContentsMargins(0, 0, 0, 0)
+        self.setFixedSize(x, y)
 
         self.image = QLabel()
 
-        self.set_image(display_image)
+        self.set_image(display_image, x, y)
 
         if action is not None:
             self.clicked.connect(action)
@@ -199,9 +200,9 @@ class PictureButton(ToggleButton):
                             border: 0px solid #D9D9D9;
                             """)
 
-    def set_image(self, image_path):
+    def set_image(self, image_path, x, y):
         pixmap = QPixmap(image_path)
-        scaled_pixmap = pixmap.scaled(48,48, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+        scaled_pixmap = pixmap.scaled(x, y, Qt.KeepAspectRatio, Qt.SmoothTransformation)
 
         self.image.setPixmap(scaled_pixmap)
 
@@ -209,3 +210,12 @@ class PictureButton(ToggleButton):
         self.image.setFixedSize(scaled_pixmap.size())
 
 
+class SpoilerButton(PictureButton):
+    def __init__(self, text=None, action=None):
+        super().__init__(text, action)
+        pixmap = QPixmap(image_path)
+        self.set_state
+
+    def set_state(self):
+        if user_preferences.spoilers:
+            pixmap
