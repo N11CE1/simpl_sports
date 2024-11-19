@@ -1,4 +1,4 @@
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QPixmap
 from PyQt5.QtWidgets import QPushButton, QRadioButton, QWidget, \
     QVBoxLayout, QHBoxLayout, QLabel, QGridLayout  # importing QPushButton to be the basis of our buttons
 from PyQt5.QtCore import Qt
@@ -7,7 +7,7 @@ from shared import user_preferences
 
 # defining toggle button (has on/off state)
 class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'm just altering the existing button type
-    def __init__(self, text, action=None):
+    def __init__(self, text=None, action=None):
         super().__init__(text)
         self.setCheckable(True)  # making button check-able aka stateful
         self.setStyleSheet(self.false_style())  # set false style as default style
@@ -25,7 +25,7 @@ class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'
                     background-color: #F5F5F5;
                     font: helvetica;
                     font-size: 50px;
-                    border: 5px solid #D9D9D9;
+                    border: 2px solid #D9D9D9;
                     border-radius: 15px;
                 }
                 """
@@ -39,7 +39,7 @@ class ToggleButton(QPushButton):  # taking QPushButton as an argument because I'
                     background-color: #F5F5F5;
                     font: helvetica;
                     font-size: 50px;
-                    border: 5px solid #D9D9D9;
+                    border: 2px solid #D9D9D9;
                     border-color: #007AFF;
                     border-radius: 15px;
                 }
@@ -77,7 +77,7 @@ class SpoilersButton(ToggleButton):
                     background-color: #F5F5F5;
                     font: helvetica;
                     font-size: 30px;
-                    border: 5px solid #007AFF;
+                    border: 2px solid #007AFF;
                     border-radius: 15px;
                 }
                 """
@@ -89,7 +89,7 @@ class SpoilersButton(ToggleButton):
                     background-color: #F5F5F5;
                     font: helvetica;
                     font-size: 30px;
-                    border: 5px solid #D9D9D9;
+                    border: 2px solid #D9D9D9;
                     border-radius: 15px;
                 }
                 """
@@ -114,13 +114,13 @@ class RadioSportsButton(ToggleButton):
         self.text = text
         self.action = action
         self.setChecked(False)
-        self.setFixedSize(350, 120)  # defining the size of the sports button
+        self.setFixedSize(250, 100)  # defining the size of the sports button
 
 
 class RadioGameButton(ToggleButton):
     def __init__(self, date=None, home=None, home_score=None, away=None, away_score=None, time=None, action=None):
         super().__init__(action)
-        self.set_font()
+        self.set_font(self)
         self.layout = QVBoxLayout()
         self.score = QGridLayout()
 
@@ -132,7 +132,7 @@ class RadioGameButton(ToggleButton):
         self.time_label = QLabel(time)
         for items in [self.date_label, self.home_label, self.home_score_label,
                       self.away_label, self.away_score_label, self.time_label]:
-            items.setStyleSheet(self.set_font())
+            items.setStyleSheet(self.set_font(self))
 
         self.score.addWidget(self.home_label, 0, 0)
         self.score.addWidget(self.home_score_label, 0, 1)
@@ -149,6 +149,7 @@ class RadioGameButton(ToggleButton):
         self.setChecked(False)
         self.setFixedSize(150, 150)
 
+    @staticmethod
     def set_font(self):
         return """
         font: helvetica;
@@ -174,3 +175,37 @@ def push_button(text, action):  # takes text and action arguments
         border-radius: 15px;
         """)  # looks stuff all set in style sheet
     return p_button  # returns p_button object to caller
+
+
+class PictureButton(ToggleButton):
+    def __init__(self, display_image, action=None):
+        super().__init__()
+        self.main_layout = QHBoxLayout()
+        self.main_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.image = QLabel()
+
+        self.set_image(display_image)
+
+        if action is not None:
+            self.clicked.connect(action)
+
+        self.main_layout.addWidget(self.image)
+        self.setLayout(self.main_layout)
+
+        self.setStyleSheet("""
+                            color: transparent;
+                            background-color: transparent;
+                            border: 0px solid #D9D9D9;
+                            """)
+
+    def set_image(self, image_path):
+        pixmap = QPixmap(image_path)
+        scaled_pixmap = pixmap.scaled(48,48, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+
+        self.image.setPixmap(scaled_pixmap)
+
+        self.image.setScaledContents(True)
+        self.image.setFixedSize(scaled_pixmap.size())
+
+

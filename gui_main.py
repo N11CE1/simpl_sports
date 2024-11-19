@@ -31,17 +31,22 @@ class MainMenu(QWidget):
         right_vbox = QVBoxLayout()
 
         logo = labels.Image("logo.png")
-        prefs_button = buttons.push_button("Preferences", self.preferences_click)
-        prefs_button.setFixedSize(200, 100)
+        spoilers_button = buttons.PictureButton("spoilers_on.png")
+        spoilers_button.setFixedSize(50, 30)
+        prefs_button = buttons.PictureButton("settings.png", self.preferences_click)
+        prefs_button.setFixedSize(48, 48)
         prefs_button.clicked.connect(self.emit_prefs_signal)
         sports_selection = SportSelection()
         game_selection = GameSelection()
         expanded_view = QSpacerItem(500, 500)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
         left_vbox.addWidget(sports_selection)
-        top_hbox.addWidget(game_selection)
+        top_hbox.addWidget(spoilers_button)
+        top_hbox.setAlignment(spoilers_button, Qt.AlignRight)
         top_hbox.addWidget(prefs_button)
+        top_hbox.setAlignment(prefs_button, Qt.AlignRight)
         right_vbox.addLayout(top_hbox)
+        right_vbox.addWidget(game_selection)
         right_vbox.addItem(expanded_view)
         self.main_layout.addLayout(left_vbox)
         self.main_layout.addLayout(right_vbox)
@@ -139,7 +144,7 @@ class GameSelection(QWidget):
 
         scroll_area = QScrollArea()
         scroll_area.setWidgetResizable(True)
-        scroll_area.setMaximumWidth(500)
+        scroll_area.setFixedWidth(800)
         scroll_area.setMaximumHeight(200)
         scroll_area.setStyleSheet("""
         QScrollArea {
@@ -152,14 +157,17 @@ class GameSelection(QWidget):
             QScrollBar:vertical {
                 border: none;
                 background: transparent;
-                width: 12px;
-                margin: 0px 0px 0px 0px;
                 padding: 0px;
+            }
+            QScrollBar:horizontal {
+                height: 6px;
+                background: transparent;
+                border-radius: 10px;
             }
             QScrollBar::handle:horizontal {
                 background: #888;
-                min-height: 20px;
-                border-radius: 6px;
+                min-height: 6px;
+                border-radius: 3px;
             }
             QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
                 border: none;
