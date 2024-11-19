@@ -37,16 +37,16 @@ class MainWindow(QMainWindow):
         self.main_ui.prefs_button_clicked.connect(self.show_prefs_ui)
         if not shared.prefs_existed:
             self.show_prefs_ui()
-        afl = QLabel("AFL", self)
-        sport_button(afl, 50, 284)
-        nrl = QLabel("NRL", self)
-        sport_button(nrl, 50, 425)
-        a_league = QLabel("A League", self)
-        sport_button(a_league, 50, 566)
-        nba = QLabel("NBA", self)
-        sport_button(nba, 50, 707)
-        nhl = QLabel("NHL", self)
-        sport_button(nhl, 50, 848)
+        # afl = QLabel("AFL", self)
+        # sport_button(afl, 50, 284)
+        # nrl = QLabel("NRL", self)
+        # sport_button(nrl, 50, 425)
+        # a_league = QLabel("A League", self)
+        # sport_button(a_league, 50, 566)
+        # nba = QLabel("NBA", self)
+        # sport_button(nba, 50, 707)
+        # nhl = QLabel("NHL", self)
+        # sport_button(nhl, 50, 848)
 
 
 
