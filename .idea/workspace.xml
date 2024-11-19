@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eaa8c7be-5655-4e9a-949b-5b2a77cbb361" name="Changes" comment="Add spoiler and settings button, resize scroll area&#10;&#10;Replaced text-based buttons with image-based buttons for spoilers and settings in `gui_main.py`. Increased the scroll area's width and refined scrollbar styles. Enhanced `buttons.py` to include `PictureButton` class and corrected styles and sizes for various buttons.&#10;&#10;Spoiler button on main not yet functional..." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Tom" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="William" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CHwZY&quot;,
+        &quot;number&quot;: 2
+      },
+      &quot;lastSeen&quot;: 1731752653063
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CHxIX&quot;,
+        &quot;number&quot;: 4
+      },
+      &quot;lastSeen&quot;: 1731753527207
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CHw-1&quot;,
+        &quot;number&quot;: 3
+      },
+      &quot;lastSeen&quot;: 1731753530761
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86AsbDN&quot;,
+        &quot;number&quot;: 1
+      },
+      &quot;lastSeen&quot;: 1731753533843
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CJQh3&quot;,
+        &quot;number&quot;: 5
+      },
+      &quot;lastSeen&quot;: 1731815933870
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CJop-&quot;,
+        &quot;number&quot;: 6
+      },
+      &quot;lastSeen&quot;: 1731837171858
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CJr45&quot;,
+        &quot;number&quot;: 7
+      },
+      &quot;lastSeen&quot;: 1731837175156
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CUygd&quot;,
+        &quot;number&quot;: 8
+      },
+      &quot;lastSeen&quot;: 1731994385520
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONJTMf86CVbvH&quot;,
+        &quot;number&quot;: 9
+      },
+      &quot;lastSeen&quot;: 1731994475091
+    }
+  ]
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="9a7278d6-b8c5-497d-b9a8-9ac97a8d84d3" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/N11CE1/simpl_sports.git&quot;,
+    &quot;accountId&quot;: &quot;9a7278d6-b8c5-497d-b9a8-9ac97a8d84d3&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;N11CE1&quot;,
+    &quot;repository&quot;: &quot;simpl_sports&quot;
+  }
+}</component>
+  <component name="HierarchyBrowserManager">
+    <option name="SORT_ALPHABETICALLY" value="true" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/shared.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2omtPV0xJvrcglpYSyUusKMv5bs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.gui_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.shared.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Tom&quot;,
+    &quot;idea.background.editor&quot;: &quot;/Users/tom/Downloads/c8f6a5caf0e35f8fa250582214486cd8-191673606.jpg,0,scale,top_right,flipH&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="simpl_sports" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="simpl_sports" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.19416.19" />
+        <option value="bundled-python-sdk-337b0a7a993a-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.19416.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eaa8c7be-5655-4e9a-949b-5b2a77cbb361" name="Changes" comment="" />
+      <created>1731486554453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731486554453</updated>
+      <workItem from="1731486555502" duration="47220000" />
+      <workItem from="1731654155528" duration="24000" />
+      <workItem from="1731654186045" duration="29850000" />
+      <workItem from="1731750917722" duration="58722000" />
+      <workItem from="1731991203571" duration="48000" />
+      <workItem from="1731991256852" duration="834000" />
+      <workItem from="1731992234226" duration="755000" />
+    </task>
+    <task id="LOCAL-00001" summary="created branch for lincoln">
+      <option name="closed" value="true" />
+      <created>1731490766774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731490766774</updated>
+    </task>
+    <task id="LOCAL-00002" summary="buttons.py&#10;&gt;Added comments explaining code">
+      <option name="closed" value="true" />
+      <created>1731540500920</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731540500920</updated>
+    </task>
+    <task id="LOCAL-00003" summary="labels.py:&#10;&gt;added comments to explain the code">
+      <option name="closed" value="true" />
+      <created>1731549803834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731549803834</updated>
+    </task>
+    <task id="LOCAL-00004" summary="buttons.py:&#10;&gt; more comments for code explanation and removed unused imports">
+      <option name="closed" value="true" />
+      <created>1731549904287</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731549904287</updated>
+    </task>
+    <task id="LOCAL-00005" summary="gui_prefs.py:&#10;&gt;added comments to explain the code">
+      <option name="closed" value="true" />
+      <created>1731555381721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731555381721</updated>
+    </task>
+    <task id="LOCAL-00006" summary="gui.py:&#10;&gt;added comments to explain the code">
+      <option name="closed" value="true" />
+      <created>1731557489750</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731557489750</updated>
+    </task>
+    <task id="LOCAL-00007" summary="buttons.py:&#10;&gt;added state check based on the information held in the sports_enabled dictionary in the user preferences object&#10;gui_prefs.py:&#10;added key argument for to pass to the state check defined in the sports button function">
+      <option name="closed" value="true" />
+      <created>1731558922473</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731558922473</updated>
+    </task>
+    <task id="LOCAL-00008" summary="gui.py:&#10;&gt;removed excess imports&#10;&gt;fixed centering method to use primaryScreen() instead of desktop() as desktop() has been depreciated&#10;&gt;empties clear layout method, soon to be deleted entirely as that is handled in gui_prefs.py now&#10;&gt;central_widget is now an object of the class Preferences selection, which calls the preferences_page1 as a method&#10;&#10;gui_prefs.py:&#10;&gt;removed unnecessary imports refactored preferences selection to be a class, pages 1 and 2 are methods within that class&#10;&gt; defined next button behavior and layout clearing also as methods of PreferencesSelection&#10;&gt;simplified set_sport function&#10;&gt;created an order_list class which allows users to reorder the sports selected in page 1&#10;&gt; implemented the order_list class with the selected_items object in page 2">
+      <option name="closed" value="true" />
+      <created>1731633405165</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731633405165</updated>
+    </task>
+    <task id="LOCAL-00009" summary="order list now saves to ini&#10;buttons.py:&#10;&gt;updated user_preferences import&#10;gui.py:&#10;&gt;imported user_preferences from shared.py&#10;gui_prefs.py:&#10;&gt;updated user_preferences import&#10;&gt;added next_button to preferences_page2&#10;&gt;seperated on_next_click into 2 methods so the same next button can do different things on the different pages&#10;&gt;added get_order_list which returns the sports order dictionary to the user_preferences object&#10;prefs.py:&#10;refactored to move user_preferences object and Prefs class shared.py&#10;shared.py:&#10;moved user_preferences and Prefs to own file to prevent circular imports">
+      <option name="closed" value="true" />
+      <created>1731650065207</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731650065207</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add new features and improve UI for preferences&#10;&#10;Integrated a spoiler toggle and redesigned sports order UI in preferences. Added new styles for widgets to enhance visual presentation. Refactored import statements and adjusted button dimensions for better user interaction.">
+      <option name="closed" value="true" />
+      <created>1731752180299</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731752180299</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactor right_vbox spacers and preferences flow&#10;&#10;Replaced the repetitive spacer item with unique named variables for better readability and added a preferences_done method to handle layout clearing. Removed the global variable preferences_done in favor of a method call to improve modularity.">
+      <option name="closed" value="true" />
+      <created>1731753640506</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731753640506</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix initialization and default values for spoilers&#10;&#10;Corrected the default initialization for the `spoilers` attribute in `Prefs` class. Also modified the dictionary comprehension in `prefs.py` for enhanced clarity and correctness.">
+      <option name="closed" value="true" />
+      <created>1731754174653</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731754174653</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactor spoiler toggle buttons&#10;&#10;Refactor the spoiler toggle functionality by replacing the `RadioButton` class with the new `SpoilersButton` class. Updated button style handling and initialization logic for better readability and maintainability.">
+      <option name="closed" value="true" />
+      <created>1731820073233</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731820073233</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add navigation and preference persistence for UI&#10;&#10;Introduce QStackedWidget to switch between main menu and preference selection. Implement persistence for user preferences, including defaults, and add navigation logic for transitioning between UI screens.">
+      <option name="closed" value="true" />
+      <created>1731835137810</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731835137811</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add validation for sports selection in preferences page&#10;&#10;Implemented a check to ensure users select at least two sports before proceeding to the next page. Adjusted the error message display and modified the size of sports buttons for improved UI consistency.">
+      <option name="closed" value="true" />
+      <created>1731837082758</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731837082758</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor button creation to use improved StyledButton class&#10;&#10;Replaced direct button instantiations with a new StyledButton class hierarchy for better code organization and reusability. This update consolidates button styling and behavior, reducing redundancy and enhancing maintainability.">
+      <option name="closed" value="true" />
+      <created>1731838730431</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731838730431</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Refactor gui_prefs.py to improve code readability&#10;&#10;Removed unnecessary comments and redundant imports to streamline the code. This refactor simplifies the structure of the `PreferencesSelection` class and associated functions, leading to better code maintainability and readability.">
+      <option name="closed" value="true" />
+      <created>1731882648608</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731882648608</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add sport and game selection to GUI&#10;&#10;Implemented sport and game selection widgets with scroll areas. Integrated these widgets into the main layout alongside existing elements.">
+      <option name="closed" value="true" />
+      <created>1731927155353</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731927155353</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add spoiler and settings button, resize scroll area&#10;&#10;Replaced text-based buttons with image-based buttons for spoilers and settings in `gui_main.py`. Increased the scroll area's width and refined scrollbar styles. Enhanced `buttons.py` to include `PictureButton` class and corrected styles and sizes for various buttons.&#10;&#10;Spoiler button on main not yet functional...">
+      <option name="closed" value="true" />
+      <created>1731982431964</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731982431964</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="e0d4fd78-2b9f-42ab-900e-d59122634eca" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="e0d4fd78-2b9f-42ab-900e-d59122634eca">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="origin/William..origin/pr/8" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created branch for lincoln" />
+    <MESSAGE value="buttons.py&#10;&gt;Added comments explaining code" />
+    <MESSAGE value="labels.py:&#10;&gt;added comments to explain the code" />
+    <MESSAGE value="buttons.py:&#10;&gt; more comments for code explanation and removed unused imports" />
+    <MESSAGE value="gui_prefs.py:&#10;&gt;added comments to explain the code" />
+    <MESSAGE value="gui.py:&#10;&gt;added comments to explain the code" />
+    <MESSAGE value="buttons.py:&#10;&gt;added state check based on the information held in the sports_enabled dictionary in the user preferences object&#10;gui_prefs.py:&#10;added key argument for to pass to the state check defined in the sports button function" />
+    <MESSAGE value="gui.py:&#10;&gt;removed excess imports&#10;&gt;fixed centering method to use primaryScreen() instead of desktop() as desktop() has been depreciated&#10;&gt;empties clear layout method, soon to be deleted entirely as that is handled in gui_prefs.py now&#10;&gt;central_widget is now an object of the class Preferences selection, which calls the preferences_page1 as a method&#10;&#10;gui_prefs.py:&#10;&gt;removed unnecessary imports refactored preferences selection to be a class, pages 1 and 2 are methods within that class&#10;&gt; defined next button behavior and layout clearing also as methods of PreferencesSelection&#10;&gt;simplified set_sport function&#10;&gt;created an order_list class which allows users to reorder the sports selected in page 1&#10;&gt; implemented the order_list class with the selected_items object in page 2" />
+    <MESSAGE value="order list now saves to ini&#10;buttons.py:&#10;&gt;updated user_preferences import&#10;gui.py:&#10;&gt;imported user_preferences from" />
+    <MESSAGE value="order list now saves to ini&#10;buttons.py:&#10;&gt;updated user_preferences import&#10;gui.py:&#10;&gt;imported user_preferences from shared.py&#10;gui_prefs.py:&#10;&gt;" />
+    <MESSAGE value="order list now saves to ini&#10;buttons.py:&#10;&gt;updated user_preferences import&#10;gui.py:&#10;&gt;imported user_preferences from shared.py&#10;gui_prefs.py:&#10;&gt;updated user_preferences import&#10;&gt;added next_button to preferences_page2&#10;&gt;seperated on_next_click into 2 methods so the same next button can do different things on the different pages&#10;&gt;added get_order_list which returns the sports order dictionary to the user_preferences object&#10;prefs.py:&#10;refactored to move user_preferences object and Prefs class shared.py&#10;shared.py:&#10;moved user_preferences and Prefs to own file to prevent circular imports" />
+    <MESSAGE value="order list now saves to ini&#10;buttons.py:&#10;&gt;updated user_preferences import&#10;gui.py:&#10;&gt;imported user_preferences from shared.py&#10;gui_prefs.py:&#10;&gt;updated user_preferences import" />
+    <MESSAGE value="testing radio button" />
+    <MESSAGE value="Add new features and improve UI for preferences&#10;&#10;Integrated a spoiler toggle and redesigned sports order UI in preferences. Added new styles for widgets to enhance visual presentation. Refactored import statements and adjusted button dimensions for better user interaction." />
+    <MESSAGE value="Add print statement and refactor preferences handling&#10;&#10;Print a message when returning to the main menu in the GUI. Refactor preferences handling code by introducing a new method `preferences_done` to improve code clarity and maintenance." />
+    <MESSAGE value="Refactor right_vbox spacers and preferences flow&#10;&#10;Replaced the repetitive spacer item with unique named variables for better readability and added a preferences_done method to handle layout clearing. Removed the global variable preferences_done in favor of a method call to improve modularity." />
+    <MESSAGE value="Fix initialization and default values for spoilers&#10;&#10;Corrected the default initialization for the `spoilers` attribute in `Prefs` class. Also modified the dictionary comprehension in `prefs.py` for enhanced clarity and correctness." />
+    <MESSAGE value="Refactor spoiler toggle buttons&#10;&#10;Refactor the spoiler toggle functionality by replacing the `RadioButton` class with the new `SpoilersButton` class. Updated button style handling and initialization logic for better readability and maintainability." />
+    <MESSAGE value="Add navigation and preference persistence for UI&#10;&#10;Introduce QStackedWidget to switch between main menu and preference selection. Implement persistence for user preferences, including defaults, and add navigation logic for transitioning between UI screens." />
+    <MESSAGE value="Add validation for sports selection in preferences page&#10;&#10;Implemented a check to ensure users select at least two sports before proceeding to the next page. Adjusted the error message display and modified the size of sports buttons for improved UI consistency." />
+    <MESSAGE value="Refactor button creation to use improved StyledButton class&#10;&#10;Replaced direct button instantiations with a new StyledButton class hierarchy for better code organization and reusability. This update consolidates button styling and behavior, reducing redundancy and enhancing maintainability." />
+    <MESSAGE value="Refactor gui_prefs.py to improve code readability&#10;&#10;Removed unnecessary comments and redundant imports to streamline the code. This refactor simplifies the structure of the `PreferencesSelection` class and associated functions, leading to better code maintainability and readability." />
+    <MESSAGE value="Add sport and game selection to GUI&#10;&#10;Implemented sport and game selection widgets with scroll areas. Integrated these widgets into the main layout alongside existing elements." />
+    <MESSAGE value="Created William Branch with py files for API" />
+    <MESSAGE value="Add spoiler and settings button, resize scroll area&#10;&#10;Replaced text-based buttons with image-based buttons for spoilers and settings in `gui_main.py`. Increased the scroll area's width and refined scrollbar styles. Enhanced `buttons.py` to include `PictureButton` class and corrected styles and sizes for various buttons.&#10;&#10;Spoiler button on main not yet functional..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add spoiler and settings button, resize scroll area&#10;&#10;Replaced text-based buttons with image-based buttons for spoilers and settings in `gui_main.py`. Increased the scroll area's width and refined scrollbar styles. Enhanced `buttons.py` to include `PictureButton` class and corrected styles and sizes for various buttons.&#10;&#10;Spoiler button on main not yet functional..." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gui.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="user_preferences" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/simpl_sports$main.coverage" NAME="main Coverage Results" MODIFIED="1731994528837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/simpl_sports$shared.coverage" NAME="shared Coverage Results" MODIFIED="1731645662923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/simpl_sports$gui_main.coverage" NAME="gui_main Coverage Results" MODIFIED="1731893918382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/simpl_sports$test.coverage" NAME="test Coverage Results" MODIFIED="1731892982725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
