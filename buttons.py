@@ -1,7 +1,8 @@
-from PyQt5.QtGui import QFont, QPixmap
+from PyQt5.QtGui import QFont, QPixmap, QIcon
 from PyQt5.QtWidgets import QPushButton, QRadioButton, QWidget, \
     QVBoxLayout, QHBoxLayout, QLabel, QGridLayout  # importing QPushButton to be the basis of our buttons
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QSize
+
 from shared import user_preferences
 
 
@@ -177,45 +178,75 @@ def push_button(text, action):  # takes text and action arguments
     return p_button  # returns p_button object to caller
 
 
-class PictureButton(ToggleButton):
-    def __init__(self, display_image, x, y, action=None):
+# # class PictureButton(ToggleButton):
+# #     def __init__(self, display_image=None, x=None, y=None, action=None):
+# #         super().__init__()
+# #         if display_image:
+# #             self.setPixmap(QPixmap(display_image))
+# #         if x is not None and y is not None:
+# #             self.setFixedSize(x, y)
+# #         self.main_layout = QHBoxLayout()
+# #         self.main_layout.setContentsMargins(0, 0, 0, 0)
+# #
+# #         self.image = QLabel()
+# #
+# #         self.set_image(display_image, x, y)
+# #
+# #         if action is not None:
+# #             self.clicked.connect(action)
+# #
+# #         self.main_layout.addWidget(self.image)
+# #         self.setLayout(self.main_layout)
+# #
+# #         self.setStyleSheet("""
+# #                             color: transparent;
+# #                             background-color: transparent;
+# #                             border: 0px solid #D9D9D9;
+# #                             """)
+#
+#     def set_image(self, image_path, x, y):
+#         pixmap = QPixmap(image_path)
+#         scaled_pixmap = pixmap.scaled(x, y, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+#
+#         self.image.setPixmap(scaled_pixmap)
+#
+#         self.image.setScaledContents(True)
+#         self.image.setFixedSize(scaled_pixmap.size())
+
+class PictureButton(QPushButton):
+    def __init__(self, display_image=None, x=None, y=None, click_function=None):
         super().__init__()
-        self.main_layout = QHBoxLayout()
-        self.main_layout.setContentsMargins(0, 0, 0, 0)
-        self.setFixedSize(x, y)
-
-        self.image = QLabel()
-
-        self.set_image(display_image, x, y)
-
-        if action is not None:
-            self.clicked.connect(action)
-
-        self.main_layout.addWidget(self.image)
-        self.setLayout(self.main_layout)
-
+        if display_image:
+            self.setIcon(QIcon(QPixmap(display_image)))
+        if x is not None and y is not None:
+            self.setIconSize(QSize(x, y))
+        if click_function:
+            self.clicked.connect(click_function)
         self.setStyleSheet("""
-                            color: transparent;
-                            background-color: transparent;
-                            border: 0px solid #D9D9D9;
-                            """)
-
-    def set_image(self, image_path, x, y):
-        pixmap = QPixmap(image_path)
-        scaled_pixmap = pixmap.scaled(x, y, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-
-        self.image.setPixmap(scaled_pixmap)
-
-        self.image.setScaledContents(True)
-        self.image.setFixedSize(scaled_pixmap.size())
+            border: 0px solid black;
+            """)
 
 
-class SpoilerButton(PictureButton):
-    def __init__(self, text=None, action=None):
-        super().__init__(text, action)
-        pixmap = QPixmap(image_path)
-        self.set_state
+class SpoilerToggle(PictureButton):
+    def __init__(self, display_image=None, secondary_image=None, x=None, y=None, click_function=None):
+        super().__init__(display_image, x, y, click_function)
+        self.initial_state()
+        self.secondary_image = secondary_image
+        self.setIcon(QIcon(self.display_image))
+        self.clicked.connect(self.toggle_image)
 
-    def set_state(self):
+    def initial_state(self):
         if user_preferences.spoilers:
-            pixmap
+            self.display_image = "spoilers_on.png"
+        else:
+            self.display_image = "spoilers_off.png"
+        self.setIcon(QIcon(self.display_image))
+
+    def toggle_image(self):
+        if user_preferences.spoilers:
+            user_preferences.spoilers = False
+            print("spoilers off")
+        elif not user_preferences.spoilers:
+            user_preferences.spoilers = True
+            print("spoilers on")
+        self.initial_state()

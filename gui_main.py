@@ -10,7 +10,6 @@ import shared
 class MainMenu(QWidget):
 
     prefs_button_clicked = pyqtSignal()
-    spoilers_button_clicked = pyqtSignal()
 
     def __init__(self):
         super().__init__()
@@ -28,21 +27,24 @@ class MainMenu(QWidget):
         left_vbox = QVBoxLayout()
         top_hbox = QHBoxLayout()
         right_vbox = QVBoxLayout()
+        spoiler_vbox = QVBoxLayout()
 
         logo = labels.Image("logo.png")
-        # spoilers_button = buttons.PictureButton("spoilers_on.png", 48, 48)
-        # spoilers_button.clicked.connect(lambda: spoilers_button.set_image("spoilers_off.png", 48, 48))
-        prefs_button = buttons.PictureButton("settings.png",48, 48, self.preferences_click)
-        prefs_button.clicked.connect(self.emit_prefs_signal)
+        spoilers_text = labels.SmallText("Spoilers")
+        spoilers_button = buttons.SpoilerToggle(x=42, y=22)
+        prefs_button = buttons.PictureButton("settings.png", 48, 48, self.emit_prefs_signal)
         sports_selection = SportSelection()
         game_selection = GameSelection()
         expanded_view = QSpacerItem(500, 500)
+        top_spacer = QSpacerItem(600, 20)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
         left_vbox.addWidget(sports_selection)
-        # top_hbox.addWidget(spoilers_button)
-        # top_hbox.setAlignment(spoilers_button, Qt.AlignRight)
+        spoiler_vbox.addWidget(spoilers_button)
+        spoiler_vbox.addWidget(spoilers_text)
+        top_hbox.addSpacerItem(top_spacer)
+        top_hbox.addLayout(spoiler_vbox)
+        top_hbox.setAlignment(spoiler_vbox, Qt.AlignRight)
         top_hbox.addWidget(prefs_button)
-        top_hbox.setAlignment(prefs_button, Qt.AlignRight)
         right_vbox.addLayout(top_hbox)
         right_vbox.addWidget(game_selection)
         right_vbox.addItem(expanded_view)
@@ -59,14 +61,9 @@ class MainMenu(QWidget):
             else:
                 pass
 
-    def preferences_click(self):
-        pass
-
     def emit_prefs_signal(self):
+        print("preferences button clicked")
         self.prefs_button_clicked.emit()
-
-    def emit_spoilers_signal(self):
-        self.spoilers_button_clicked.emit()
 
 
 class SportSelection(QWidget):

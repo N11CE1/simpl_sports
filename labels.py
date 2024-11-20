@@ -33,3 +33,15 @@ class Image(QWidget):
         image.setFixedSize(scaled_pixmap.size())
 
         self.main_layout.addWidget(image)
+
+
+class SmallText(QLabel):
+    def __init__(self, text):
+        super().__init__()
+        self.setText(text)
+        self.setAlignment(Qt.AlignCenter)
+        self.setStyleSheet("""
+                font-helvetica;
+                font-size: 15px;
+                color: black;
+                """)
