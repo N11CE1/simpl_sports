@@ -8,8 +8,6 @@ from shared import user_preferences
 PREFS_FILE = "user_prefs.ini"
 
 
-
-
 def write_prefs(user_preferences):
     config = configparser.ConfigParser()
 
@@ -20,10 +18,10 @@ def write_prefs(user_preferences):
     with open(PREFS_FILE, "w") as configfile:
         config.write(configfile)
 
+
 def read_prefs():
     config = configparser.ConfigParser()
     config.read("user_prefs.ini")
-
 
     sports_enabled = {key: config.getboolean("sports_enabled", key) for key in config["sports_enabled"]}
     print(sports_enabled)
@@ -56,10 +54,3 @@ def check_prefs():
 def write_on_exit(user_preferences):
     print("Saving preferences...")
     write_prefs(user_preferences)
-
-
-# def get_sports_num():
-#     return sum(value is True for value in user_preferences.sports_order
-
-
-#user_preferences = Prefs()

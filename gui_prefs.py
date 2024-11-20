@@ -1,25 +1,19 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
-    QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem, \
-    QPushButton, QSizePolicy  # importing main
-# widget class,
-# grid layout class and vertical out class
-from PyQt5.QtCore import Qt, QSize, pyqtSignal  # importing Qt for alignment abilities
-
-import gui_main
-import labels  # importing the labels file for use of our custom labels
-import buttons  # importing the buttons file for use of our custom buttons
-import shared
+    QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem
+from PyQt5.QtCore import Qt, QSize, pyqtSignal
+import labels
+import buttons
 from shared import user_preferences, default_prefs
 
 
-class PreferencesSelection(QWidget):  # creating preference selection as a class using QWidget as a base to customise
+class PreferencesSelection(QWidget):
 
     next_button_clicked = pyqtSignal()
     preferences_updated = pyqtSignal()
 
-    def __init__(self):  # initialising class
-        super().__init__()  # calling super to give class all properties of QWidgets
-        self.main_layout = None  # adding main layout attribute which will have everything in it
+    def __init__(self):
+        super().__init__()
+        self.main_layout = None
         self.hbox = None
         self.right_vbox = None
         self.left_vbox = None
@@ -28,19 +22,17 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.spoiler_button_group = None
         self.page2_next_button = None
         self.page1_buttons_box = None
-        self.init_ui()  # triggering init_ui
+        self.init_ui()
 
-    def init_ui(self):  # sets the start point of the ui when an object of this class is triggered
-        self.main_layout = QVBoxLayout()  # the main layout will be
+    def init_ui(self):
+        self.main_layout = QVBoxLayout()
         self.setLayout(self.main_layout)
         self.preferences_page1()
 
-    # defining preferences page 1 that will contain all the elements relevant to sports selection
-    def preferences_page1(self):  # takes argument which will be function to clear all widgets and load the next
+    def preferences_page1(self):
         self.clear_layout(self.main_layout)
-        sports_widget = sport_select()  # creating an instance of the sports selection grid
-        question = labels.large_text_label("What sports do you want to follow?")  # creating a label using the large
-        # text label we defined in labels.py and giving the text we want displayed as an argument
+        sports_widget = sport_select()
+        question = labels.large_text_label("What sports do you want to follow?")
         question.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
         self.not_enough = labels.large_text_label("You need to select at least 2 sports")
         self.not_enough.setStyleSheet("""
@@ -48,21 +40,19 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
                                  font-size: 30px;
                                  """)
         self.main_layout.addSpacing(100)
-        self.main_layout.addWidget(question)  # adding the question to the "main_layout" vertical layout
+        self.main_layout.addWidget(question)
         self.main_layout.addWidget(self.not_enough)
         self.main_layout.addWidget(
-            sports_widget)  # adding the sports selection grid to the "main_layout vertical layout
+            sports_widget)
 
         self.page1_buttons_box = QHBoxLayout()
         self.main_layout.addLayout(self.page1_buttons_box)
         skip_button = buttons.push_button(f"SKIP\n(use defaults) ", self.skip_button_action)
         skip_button.setFixedSize(250, 100)
         skip_button.clicked.connect(self.emit_next_signal)
-        page1_next_button = buttons.push_button("Next", self.page1_next_click)  # creating a push button and passing the text
-        # we want displayed on it and the action we want it to do which it gets from the argument given to the function
+        page1_next_button = buttons.push_button("Next", self.page1_next_click)
         self.page1_buttons_box.addWidget(skip_button, alignment=Qt.AlignLeft)
-        self.page1_buttons_box.addWidget(page1_next_button, alignment=Qt.AlignRight)  # adding the next button to the "main_layout"
-        # vertical layout box and setting the alignment, so it appears on the right
+        self.page1_buttons_box.addWidget(page1_next_button, alignment=Qt.AlignRight)
 
     @staticmethod
     def skip_button_action(self):
@@ -177,56 +167,42 @@ class PreferencesSelection(QWidget):  # creating preference selection as a class
         self.next_button_clicked.emit()
 
 
-
-# defining set_sport which will be the functionality of our sports selection buttons
-def set_sport(checked, key):  # takes the arguments of checked (whether the button is on or off)
+def set_sport(checked, key):
     user_preferences.sports_enabled[key] = checked
     print(user_preferences.sports_enabled)
 
 
-# save_sport_num function will set the order the sports are displayed in, hasn't been written yes
 def save_sport_num():
     pass
 
 
-# creating the grid that will house all the sports selection buttons
 def sport_select():
-    container = QWidget()  # creating a widget that will contain the grid layout
-    sports_grid = QGridLayout()  # creating the grid
-    sports_grid.setContentsMargins(100, 100, 100, 100)  # setting the margins on the grid (for looks mostly)
+    container = QWidget()
+    sports_grid = QGridLayout()
+    sports_grid.setContentsMargins(100, 100, 100, 100)
 
-    # creating a button for each sport in the sports selection screen
-    # because each button is on object of the sports_button class we defined in buttons.py they each take
-    # 3 arguments (the dictionary key to affect the state of the correct sport,
-    # the text to be displayed on the button and the action that clicking the button will trigger)
     nba_button = buttons.sports_button("nba", "NBA", lambda checked: set_sport(checked, "nba"))
     nfl_button = buttons.sports_button("nfl", "NFL", lambda checked: set_sport(checked, "nfl"))
     nhl_button = buttons.sports_button("nhl", "NHL", lambda checked: set_sport(checked, "nhl"))
     epl_button = buttons.sports_button("epl", "EPL", lambda checked: set_sport(checked, "epl"))
-    # lambda just allow me to define and execute code on 1 line
-    # in this case it calls the set_sport function and passes the
-    # checked status and the key to search the sport dictionary for
 
-    # adding each button to the grid layout and defining their position in the grid
     sports_grid.addWidget(nba_button, 0, 0)
     sports_grid.addWidget(nfl_button, 0, 1)
     sports_grid.addWidget(nhl_button, 1, 0)
     sports_grid.addWidget(epl_button, 1, 1)
 
-    # adding the grid to the container we created before
     container.setLayout(sports_grid)
 
-    return container  # return the container, that contains everything we've done in this function, to the caller
+    return container
 
 
-class OrderList(QListWidget):  # creating order list class
-    def __init__(self, items, parent=None):  # giving attributes of items and parent
-        # which defaults to non because it is optional
-        super().__init__(parent)  # inherits properties of QListWidget
-        self.setAcceptDrops(True)  # allowing to accept drag and drop
+class OrderList(QListWidget):
+    def __init__(self, items, parent=None):
+        super().__init__(parent)
+        self.setAcceptDrops(True)
         self.setDragEnabled(True)
         self.setDragDropMode(QAbstractItemView.InternalMove)
-        self.data_dict = {}  # dictionary data will be stored in
+        self.data_dict = {}
         self.setFixedSize(300, 500)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.setStyleSheet("""
@@ -273,8 +249,8 @@ class OrderList(QListWidget):  # creating order list class
         """)
         self.set_items(items)
 
-    def set_items(self, items):  # setting default order of list
-        self.clear()  # clearing any existing items
+    def set_items(self, items):
+        self.clear()
         for item in items:
             list_item = QListWidgetItem(item["display_text"])
             list_item.setData(Qt.UserRole, item["unique_key"])
@@ -288,7 +264,7 @@ class OrderList(QListWidget):  # creating order list class
         self.update_data()
         event.accept()
 
-    def update_data(self):  # updating dictionary
+    def update_data(self):
         self.data_dict = {}
         for index in range(self.count()):
             item = self.item(index)
