@@ -1,12 +1,10 @@
-# TODO: fix bug where order list doesn't update if sport is enabled on page 1
-from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
-    QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem
+from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem
 from PyQt5.QtCore import Qt, QSize, pyqtSignal
 from buttons.spoilers_button import SpoilersButton as SpoilersButton
-from buttons.sports_button import SportsButton as SportsButton
 from buttons.push_button import PushButton as PushButton
 from labels.custom_label import CustomLabel as CustomLabel
 from widgets.order_list import OrderList as OrderList
+from widgets.sport_select import sport_select as sport_select
 from shared import user_preferences as user_preferences, default_prefs as default_preferences
 
 
@@ -181,31 +179,3 @@ class PreferencesSelection(QWidget):
 
     def emit_next_signal(self):
         self.next_button_clicked.emit()
-
-
-def set_sport(checked, key):
-    user_preferences.sports_enabled[key] = checked
-    print(user_preferences.sports_enabled)
-
-
-def sport_select():
-    container = QWidget()
-    sports_grid = QGridLayout()
-    sports_grid.setContentsMargins(100, 100, 100, 100)
-
-    nba_button = SportsButton("nba", "NBA", lambda checked: set_sport(checked, "nba"))
-    nfl_button = SportsButton("nfl", "NFL", lambda checked: set_sport(checked, "nfl"))
-    nhl_button = SportsButton("nhl", "NHL", lambda checked: set_sport(checked, "nhl"))
-    epl_button = SportsButton("epl", "EPL", lambda checked: set_sport(checked, "epl"))
-
-    sports_grid.addWidget(nba_button, 0, 0)
-    sports_grid.addWidget(nfl_button, 0, 1)
-    sports_grid.addWidget(nhl_button, 1, 0)
-    sports_grid.addWidget(epl_button, 1, 1)
-
-    container.setLayout(sports_grid)
-
-    return container
-
-
-
