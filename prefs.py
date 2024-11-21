@@ -8,12 +8,12 @@ from shared import user_preferences
 PREFS_FILE = "user_prefs.ini"
 
 
-def write_prefs(user_preferences):
+def write_prefs(preferences):
     config = configparser.ConfigParser()
 
-    config["sports_enabled"] = {key: str(value).lower() for key, value in user_preferences.sports_enabled.items()}
-    config["sports_order"] = {str(key): value for key, value in user_preferences.sports_order.items()}
-    config["spoilers"] = {"spoilers_enabled": str(user_preferences.spoilers).lower()}
+    config["sports_enabled"] = {key: str(value).lower() for key, value in preferences.sports_enabled.items()}
+    config["sports_order"] = {str(key): value for key, value in preferences.sports_order.items()}
+    config["spoilers"] = {"spoilers_enabled": str(preferences.spoilers).lower()}
 
     with open(PREFS_FILE, "w") as configfile:
         config.write(configfile)
@@ -51,6 +51,6 @@ def check_prefs():
         return returnable
 
 
-def write_on_exit(user_preferences):
+def write_on_exit(preferences):
     print("Saving preferences...")
-    write_prefs(user_preferences)
+    write_prefs(preferences)

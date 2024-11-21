@@ -212,4 +212,3 @@ class GameSelection(QWidget):
                                                        away=away, away_score=away_score, time=time)
                 self.games_button_group.addButton(radio_button)
                 self.hbox.addWidget(radio_button)
-

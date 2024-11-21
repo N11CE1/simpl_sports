@@ -20,8 +20,11 @@ class PreferencesSelection(QWidget):
         self.order_list = None
         self.spoiler_buttons = None
         self.spoiler_button_group = None
-        self.page2_next_button = None
         self.page1_buttons_box = None
+        self.page2_buttons_box = None
+        self.page2_back_button = None
+        self.page2_next_button = None
+        self.not_enough = None
         self.init_ui()
 
     def init_ui(self):
@@ -32,9 +35,9 @@ class PreferencesSelection(QWidget):
     def preferences_page1(self):
         self.clear_layout(self.main_layout)
         sports_widget = sport_select()
-        question = labels.large_text_label("What sports do you want to follow?")
+        question = labels.CustomLabel("What sports do you want to follow?", 40, "black")
         question.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-        self.not_enough = labels.large_text_label("You need to select at least 2 sports")
+        self.not_enough = labels.CustomLabel("You need to select at least 2 sports", 40, "black")
         self.not_enough.setStyleSheet("""
                                  color: transparent;
                                  font-size: 30px;
@@ -55,7 +58,7 @@ class PreferencesSelection(QWidget):
         self.page1_buttons_box.addWidget(page1_next_button, alignment=Qt.AlignRight)
 
     @staticmethod
-    def skip_button_action(self):
+    def skip_button_action():
         user_preferences.sports_enabled = default_prefs.sports_enabled
         user_preferences.sports_order = default_prefs.sports_order
         user_preferences.spoilers = default_prefs.spoilers
@@ -66,17 +69,18 @@ class PreferencesSelection(QWidget):
             print(selected_sports_count)
             self.preferences_page2()
         else:
-            self.not_enough.setStyleSheet("""color: red;
+            self.not_enough.setStyleSheet("""
+                                          color: red;
                                           font-size: 30px;
                                           """)
 
     def preferences_page2(self):
         self.clear_layout(self.main_layout)
 
-        order_text = labels.large_text_label("Order your selected sport"
-                                             "\nfrom most to least important")
-        spoiler_text = labels.large_text_label("Do you want spoilers"
-                                               "\nenabled for live games?")
+        order_text = labels.CustomLabel("Order your selected sport"
+                                        "\nfrom most to least important", 40)
+        spoiler_text = labels.CustomLabel("Do you want spoilers"
+                                          "\nenabled for live games?", 40)
 
         selected_items = self.get_selected_sports()
         self.order_list = OrderList(selected_items)
@@ -172,10 +176,6 @@ def set_sport(checked, key):
     print(user_preferences.sports_enabled)
 
 
-def save_sport_num():
-    pass
-
-
 def sport_select():
     container = QWidget()
     sports_grid = QGridLayout()
@@ -199,6 +199,7 @@ def sport_select():
 class OrderList(QListWidget):
     def __init__(self, items, parent=None):
         super().__init__(parent)
+        self.user_preferences_updated = None
         self.setAcceptDrops(True)
         self.setDragEnabled(True)
         self.setDragDropMode(QAbstractItemView.InternalMove)
