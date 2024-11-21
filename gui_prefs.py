@@ -5,7 +5,7 @@ from buttons.spoilers_button import SpoilersButton as SpoilersButton
 from buttons.sports_button import SportsButton as SportsButton
 from buttons.push_button import PushButton as PushButton
 from labels.custom_label import CustomLabel as CustomLabel
-from shared import user_preferences, default_prefs
+from shared import user_preferences as user_preferences, default_prefs as default_preferences
 
 
 class PreferencesSelection(QWidget):
@@ -61,9 +61,9 @@ class PreferencesSelection(QWidget):
 
     @staticmethod
     def skip_button_action():
-        user_preferences.sports_enabled = default_prefs.sports_enabled
-        user_preferences.sports_order = default_prefs.sports_order
-        user_preferences.spoilers = default_prefs.spoilers
+        user_preferences.sports_enabled = default_preferences.sports_enabled
+        user_preferences.sports_order = default_preferences.sports_order
+        user_preferences.spoilers = default_preferences.spoilers
 
     def page1_next_click(self):
         selected_sports_count = sum(1 for key, value in user_preferences.sports_enabled.items() if value)
@@ -160,10 +160,17 @@ class PreferencesSelection(QWidget):
     @staticmethod
     def get_selected_sports():
         selected_items = []
-        for key, enabled in user_preferences.sports_enabled.items():
-            if enabled:
-                display_text = key.upper()
-                selected_items.append({"display_text": display_text, "unique_key": key})
+        if user_preferences.sports_order is not None:
+            for _, key in user_preferences.sports_order.items():
+                if user_preferences.sports_enabled.get(key):
+                    display_text = key.upper()
+                    selected_items.append({"display_text": display_text, "unique_key": key})
+        else:
+            for key, enabled in user_preferences.sports_enabled.items():
+                if enabled:
+                    display_text = key.upper()
+                    selected_items.append({"display_text": display_text, "unique_key": key})
+        print(selected_items)
         return selected_items
 
     def reset_to_page1(self):
@@ -274,6 +281,7 @@ class OrderList(QListWidget):
             unique_key = item.data(Qt.UserRole)
             self.data_dict[index] = unique_key
         print("dictionary:", self.data_dict)
+
 
     def get_order_list(self):
         return self.data_dict
