@@ -162,16 +162,17 @@ class PreferencesSelection(QWidget):
     @staticmethod
     def get_selected_sports():
         selected_items = []
-        if user_preferences.sports_order is not None:
-            for _, key in user_preferences.sports_order.items():
-                if user_preferences.sports_enabled.get(key):
-                    display_text = key.upper()
-                    selected_items.append({"display_text": display_text, "unique_key": key})
-        else:
-            for key, enabled in user_preferences.sports_enabled.items():
-                if enabled:
-                    display_text = key.upper()
-                    selected_items.append({"display_text": display_text, "unique_key": key})
+        enabled_sports = [key for key, enabled in user_preferences.sports_enabled.items() if enabled]
+        ordered_sports = [
+            user_preferences.sports_order[key] for key in sorted(user_preferences.sports_order.keys())
+            if user_preferences.sports_order[key] in enabled_sports
+            ]
+        new_sports = [item for item in enabled_sports if item not in user_preferences.sports_order.values()]
+        new_ordered_list = ordered_sports + new_sports
+        for key in new_ordered_list:
+            display_text = key.upper()
+            selected_items.append({"display_text": display_text, "unique_key": key})
+
         print(selected_items)
         return selected_items
 
