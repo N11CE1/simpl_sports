@@ -60,7 +60,6 @@ class MainWindow(QMainWindow):
         self.main_ui.set_main_layout()
         self.central_widget.setCurrentWidget(self.main_ui)
 
-
     def show_prefs_ui(self):
         self.prefs_ui.reset_to_page1()
         self.central_widget.setCurrentWidget(self.prefs_ui)

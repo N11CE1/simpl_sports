@@ -3,15 +3,16 @@ from PyQt5.QtCore import Qt  # importing Qt for alignment abilities
 from PyQt5.QtGui import QPixmap
 
 
-def large_text_label(text):
-    label = QLabel(text)
-    label.setAlignment(Qt.AlignCenter)
-    label.setStyleSheet("""
-                font-helvetica;
-                font-size: 40px;
-                color: black;
-                """)
-    return label
+class CustomLabel(QLabel):
+    def __init__(self, text, font_size=40, color='black'):
+        super().__init__(text)
+        self.color = color
+        self.setAlignment(Qt.AlignCenter)
+        self.setStyleSheet(f"""
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: {font_size}px;
+                    color: {color};
+                    """)
 
 
 class Image(QWidget):
