@@ -1,8 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
     QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem
 from PyQt5.QtCore import Qt, QSize, pyqtSignal
-import buttons
-import buttons_file
 from buttons.spoilers_button import SpoilersButton as SpoilersButton
 from buttons.sports_button import SportsButton as SportsButton
 from buttons.push_button import PushButton as PushButton
@@ -81,9 +79,9 @@ class PreferencesSelection(QWidget):
     def preferences_page2(self):
         self.clear_layout(self.main_layout)
 
-        order_text = buttons.CustomLabel("Order your selected sport"
+        order_text = CustomLabel("Order your selected sport"
                                         "\nfrom most to least important", 40)
-        spoiler_text = buttons.CustomLabel("Do you want spoilers"
+        spoiler_text = CustomLabel("Do you want spoilers"
                                           "\nenabled for live games?", 40)
 
         selected_items = self.get_selected_sports()
@@ -95,8 +93,8 @@ class PreferencesSelection(QWidget):
         scroll_area.setMinimumHeight(200)
 
         self.page2_buttons_box = QHBoxLayout()
-        self.page2_back_button = buttons.push_button("Back", self.go_back)
-        self.page2_next_button = buttons.push_button("Save", self.page2_next_click)
+        self.page2_back_button = PushButton("Back", self.go_back)
+        self.page2_next_button = PushButton("Save", self.page2_next_click)
         self.page2_next_button.clicked.connect(self.emit_next_signal)
 
         self.page2_buttons_box.addWidget(self.page2_back_button, alignment=Qt.AlignLeft)
@@ -104,11 +102,11 @@ class PreferencesSelection(QWidget):
 
         self.spoiler_button_group = QButtonGroup(self)
         self.spoiler_button_group.setExclusive(True)
-        spoiler_on = buttons.SpoilersButton(
+        spoiler_on = SpoilersButton(
             "Spoilers On",
             action=lambda checked: setattr(user_preferences, "spoilers", True))
         spoiler_on.setChecked(user_preferences.spoilers)
-        spoiler_off = buttons.SpoilersButton(
+        spoiler_off = SpoilersButton(
             "Spoilers Off",
             action=lambda checked: setattr(user_preferences, "spoilers", False))
         spoiler_off.setChecked(not user_preferences.spoilers)

@@ -2,7 +2,6 @@ from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtWidgets import (QWidget, QHBoxLayout, QVBoxLayout, QButtonGroup,
                              QScrollArea, QSpacerItem)
 
-import buttons
 import shared
 from labels.image import Image as Image
 from labels.small_text import SmallText as SmallText
