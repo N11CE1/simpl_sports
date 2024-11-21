@@ -3,8 +3,13 @@ from PyQt5.QtWidgets import (QWidget, QHBoxLayout, QVBoxLayout, QButtonGroup,
                              QScrollArea, QSpacerItem)
 
 import buttons
-import labels
 import shared
+from labels.image import Image as Image
+from labels.small_text import SmallText as SmallText
+from buttons.spoiler_toggle import SpoilerToggle as SpoilerToggle
+from buttons.picture_button import PictureButton as PictureButton
+from buttons.radio_sports_button import RadioSportsButton as RadioSportsButton
+from buttons.radio_game_button import RadioGameButton as RadioGameButton
 
 
 class MainMenu(QWidget):
@@ -29,10 +34,10 @@ class MainMenu(QWidget):
         right_vbox = QVBoxLayout()
         spoiler_vbox = QVBoxLayout()
 
-        logo = labels.Image("logo.png")
-        spoilers_text = labels.SmallText("Spoilers")
-        spoilers_button = buttons.SpoilerToggle(x=42, y=22)
-        prefs_button = buttons.PictureButton("settings.png", 48, 48, self.emit_prefs_signal)
+        logo = Image("logo.png")
+        spoilers_text = SmallText("Spoilers")
+        spoilers_button = SpoilerToggle(x=42, y=22)
+        prefs_button = PictureButton("settings.png", 48, 48, self.emit_prefs_signal)
         sports_selection = SportSelection()
         game_selection = GameSelection()
         expanded_view = QSpacerItem(500, 500)
@@ -129,7 +134,7 @@ class SportSelection(QWidget):
                 widget.deleteLater()
 
         for sports in shared.user_preferences.sports_order.values():
-            radio_button = buttons.RadioSportsButton(sports.upper())
+            radio_button = RadioSportsButton(sports.upper())
             self.sports_button_group.addButton(radio_button)
             self.vbox.addWidget(radio_button)
 
@@ -208,7 +213,7 @@ class GameSelection(QWidget):
             time = games.get("time", None)
 
             if time is not None:
-                radio_button = buttons.RadioGameButton(date=date, home=home, home_score=home_score,
+                radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
                                                        away=away, away_score=away_score, time=time)
                 self.games_button_group.addButton(radio_button)
                 self.hbox.addWidget(radio_button)

@@ -1,8 +1,12 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QListWidget, \
     QAbstractItemView, QListWidgetItem, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem
 from PyQt5.QtCore import Qt, QSize, pyqtSignal
-import labels
 import buttons
+import buttons_file
+from buttons.spoilers_button import SpoilersButton as SpoilersButton
+from buttons.sports_button import SportsButton as SportsButton
+from buttons.push_button import PushButton as PushButton
+from labels.custom_label import CustomLabel as CustomLabel
 from shared import user_preferences, default_prefs
 
 
@@ -35,9 +39,9 @@ class PreferencesSelection(QWidget):
     def preferences_page1(self):
         self.clear_layout(self.main_layout)
         sports_widget = sport_select()
-        question = labels.CustomLabel("What sports do you want to follow?", 40, "black")
+        question = CustomLabel("What sports do you want to follow?", 40, "black")
         question.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-        self.not_enough = labels.CustomLabel("You need to select at least 2 sports", 40, "black")
+        self.not_enough = CustomLabel("You need to select at least 2 sports", 40, "black")
         self.not_enough.setStyleSheet("""
                                  color: transparent;
                                  font-size: 30px;
@@ -50,10 +54,10 @@ class PreferencesSelection(QWidget):
 
         self.page1_buttons_box = QHBoxLayout()
         self.main_layout.addLayout(self.page1_buttons_box)
-        skip_button = buttons.push_button(f"SKIP\n(use defaults) ", self.skip_button_action)
+        skip_button = PushButton(f"SKIP\n(use defaults) ", self.skip_button_action)
         skip_button.setFixedSize(250, 100)
         skip_button.clicked.connect(self.emit_next_signal)
-        page1_next_button = buttons.push_button("Next", self.page1_next_click)
+        page1_next_button = PushButton("Next", self.page1_next_click)
         self.page1_buttons_box.addWidget(skip_button, alignment=Qt.AlignLeft)
         self.page1_buttons_box.addWidget(page1_next_button, alignment=Qt.AlignRight)
 
@@ -77,9 +81,9 @@ class PreferencesSelection(QWidget):
     def preferences_page2(self):
         self.clear_layout(self.main_layout)
 
-        order_text = labels.CustomLabel("Order your selected sport"
+        order_text = buttons.CustomLabel("Order your selected sport"
                                         "\nfrom most to least important", 40)
-        spoiler_text = labels.CustomLabel("Do you want spoilers"
+        spoiler_text = buttons.CustomLabel("Do you want spoilers"
                                           "\nenabled for live games?", 40)
 
         selected_items = self.get_selected_sports()
@@ -181,10 +185,10 @@ def sport_select():
     sports_grid = QGridLayout()
     sports_grid.setContentsMargins(100, 100, 100, 100)
 
-    nba_button = buttons.sports_button("nba", "NBA", lambda checked: set_sport(checked, "nba"))
-    nfl_button = buttons.sports_button("nfl", "NFL", lambda checked: set_sport(checked, "nfl"))
-    nhl_button = buttons.sports_button("nhl", "NHL", lambda checked: set_sport(checked, "nhl"))
-    epl_button = buttons.sports_button("epl", "EPL", lambda checked: set_sport(checked, "epl"))
+    nba_button = SportsButton("nba", "NBA", lambda checked: set_sport(checked, "nba"))
+    nfl_button = SportsButton("nfl", "NFL", lambda checked: set_sport(checked, "nfl"))
+    nhl_button = SportsButton("nhl", "NHL", lambda checked: set_sport(checked, "nhl"))
+    epl_button = SportsButton("epl", "EPL", lambda checked: set_sport(checked, "epl"))
 
     sports_grid.addWidget(nba_button, 0, 0)
     sports_grid.addWidget(nfl_button, 0, 1)
