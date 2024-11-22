@@ -15,12 +15,15 @@ class MainMenu(QWidget):
     def __init__(self):
         super().__init__()
         self.main_layout = None
+        self.sports_selection = None
+        self.game_selection = None
         self.init_ui()
 
     def init_ui(self):
         self.main_layout = QHBoxLayout()
         self.setLayout(self.main_layout)
         self.set_main_layout()
+
 
     def set_main_layout(self):
         self.clear_layout(self.main_layout)
@@ -34,12 +37,13 @@ class MainMenu(QWidget):
         spoilers_text = SmallText("Spoilers")
         spoilers_button = SpoilerToggle(x=42, y=22)
         prefs_button = PictureButton("images/settings.png", 48, 48, self.emit_prefs_signal)
-        sports_selection = SportSelection()
-        game_selection = GameSelection()
+        self.sports_selection = SportSelection()
+        self.game_selection = GameSelection()
+        self.sports_selection.sport_selected.connect(self.game_selection.update_games)
         expanded_view = QSpacerItem(500, 500)
         top_spacer = QSpacerItem(600, 20)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
-        left_vbox.addWidget(sports_selection)
+        left_vbox.addWidget(self.sports_selection)
         spoiler_vbox.addWidget(spoilers_button)
         spoiler_vbox.addWidget(spoilers_text)
         top_hbox.addSpacerItem(top_spacer)
@@ -47,7 +51,7 @@ class MainMenu(QWidget):
         top_hbox.setAlignment(spoiler_vbox, Qt.AlignRight)
         top_hbox.addWidget(prefs_button)
         right_vbox.addLayout(top_hbox)
-        right_vbox.addWidget(game_selection)
+        right_vbox.addWidget(self.game_selection)
         right_vbox.addItem(expanded_view)
         self.main_layout.addLayout(left_vbox)
         self.main_layout.addLayout(right_vbox)

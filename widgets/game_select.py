@@ -1,23 +1,12 @@
-from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup, QGraphicsDropShadowEffect
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup
 
 from buttons.radio_game_button import RadioGameButton
 from common import shared
 
 
 class GameSelection(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.setStyleSheet("background: transparent;")
-        self.main_layout = QHBoxLayout()
-        self.setLayout(self.main_layout)
-
-        scroll_area = QScrollArea()
-        scroll_area.setWidgetResizable(True)
-        scroll_area.setFixedWidth(800)
-        scroll_area.setFixedHeight(195)
-        scroll_area.setStyleSheet("""
-        QScrollArea {
+    SCROLL_AREA_STYLE = """
+            QScrollArea {
                 border: 2px solid #ccc;
                 border-radius: 10px;
                 background: transparent;
@@ -61,7 +50,19 @@ class GameSelection(QWidget):
             margin: 0px;
             padding: 0px;
             }
-        """)
+            """
+
+    def __init__(self):
+        super().__init__()
+        self.setStyleSheet("background: transparent;")
+        self.main_layout = QHBoxLayout()
+        self.setLayout(self.main_layout)
+
+        scroll_area = QScrollArea()
+        scroll_area.setWidgetResizable(True)
+        scroll_area.setFixedWidth(800)
+        scroll_area.setFixedHeight(195)
+        scroll_area.setStyleSheet(self.SCROLL_AREA_STYLE)
 
         self.main_layout.addWidget(scroll_area)
 
@@ -73,9 +74,14 @@ class GameSelection(QWidget):
 
         self.games_button_group = QButtonGroup()
         self.games_button_group.setExclusive(True)
-        self.update_games()
+        # self.update_games(sport=None)
 
-    def update_games(self):
+    def update_games(self, sport):
+        print(f"Game Selection updated for sport {sport}")
+        if sport is None:
+            print("No sport specified")
+            return
+
         while self.hbox.count():
             item = self.hbox.takeAt(0)
             widget = item.widget()
@@ -83,7 +89,17 @@ class GameSelection(QWidget):
                 self.games_button_group.removeButton(widget)
                 widget.deleteLater()
 
-        for games in shared.test_games.values():
+        sport_games = None
+        for sport_dict in shared.test_games:
+            if sport in sport_dict:
+                sport_games = sport_dict[sport]
+                break
+
+        if sport_games is None:
+            print(f"No games found for {sport}")
+            return
+
+        for games in sport_games.values():
             date = games.get("date", None)
             home = games.get("home", None)
             home_score = games.get("home_score", None)

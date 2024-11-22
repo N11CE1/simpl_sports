@@ -1,9 +1,11 @@
+from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QButtonGroup
 from common import shared
 from buttons.radio_sports_button import RadioSportsButton
 
 
 class SportSelection(QWidget):
+    sport_selected = pyqtSignal(str)
     SCROLL_AREA_STYLE = """  
             QScrollArea {
             border: 2px solid #ccc;
@@ -70,6 +72,7 @@ class SportSelection(QWidget):
         scroll_area.setWidget(container)
         self.sports_button_group = QButtonGroup()
         self.sports_button_group.setExclusive(True)
+        self.sports_button_group.buttonClicked.connect(self.on_button_clicked)
         self.update_sports()
 
     def _create_styled_scroll_area(self):
@@ -94,3 +97,9 @@ class SportSelection(QWidget):
             radio_button = RadioSportsButton(sports.upper())
             self.sports_button_group.addButton(radio_button)
             self.sports_buttons_layout.addWidget(radio_button)
+
+    def on_button_clicked(self, button):
+        sport = button.text
+        self.sport_selected.emit(sport)
+
+
