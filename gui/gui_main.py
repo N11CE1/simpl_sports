@@ -7,6 +7,7 @@ from buttons.spoiler_toggle import SpoilerToggle as SpoilerToggle
 from buttons.picture_button import PictureButton as PictureButton
 from widgets.game_select import GameSelection as GameSelection
 from widgets.main_sport_select import SportSelection as SportSelection
+from widgets.game_expanded_view import GameExpandedView as GameExpandedView
 
 class MainMenu(QWidget):
 
@@ -37,8 +38,10 @@ class MainMenu(QWidget):
         spoilers_text = SmallText("Spoilers")
         spoilers_button = SpoilerToggle(x=42, y=22)
         prefs_button = PictureButton("images/settings.png", 48, 48, self.emit_prefs_signal)
+
         self.sports_selection = SportSelection()
         self.game_selection = GameSelection()
+        self.game_expanded_view = GameExpandedView()
         self.sports_selection.sport_selected.connect(self.game_selection.update_games)
         expanded_view = QSpacerItem(500, 500)
         top_spacer = QSpacerItem(600, 20)
@@ -52,7 +55,7 @@ class MainMenu(QWidget):
         top_hbox.addWidget(prefs_button)
         right_vbox.addLayout(top_hbox)
         right_vbox.addWidget(self.game_selection)
-        right_vbox.addItem(expanded_view)
+        right_vbox.addWidget(self.game_expanded_view)
         self.main_layout.addLayout(left_vbox)
         self.main_layout.addLayout(right_vbox)
 
