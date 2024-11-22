@@ -1,5 +1,5 @@
 from buttons.toggle_button import ToggleButton
-from shared import user_preferences
+from common.shared import user_preferences
 
 
 class SportsButton(ToggleButton):

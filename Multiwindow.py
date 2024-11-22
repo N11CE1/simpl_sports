@@ -33,7 +33,7 @@ class SimplSportsGUI(QWidget):
 
         # Icon label
         logo_icon = QLabel()
-        pixmap = QPixmap("logo.png")  # Path to the icon file
+        pixmap = QPixmap("images/logo.png")  # Path to the icon file
         logo_icon.setPixmap(pixmap)
         logo_icon.setPixmap(pixmap.scaled(100, 100, aspectRatioMode=Qt.KeepAspectRatio)) # Set the icon size
         logo_icon.setStyleSheet("border: none;") # Remove the border around the icon
@@ -77,7 +77,7 @@ class SimplSportsGUI(QWidget):
 
         # Settings icon button
         self.settings_button = QPushButton()
-        self.settings_button.setIcon(QIcon(QPixmap("logo.png")))  # Download a settings icon
+        self.settings_button.setIcon(QIcon(QPixmap("images/logo.png")))  # Download a settings icon
         self.settings_button.setStyleSheet("background-color: transparent;")
         self.settings_button.setIconSize(QSize(20, 20))
 

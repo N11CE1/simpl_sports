@@ -1,5 +1,5 @@
-import gui_prefs
-import gui_main
+import gui.gui_prefs as gui_prefs
+import gui.gui_main as gui_main
 import sys
 # Importing QApplication for the main application QMain Window for the window
 # and QLabel for objects within the window
@@ -8,10 +8,10 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QStackedWidget
 # and QFont for font in the app
 from PyQt5.QtGui import QIcon
 
-import shared
+from common import shared
 # importing Qt for alignment
 from prefs import write_on_exit
-from shared import user_preferences
+from common.shared import user_preferences
 
 
 class MainWindow(QMainWindow):
@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         # Setting window name and size
         self.setWindowTitle('Simpl Sports')
         self.setFixedSize(1200, 800)
-        self.setWindowIcon(QIcon('logo.png'))
+        self.setWindowIcon(QIcon('../images/logo.png'))
         self.setStyleSheet("background-color: #FFFFFF;")
 
         self.central_widget = QStackedWidget()

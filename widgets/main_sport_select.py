@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QButtonGroup
-import shared
+from common import shared
 from buttons.radio_sports_button import RadioSportsButton
 
 

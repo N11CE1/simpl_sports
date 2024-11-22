@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup
 
 from buttons.radio_game_button import RadioGameButton
-import shared
+from common import shared
 
 
 class GameSelection(QWidget):

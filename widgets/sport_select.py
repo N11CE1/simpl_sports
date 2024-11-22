@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout
 
 from buttons.sports_button import SportsButton as SportsButton
-from shared import user_preferences as user_preferences
+from common.shared import user_preferences as user_preferences
 
 MARGIN_SIZE = 100
 SPORTS_AND_POSITIONS = [

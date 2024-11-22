@@ -1,6 +1,6 @@
 from PyQt5.QtGui import QIcon
 from buttons.picture_button import PictureButton as PictureButton
-from shared import user_preferences as user_preferences
+from common.shared import user_preferences as user_preferences
 
 
 class SpoilerToggle(PictureButton):
@@ -14,9 +14,9 @@ class SpoilerToggle(PictureButton):
 
     def initial_state(self):
         if user_preferences.spoilers:
-            self.display_image = "spoilers_on.png"
+            self.display_image = "images/spoilers_on.png"
         else:
-            self.display_image = "spoilers_off.png"
+            self.display_image = "images/spoilers_off.png"
         self.setIcon(QIcon(self.display_image))
 
     def toggle_image(self):

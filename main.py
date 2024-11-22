@@ -1,4 +1,4 @@
-import gui
+import gui.gui as gui
 import prefs
 
 

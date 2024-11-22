@@ -1,8 +1,8 @@
 import configparser
 import os
 
-import shared
-from shared import user_preferences
+from common import shared
+from common.shared import user_preferences
 
 
 PREFS_FILE = "user_prefs.ini"

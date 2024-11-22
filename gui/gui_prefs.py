@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QWidget, QGridLayout, QVBoxLayout, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem
-from PyQt5.QtCore import Qt, QSize, pyqtSignal
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QScrollArea, QButtonGroup, QSpacerItem
+from PyQt5.QtCore import Qt, pyqtSignal
 from buttons.spoilers_button import SpoilersButton as SpoilersButton
 from buttons.push_button import PushButton as PushButton
 from labels.custom_label import CustomLabel as CustomLabel
 from widgets.order_list import OrderList as OrderList
 from widgets.sport_select import sport_select as sport_select
-from shared import user_preferences as user_preferences, default_prefs as default_preferences
+from common.shared import user_preferences as user_preferences, default_prefs as default_preferences
 
 
 class PreferencesSelection(QWidget):

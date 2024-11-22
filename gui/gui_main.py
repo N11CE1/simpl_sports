@@ -30,10 +30,10 @@ class MainMenu(QWidget):
         right_vbox = QVBoxLayout()
         spoiler_vbox = QVBoxLayout()
 
-        logo = Image("logo.png")
+        logo = Image("images/logo.png")
         spoilers_text = SmallText("Spoilers")
         spoilers_button = SpoilerToggle(x=42, y=22)
-        prefs_button = PictureButton("settings.png", 48, 48, self.emit_prefs_signal)
+        prefs_button = PictureButton("images/settings.png", 48, 48, self.emit_prefs_signal)
         sports_selection = SportSelection()
         game_selection = GameSelection()
         expanded_view = QSpacerItem(500, 500)
