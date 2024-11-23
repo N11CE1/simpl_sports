@@ -262,3 +262,15 @@ test_games = [{'EPL': {0: {"date": "16/11/2024",
                        }}
               ]
 
+epl_expanded_games = {0: {"date": "16/11/2024",
+                          "home": "Giants",
+                          "home_score": "50",
+                          "away": "Jets",
+                          "away_score": "30",
+                          "time": "Full Time"},
+                      1: {"date": "17/11/2024",
+                          "home": "Cowboys",
+                          "home_score": "10",
+                          "away": "Cows",
+                          "away_score": "5",
+                          "time": "Full Time"}}

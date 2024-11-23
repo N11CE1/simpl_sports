@@ -1,3 +1,5 @@
+# TODO: fix expanded view game selection logic
+from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup
 
 from buttons.radio_game_button import RadioGameButton
@@ -5,6 +7,7 @@ from common import shared
 
 
 class GameSelection(QWidget):
+    game_selected = pyqtSignal(int)
     SCROLL_AREA_STYLE = """
             QScrollArea {
                 border: 2px solid #ccc;
@@ -74,8 +77,7 @@ class GameSelection(QWidget):
 
         self.games_button_group = QButtonGroup()
         self.games_button_group.setExclusive(True)
-        # self.update_games(sport=None)
-
+        self.games_button_group.buttonClicked.connect(self.on_button_clicked)
     def update_games(self, sport):
         print(f"Game Selection updated for sport {sport}")
         if sport is None:
@@ -99,16 +101,30 @@ class GameSelection(QWidget):
             print(f"No games found for {sport}")
             return
 
-        for games in sport_games.values():
-            date = games.get("date", None)
-            home = games.get("home", None)
-            home_score = games.get("home_score", None)
-            away = games.get("away", None)
-            away_score = games.get("away_score", None)
-            time = games.get("time", None)
+        for game in sport_games.values():
+            date = game.get("date", None)
+            home = game.get("home", None)
+            home_score = game.get("home_score", None)
+            away = game.get("away", None)
+            away_score = game.get("away_score", None)
+            time = game.get("time", None)
 
             if time is not None:
                 radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
                                                away=away, away_score=away_score, time=time)
                 self.games_button_group.addButton(radio_button)
                 self.hbox.addWidget(radio_button)
+
+                # radio_button.setProperty('game_key', game_key)
+
+                self.games_button_group.addButton(radio_button)
+                self.hbox.addWidget(radio_button)
+
+    def on_button_clicked(self, button):
+        pass
+        # game_key = button.property('game_key')
+        # if game_key is not None:
+        #     print(f"Game Selection updated for {game_key}")
+        #     self.game_selected.emit(game_key)
+        # else:
+        #     print(f"No games found for {game_key}")

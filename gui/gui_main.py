@@ -18,6 +18,7 @@ class MainMenu(QWidget):
         self.main_layout = None
         self.sports_selection = None
         self.game_selection = None
+        self.game_expanded_view = None
         self.init_ui()
 
     def init_ui(self):
@@ -43,7 +44,7 @@ class MainMenu(QWidget):
         self.game_selection = GameSelection()
         self.game_expanded_view = GameExpandedView()
         self.sports_selection.sport_selected.connect(self.game_selection.update_games)
-        expanded_view = QSpacerItem(500, 500)
+        # self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
         top_spacer = QSpacerItem(600, 20)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
         left_vbox.addWidget(self.sports_selection)
