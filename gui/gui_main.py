@@ -44,7 +44,7 @@ class MainMenu(QWidget):
         self.game_selection = GameSelection()
         self.game_expanded_view = GameExpandedView()
         self.sports_selection.sport_selected.connect(self.game_selection.update_games)
-        # self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
+        self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
         top_spacer = QSpacerItem(600, 20)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
         left_vbox.addWidget(self.sports_selection)

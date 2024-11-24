@@ -7,7 +7,7 @@ from common import shared
 
 
 class GameSelection(QWidget):
-    game_selected = pyqtSignal(int)
+    game_selected = pyqtSignal(int, str)
     SCROLL_AREA_STYLE = """
             QScrollArea {
                 border: 2px solid #ccc;
@@ -78,6 +78,7 @@ class GameSelection(QWidget):
         self.games_button_group = QButtonGroup()
         self.games_button_group.setExclusive(True)
         self.games_button_group.buttonClicked.connect(self.on_button_clicked)
+
     def update_games(self, sport):
         print(f"Game Selection updated for sport {sport}")
         if sport is None:
@@ -101,7 +102,7 @@ class GameSelection(QWidget):
             print(f"No games found for {sport}")
             return
 
-        for game in sport_games.values():
+        for game_key, game in sport_games.items():
             date = game.get("date", None)
             home = game.get("home", None)
             home_score = game.get("home_score", None)
@@ -112,19 +113,18 @@ class GameSelection(QWidget):
             if time is not None:
                 radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
                                                away=away, away_score=away_score, time=time)
-                self.games_button_group.addButton(radio_button)
-                self.hbox.addWidget(radio_button)
 
-                # radio_button.setProperty('game_key', game_key)
+                radio_button.setProperty("sport", sport)
+                radio_button.setProperty("game_key", game_key)
 
                 self.games_button_group.addButton(radio_button)
                 self.hbox.addWidget(radio_button)
 
     def on_button_clicked(self, button):
-        pass
-        # game_key = button.property('game_key')
-        # if game_key is not None:
-        #     print(f"Game Selection updated for {game_key}")
-        #     self.game_selected.emit(game_key)
-        # else:
-        #     print(f"No games found for {game_key}")
+        game_key = button.property('game_key')
+        sport = button.property('sport')
+        if game_key is not None and sport is not None:
+            print(f"Game Selection updated for {game_key}, sport: {sport}")
+            self.game_selected.emit(game_key, sport)
+        else:
+            print(f"No games found for {game_key}, {sport}")
