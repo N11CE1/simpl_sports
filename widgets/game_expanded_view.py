@@ -125,6 +125,7 @@ class GameExpandedView(QWidget):
             print(self.home, self.home_score, self.away, self.away_score)
         else:
             print(f"No game found for key {game_key}")
+            return
 
         self.home_team = TextImageText(self.home, "images/logo.png", self.home_score)
         self.vs = Image("images/logo.png")

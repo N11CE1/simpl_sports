@@ -9,6 +9,7 @@ from widgets.game_select import GameSelection as GameSelection
 from widgets.main_sport_select import SportSelection as SportSelection
 from widgets.game_expanded_view import GameExpandedView as GameExpandedView
 
+
 class MainMenu(QWidget):
 
     prefs_button_clicked = pyqtSignal()
@@ -25,7 +26,6 @@ class MainMenu(QWidget):
         self.main_layout = QHBoxLayout()
         self.setLayout(self.main_layout)
         self.set_main_layout()
-
 
     def set_main_layout(self):
         self.clear_layout(self.main_layout)
@@ -73,9 +73,3 @@ class MainMenu(QWidget):
     def emit_prefs_signal(self):
         print("preferences button clicked")
         self.prefs_button_clicked.emit()
-
-
-
-
-
-
