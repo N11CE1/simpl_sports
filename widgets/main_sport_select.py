@@ -1,5 +1,5 @@
 from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QButtonGroup
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QButtonGroup, QRadioButton
 from common import shared
 from buttons.radio_sports_button import RadioSportsButton
 
@@ -72,7 +72,7 @@ class SportSelection(QWidget):
         scroll_area.setWidget(container)
         self.sports_button_group = QButtonGroup()
         self.sports_button_group.setExclusive(True)
-        self.sports_button_group.buttonClicked.connect(self.on_button_clicked)
+        # self.sports_button_group.buttonToggled.connect(self.on_button_clicked)
         self.update_sports()
 
     def _create_styled_scroll_area(self):
@@ -93,13 +93,35 @@ class SportSelection(QWidget):
             if widget:
                 self.sports_button_group.removeButton(widget)
                 widget.deleteLater()
+
+        first_button = True
+        default_sport = None
+
         for sports in shared.user_preferences.sports_order.values():
             radio_button = RadioSportsButton(sports.upper())
             self.sports_button_group.addButton(radio_button)
             self.sports_buttons_layout.addWidget(radio_button)
 
-    def on_button_clicked(self, button):
-        sport = button.text
-        self.sport_selected.emit(sport)
+            radio_button.toggled.connect(self.on_button_toggled)
 
+            if first_button:
+                radio_button.setChecked(True)
+                default_sport = radio_button.text
+                first_button = False
+                self.sport_selected.emit(default_sport)
 
+        # if default_sport:
+        #     self.sport_selected.emit(default_sport)
+
+    def on_button_toggled(self, checked):
+        if checked:
+            button = self.sender()
+            sport = button.text
+            self.sport_selected.emit(sport)
+
+    def emit_current_sport(self):
+        checked_button = self.sports_button_group.checkedButton()
+        if checked_button:
+            sport = checked_button.text
+            print(f"Emitting sport_selected signal for current sport: {sport}")
+            self.sport_selected.emit(sport)

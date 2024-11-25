@@ -1,4 +1,3 @@
-# TODO: fix expanded view game selection logic
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup
 
@@ -77,7 +76,7 @@ class GameSelection(QWidget):
 
         self.games_button_group = QButtonGroup()
         self.games_button_group.setExclusive(True)
-        self.games_button_group.buttonClicked.connect(self.on_button_clicked)
+        # self.games_button_group.buttonClicked.connect(self.on_button_clicked)
 
     def update_games(self, sport):
         print(f"Game Selection updated for sport {sport}")
@@ -102,6 +101,8 @@ class GameSelection(QWidget):
             print(f"No games found for {sport}")
             return
 
+        first_game = None
+
         for game_key, game in sport_games.items():
             date = game.get("date", None)
             home = game.get("home", None)
@@ -120,11 +121,26 @@ class GameSelection(QWidget):
                 self.games_button_group.addButton(radio_button)
                 self.hbox.addWidget(radio_button)
 
-    def on_button_clicked(self, button):
-        game_key = button.property('game_key')
-        sport = button.property('sport')
-        if game_key is not None and sport is not None:
-            print(f"Game Selection updated for {game_key}, sport: {sport}")
-            self.game_selected.emit(game_key, sport)
-        else:
-            print(f"No games found for {game_key}, {sport}")
+                radio_button.toggled.connect(self.on_button_toggled)
+
+                if first_game is None:
+                    first_game = radio_button
+
+        if first_game is not None:
+            first_game.setChecked(True)
+            game_key = first_game.property("game_key")
+            sport = first_game.property("sport")
+            if game_key is not None and sport is not None:
+                print(f"Default game selected: {game_key}, sport: {sport}")
+                self.game_selected.emit(game_key, sport)
+
+    def on_button_toggled(self, checked):
+        if checked:
+            button = self.sender()
+            game_key = button.property('game_key')
+            sport = button.property('sport')
+            if game_key is not None and sport is not None:
+                print(f"Game Selection updated for {game_key}, sport: {sport}")
+                self.game_selected.emit(game_key, sport)
+            else:
+                print(f"No games found for {game_key}, {sport}")
