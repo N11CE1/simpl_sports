@@ -6,6 +6,10 @@ from buttons.radio_sports_button import RadioSportsButton
 
 class SportSelection(QWidget):
     sport_selected = pyqtSignal(str)
+    SPORT_DISPLAY_NAMES = {"EPL": "Premier League",
+                           "NBA": "NBA",
+                           "NFL": "NFL",
+                           "NHL": "NHL"}
     SCROLL_AREA_STYLE = """  
             QScrollArea {
             border: 2px solid #ccc;
@@ -79,7 +83,7 @@ class SportSelection(QWidget):
         scroll_area = QScrollArea()
         scroll_area.setWidgetResizable(True)
         scroll_area.setMaximumWidth(290)
-        scroll_area.setMaximumHeight(400)
+        scroll_area.setMaximumHeight(550)
         self._style_scroll_area(scroll_area)
         return scroll_area
 
@@ -98,7 +102,11 @@ class SportSelection(QWidget):
         default_sport = None
 
         for sports in shared.user_preferences.sports_order.values():
-            radio_button = RadioSportsButton(sports.upper())
+            internal_name = sports.upper()
+            display_name = self.SPORT_DISPLAY_NAMES.get(internal_name, internal_name)
+
+            radio_button = RadioSportsButton(display_name)
+            radio_button.setProperty("internal_name", internal_name)
             self.sports_button_group.addButton(radio_button)
             self.sports_buttons_layout.addWidget(radio_button)
 
@@ -106,18 +114,23 @@ class SportSelection(QWidget):
 
             if first_button:
                 radio_button.setChecked(True)
-                default_sport = radio_button.text
+                default_sport = internal_name
                 first_button = False
-                self.sport_selected.emit(default_sport)
 
-        # if default_sport:
-        #     self.sport_selected.emit(default_sport)
+        if default_sport:
+            print(f"Emitting sport_selected signal for {default_sport}")
+            self.sport_selected.emit(default_sport)
 
     def on_button_toggled(self, checked):
         if checked:
             button = self.sender()
-            sport = button.text
-            self.sport_selected.emit(sport)
+            display_name = button.text
+            internal_name = button.property("internal_name")
+            if internal_name:
+                print(f"sport selected: {internal_name} ({display_name})")
+                self.sport_selected.emit(internal_name)
+            else:
+                print(f"No internal name found for: {display_name}")
 
     def emit_current_sport(self):
         checked_button = self.sports_button_group.checkedButton()

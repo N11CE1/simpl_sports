@@ -48,7 +48,7 @@ class MainMenu(QWidget):
         self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
 
         self.sports_selection.emit_current_sport()
-        top_spacer = QSpacerItem(600, 20)
+        top_spacer = QSpacerItem(600, 0)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
         left_vbox.addWidget(self.sports_selection)
         spoiler_vbox.addWidget(spoilers_button)
@@ -62,6 +62,8 @@ class MainMenu(QWidget):
         right_vbox.addWidget(self.game_expanded_view)
         self.main_layout.addLayout(left_vbox)
         self.main_layout.addLayout(right_vbox)
+
+        self.sports_selection.emit_current_sport()
 
     def clear_layout(self, layout):
         while layout.count():
