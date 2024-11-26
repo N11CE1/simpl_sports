@@ -63,7 +63,7 @@ class GameSelection(QWidget):
         scroll_area = QScrollArea()
         scroll_area.setWidgetResizable(True)
         scroll_area.setFixedWidth(800)
-        scroll_area.setFixedHeight(195)
+        scroll_area.setFixedHeight(189)
         scroll_area.setStyleSheet(self.SCROLL_AREA_STYLE)
 
         self.main_layout.addWidget(scroll_area)

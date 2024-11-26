@@ -79,7 +79,7 @@ class SportSelection(QWidget):
         scroll_area = QScrollArea()
         scroll_area.setWidgetResizable(True)
         scroll_area.setMaximumWidth(290)
-        scroll_area.setMaximumHeight(400)
+        scroll_area.setMaximumHeight(500)
         self._style_scroll_area(scroll_area)
         return scroll_area
 

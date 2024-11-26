@@ -89,7 +89,7 @@ class GameExpandedView(QWidget):
         scroll_area = QScrollArea()
         scroll_area.setWidgetResizable(True)
         scroll_area.setFixedWidth(800)
-        scroll_area.setFixedHeight(400)
+        scroll_area.setFixedHeight(450)
         self._style_scroll_area(scroll_area)
         return scroll_area
 
