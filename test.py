@@ -1,7 +1,10 @@
 import sys
+
+from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 
 from labels.text_image_text import TextImageText
+from buttons.radio_sports_button import RadioSportsButton as RadioSportsButton
 
 
 class MainWindow(QWidget):
@@ -18,10 +21,10 @@ class MainWindow(QWidget):
         self.setLayout(layout)
 
         # Create a button widget
-        home_team = TextImageText("text", "images/logo.png", "text")
-
+        # home_team = TextImageText("text", "images/logo.png", "text")
+        sport_button = RadioSportsButton(text_label="EPL", logo="images/epl.png")
         # Add the button to the layout
-        layout.addWidget(home_team)
+        layout.addWidget(sport_button)
 
 
 def main():

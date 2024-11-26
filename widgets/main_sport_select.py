@@ -98,7 +98,7 @@ class SportSelection(QWidget):
         default_sport = None
 
         for sports in shared.user_preferences.sports_order.values():
-            radio_button = RadioSportsButton(sports.upper())
+            radio_button = RadioSportsButton(text_label=sports.upper(), logo=f"images/{sports}.png")
             self.sports_button_group.addButton(radio_button)
             self.sports_buttons_layout.addWidget(radio_button)
 
@@ -106,22 +106,20 @@ class SportSelection(QWidget):
 
             if first_button:
                 radio_button.setChecked(True)
-                default_sport = radio_button.text
+                default_sport = radio_button.text_label.text()
                 first_button = False
                 self.sport_selected.emit(default_sport)
-
-        # if default_sport:
-        #     self.sport_selected.emit(default_sport)
 
     def on_button_toggled(self, checked):
         if checked:
             button = self.sender()
-            sport = button.text
-            self.sport_selected.emit(sport)
+            if isinstance(button, RadioSportsButton):
+                sport = button.text_label.text()
+                self.sport_selected.emit(sport)
 
     def emit_current_sport(self):
         checked_button = self.sports_button_group.checkedButton()
         if checked_button:
-            sport = checked_button.text
+            sport = checked_button.text_label.text()
             print(f"Emitting sport_selected signal for current sport: {sport}")
             self.sport_selected.emit(sport)

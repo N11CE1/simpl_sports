@@ -2,7 +2,6 @@ import collections.abc
 
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea
-from labels.image_with_text import ImageWithText as ImageWithText
 from labels.image import Image as Image
 from labels.small_text import SmallText as SmallText
 from labels.text_image_text import TextImageText as TextImageText
