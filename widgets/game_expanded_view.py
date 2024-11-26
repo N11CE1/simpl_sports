@@ -142,3 +142,4 @@ class GameExpandedView(QWidget):
         self.stats.addWidget(self.stat2, 0, 1)
         self.stats.addWidget(self.stat3, 1, 0)
         self.stats.addWidget(self.stat4, 1, 1)
+        
