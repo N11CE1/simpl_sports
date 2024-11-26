@@ -1,3 +1,4 @@
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QFrame, QVBoxLayout, QLabel
 
 
@@ -12,18 +13,25 @@ class StatsLabel(QFrame):
             if arg_value is not None:
                 print(arg_name, arg_value)
                 label = QLabel(arg_value)
+                label.setAlignment(Qt.AlignCenter)
                 self.vert_box.addWidget(label)
+        self.vert_box.setAlignment(Qt.AlignCenter)
         self.setLayout(self.vert_box)
 
     @staticmethod
     def false_style():
         return """
-                    color: black;
-                    background-color: #F5F5F5;
-                    font: helvetica;
-                    font-size: 50px;
-                    border: 2px solid #D9D9D9;
-                    border-radius: 15px;
+                    QFrame{
+                        font: helvetica;
+                        border: 2px solid #D9D9D9;
+                        border-radius: 15px;
+                    }
+                    QLabel{
+                        color: black;
+                        background-color: white;
+                        font-size: 20px;
+                        border: none;
+                    }
 
 
                 """

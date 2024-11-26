@@ -137,7 +137,8 @@ class GameExpandedView(QWidget):
         self.stat1 = StatsLabel(title="Stat 1", line1="line1", line2="line2")
         self.stat2 = StatsLabel(title="Stat 2", line1="line1", line2="line2", line3="line3")
         self.stat3 = StatsLabel(title="Stat 3", line1="line1", line2="line2", line3="line3", line4="line4")
-        self.stat4 = StatsLabel(titles="Stat 4", line1="line1", line2="line2", line3="line3", line4="line4", line5="line5")
+        self.stat4 = StatsLabel(titles="Stat 4", line1="line1", line2="line2", line3="line3",
+                                line4="line4", line5="line5")
 
         self.stats.addWidget(self.stat1, 0, 0)
         self.stats.addWidget(self.stat2, 0, 1)
