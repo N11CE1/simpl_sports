@@ -19,7 +19,10 @@ class RadioSportsButton(ToggleButton):
 
     def get_text(self, text_label):
         self.text_label = QLabel(text_label)
-        self.text_label.setStyleSheet("font-size: 45px;")
+        self.text_label.setStyleSheet("""
+                                      color: black;
+                                      font-size: 45px;
+                                      """)
         spacer = QSpacerItem(20, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.horizontal_layout.addSpacerItem(spacer)
         self.horizontal_layout.addWidget(self.text_label)

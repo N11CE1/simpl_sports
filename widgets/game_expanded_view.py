@@ -7,6 +7,7 @@ from labels.small_text import SmallText as SmallText
 from labels.text_image_text import TextImageText as TextImageText
 from widgets.main_sport_select import SportSelection as MainSportSelection
 from common.shared import nba as nba, nfl as nfl, nhl as nhl, epl as epl
+from labels.stats_label import StatsLabel as StatsLabel
 
 
 class GameExpandedView(QWidget):
@@ -133,13 +134,12 @@ class GameExpandedView(QWidget):
         self.score_view.addWidget(self.vs)
         self.score_view.addWidget(self.away_team)
 
-        self.stat1 = SmallText("Stat 1")
-        self.stat2 = SmallText("Stat 2")
-        self.stat3 = SmallText("Stat 3")
-        self.stat4 = SmallText("Stat 4")
+        self.stat1 = StatsLabel(title="Stat 1", line1="line1", line2="line2")
+        self.stat2 = StatsLabel(title="Stat 2", line1="line1", line2="line2", line3="line3")
+        self.stat3 = StatsLabel(title="Stat 3", line1="line1", line2="line2", line3="line3", line4="line4")
+        self.stat4 = StatsLabel(titles="Stat 4", line1="line1", line2="line2", line3="line3", line4="line4", line5="line5")
 
         self.stats.addWidget(self.stat1, 0, 0)
         self.stats.addWidget(self.stat2, 0, 1)
         self.stats.addWidget(self.stat3, 1, 0)
         self.stats.addWidget(self.stat4, 1, 1)
-        
