@@ -32,6 +32,4 @@ class StatsLabel(QFrame):
                         font-size: 20px;
                         border: none;
                     }
-
-
                 """

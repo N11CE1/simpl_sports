@@ -8,6 +8,7 @@ from buttons.picture_button import PictureButton as PictureButton
 from widgets.game_select import GameSelection as GameSelection
 from widgets.main_sport_select import SportSelection as SportSelection
 from widgets.game_expanded_view import GameExpandedView as GameExpandedView
+from buttons.dropdown_button import DropDownButton as DropDownButton
 
 
 class MainMenu(QWidget):
@@ -36,6 +37,7 @@ class MainMenu(QWidget):
         spoiler_vbox = QVBoxLayout()
 
         logo = Image("images/logo.png")
+        week_selection = DropDownButton(week1="Week 1",week2="Week 2",week3="Week 3",week4="Week 4")
         spoilers_text = SmallText("Spoilers")
         spoilers_button = SpoilerToggle(x=42, y=22)
         prefs_button = PictureButton("images/settings.png", 48, 48, self.emit_prefs_signal)
@@ -48,11 +50,12 @@ class MainMenu(QWidget):
         self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
 
         self.sports_selection.emit_current_sport()
-        top_spacer = QSpacerItem(600, 0)
+        top_spacer = QSpacerItem(360, 0)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
         left_vbox.addWidget(self.sports_selection)
         spoiler_vbox.addWidget(spoilers_button)
         spoiler_vbox.addWidget(spoilers_text)
+        top_hbox.addWidget(week_selection)
         top_hbox.addSpacerItem(top_spacer)
         top_hbox.addLayout(spoiler_vbox)
         top_hbox.setAlignment(spoiler_vbox, Qt.AlignRight)
