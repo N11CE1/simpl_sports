@@ -1,0 +1,176 @@
+import time
+
+from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup
+
+from buttons.radio_game_button import RadioGameButton
+from common import shared
+from api import api_data_manager as adm
+
+class GameSelection(QWidget):
+    game_selected = pyqtSignal(str, str)
+    SCROLL_AREA_STYLE = """
+            QScrollArea {
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                background: transparent;
+                padding-bottom: 0px;
+            }
+            QScrollArea > QWidget > QWidget {
+                background: transparent;
+            }
+            QScrollBar:vertical {
+                border: none;
+                background: transparent;
+                padding: 0px;
+                margin: 0px;
+            }
+            QScrollBar:horizontal {
+                height: 10px;
+                background: transparent;
+                border-radius: 4px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+            }
+            QScrollBar::handle:horizontal {
+                background: #888;
+                min-height: 6px;
+                border-radius: 3px;
+            }
+            QScrollBar::handle:horizontal:hover {
+                background: #666;
+            }
+            QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal,
+            QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal,
+            QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal,
+            QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+            background: transparent;
+            background-color: transparent;
+            background-image: none;
+            border: none;
+            width: 0px;
+            height: 0px;
+            margin: 0px;
+            padding: 0px;
+            }
+            """
+
+    def __init__(self):
+        super().__init__()
+        self.setStyleSheet("background: transparent;")
+        self.main_layout = QHBoxLayout()
+        self.setLayout(self.main_layout)
+
+        scroll_area = QScrollArea()
+        scroll_area.setWidgetResizable(True)
+        scroll_area.setFixedWidth(800)
+        scroll_area.setFixedHeight(189)
+        scroll_area.setStyleSheet(self.SCROLL_AREA_STYLE)
+
+        self.main_layout.addWidget(scroll_area)
+
+        container = QWidget(self)
+        self.hbox = QHBoxLayout()
+        container.setLayout(self.hbox)
+
+        scroll_area.setWidget(container)
+
+        self.games_button_group = QButtonGroup()
+        self.games_button_group.setExclusive(True)
+        # self.games_button_group.buttonClicked.connect(self.on_button_clicked)
+
+
+    def update_games(self, sport):
+        print(f"Game Selection updated for sport {sport}")
+        if sport is None:
+            print("No sport specified")
+            return
+
+        while self.hbox.count():
+            item = self.hbox.takeAt(0)
+            widget = item.widget()
+            if widget:
+                self.games_button_group.removeButton(widget)
+                widget.deleteLater()
+
+        ## Original code
+        # sport_games = None
+        # for sport_dict in shared.test_games:
+        #     if sport in sport_dict:
+        #         sport_games = sport_dict[sport]
+        #         break
+        ## End original code
+
+        sport_games = adm.scheduled_games(sport)
+
+        if sport_games is None:
+            print(f"No games found for {sport}")
+            return
+
+        first_game = None
+
+        ## Original code
+        # for game_key, game in sport_games.items():
+        #     date = game.get("date", None)
+        #     home = game.get("home", None)
+        #     home_score = game.get("home_score", None)
+        #     away = game.get("away", None)
+        #     away_score = game.get("away_score", None)
+        #     time = game.get("time", None)
+        #
+        #     if time is not None:
+        #         radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
+        #                                        away=away, away_score=away_score, time=time)
+        #
+        #         radio_button.setProperty("sport", sport)
+        #         radio_button.setProperty("game_key", game_key)
+        #
+        #         self.games_button_group.addButton(radio_button)
+        #         self.hbox.addWidget(radio_button)
+        #
+        #         radio_button.toggled.connect(self.on_button_toggled)
+        ## Original code
+
+        for game_key, game in sport_games.items():
+            game_id = game["game_id"]
+            date = game.get("date")
+            home = game.get("home")
+            home_score = game.get("home_score")
+            away = game.get("away")
+            away_score = game.get("away_score")
+            status = game.get("status")
+
+            if status is not None:
+                radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
+                                               away=away, away_score=away_score, time=status)
+                radio_button.setProperty("sport", sport)
+                radio_button.setProperty("game_key", str(game_id))
+
+                self.games_button_group.addButton(radio_button)
+                self.hbox.addWidget(radio_button)
+
+                radio_button.toggled.connect(self.on_button_toggled)
+
+                if first_game is None:
+                    first_game = radio_button
+
+        if first_game is not None:
+
+            first_game.setChecked(True)
+            game_key = first_game.property("game_key")
+            sport = first_game.property("sport")
+            if game_key is not None and sport is not None:
+                print(f"Default game selected: {game_key}, sport: {sport}")
+                self.game_selected.emit(game_key, sport)
+
+    def on_button_toggled(self, checked):
+        if checked:
+            button = self.sender()
+            game_key = button.property('game_key')
+            sport = button.property('sport')
+            if game_key is not None and sport is not None:
+                print(f"Game Selection updated for {game_key}, sport: {sport}")
+                self.game_selected.emit(game_key, sport)
+            else:
+                print(f"No games found for {game_key}, {sport}")
