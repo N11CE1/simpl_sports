@@ -31,5 +31,6 @@ def sport_select():
 
 def add_sport_button(sports_grid, sport_key, sport_name, position):
     action = lambda checked: set_sport(checked, sport_key)
-    sport_button = SportsButton(sport_key, sport_name, action)
+    # print(sport_key)
+    sport_button = SportsButton(sport_key, sport_name, action, f"images/{sport_key}.png")
     sports_grid.addWidget(sport_button, *position)

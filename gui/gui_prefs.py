@@ -39,6 +39,12 @@ class PreferencesSelection(QWidget):
         sports_widget = sport_select()
         question = CustomLabel("What sports do you want to follow?", 40, "black")
         question.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        question.setStyleSheet("""
+                font-size: 30px;
+                border: 2px #D9D9D9;
+                border-radius: 10px;
+            """)
+        # question.setFixedSize(200, 200)
         self.not_enough = CustomLabel("You need to select at least 2 sports", 40, "black")
         self.not_enough.setStyleSheet("""
                                  color: transparent;
@@ -80,9 +86,9 @@ class PreferencesSelection(QWidget):
         self.clear_layout(self.main_layout)
 
         order_text = CustomLabel("Order your selected sport"
-                                        "\nfrom most to least important", 40)
+                                        "\nfrom most to least important", 30)
         spoiler_text = CustomLabel("Do you want spoilers"
-                                          "\nenabled for live games?", 40)
+                                          "\nenabled for live games?", 30)
 
         selected_items = self.get_selected_sports()
         self.order_list = OrderList(selected_items)
@@ -114,17 +120,23 @@ class PreferencesSelection(QWidget):
         self.spoiler_button_group.addButton(spoiler_off)
 
         self.left_vbox = QVBoxLayout()
+        left_vbox_spacer1 = QSpacerItem(0, 20)
+        self.left_vbox.addSpacerItem(left_vbox_spacer1)
         self.left_vbox.addWidget(order_text, alignment=(Qt.AlignTop | Qt.AlignHCenter))
+        left_vbox_spacer2 = QSpacerItem(0, 40)
+        self.left_vbox.addSpacerItem(left_vbox_spacer2)
         self.left_vbox.addWidget(self.order_list, alignment=Qt.AlignCenter)
 
         self.right_vbox = QVBoxLayout()
-        right_vbox_spacer1 = QSpacerItem(0, 120)
-        self.right_vbox.addWidget(spoiler_text, alignment=(Qt.AlignTop | Qt.AlignHCenter))
+        right_vbox_spacer1 = QSpacerItem(0, 20)
         self.right_vbox.addSpacerItem(right_vbox_spacer1)
-        self.right_vbox.addWidget(spoiler_on, alignment=Qt.AlignCenter)
-        self.right_vbox.addWidget(spoiler_off, alignment=Qt.AlignCenter)
+        self.right_vbox.addWidget(spoiler_text, alignment=(Qt.AlignTop | Qt.AlignHCenter))
         right_vbox_spacer2 = QSpacerItem(0, 120)
         self.right_vbox.addSpacerItem(right_vbox_spacer2)
+        self.right_vbox.addWidget(spoiler_on, alignment=Qt.AlignCenter)
+        self.right_vbox.addWidget(spoiler_off, alignment=Qt.AlignCenter)
+        right_vbox_spacer3 = QSpacerItem(0, 120)
+        self.right_vbox.addSpacerItem(right_vbox_spacer3)
 
         self.hbox = QHBoxLayout()
         self.hbox.addLayout(self.left_vbox)
