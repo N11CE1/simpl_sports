@@ -1,0 +1,28 @@
+{
+	"leagues": [
+		{
+			"short_name": "NBA",
+			"name": "NATIONAL BASKETBALL ASSOCIATION",
+			"badge": "https://www.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png",
+			"sportsdb_id": "NBA"
+		},
+		{
+			"short_name": "NFL",
+			"name": "NATIONAL FOOTBALL LEAGUE",
+			"badge": "https://www.thesportsdb.com/images/media/league/badge/g85fqz1662057187.png",
+			"sportsdb_id": "NFL"
+		},
+		{
+			"short_name": "NHL",
+			"name": "National Hockey League",
+			"badge": "https://www.thesportsdb.com/images/media/league/badge/4cem2k1619616539.png",
+			"sportsdb_id": "NHL"
+		},
+		{
+			"short_name": "EPL",
+			"name": "English Premier League",
+			"badge": "https://www.thesportsdb.com/images/media/league/badge/dsnjpz1679951317.png",
+			"sportsdb_id": "ENGLISH_PREMIER_LEAGUE"
+		}
+	]
+}

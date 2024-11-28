@@ -13,11 +13,14 @@ from common import shared
 from prefs import write_on_exit
 from common.shared import user_preferences
 
+from api import initialize_new_installed_app as new_app
+from api import data_operations as do
 
 class MainWindow(QMainWindow):
     def __init__(self):
         # Inheriting from the superclass
         super().__init__()
+
         # Setting window name and size
         self.setWindowTitle('Simpl Sports')
         self.setFixedSize(1200, 800)
@@ -26,6 +29,12 @@ class MainWindow(QMainWindow):
 
         self.central_widget = QStackedWidget()
         self.setCentralWidget(self.central_widget)
+
+        ## Initialize database when very first run of app
+        do.initialize_tables()
+        if len(do.get_leagues()) == 0:
+            initialize_window = new_app.LoadingWindow()
+            initialize_window.exec()
 
         self.prefs_ui = gui_prefs.PreferencesSelection()
         self.main_ui = gui_main.MainMenu()
@@ -40,6 +49,8 @@ class MainWindow(QMainWindow):
 
         # Window centering method
         self.center()
+
+
 
     def center(self):
         # fetching the screen's geometry

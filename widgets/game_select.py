@@ -1,12 +1,14 @@
+import time
+
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup
 
 from buttons.radio_game_button import RadioGameButton
 from common import shared
-
+from api import api_data_manager as adm
 
 class GameSelection(QWidget):
-    game_selected = pyqtSignal(int, str)
+    game_selected = pyqtSignal(str, str)
     SCROLL_AREA_STYLE = """
             QScrollArea {
                 border: 2px solid #ccc;
@@ -78,6 +80,7 @@ class GameSelection(QWidget):
         self.games_button_group.setExclusive(True)
         # self.games_button_group.buttonClicked.connect(self.on_button_clicked)
 
+
     def update_games(self, sport):
         print(f"Game Selection updated for sport {sport}")
         if sport is None:
@@ -91,11 +94,15 @@ class GameSelection(QWidget):
                 self.games_button_group.removeButton(widget)
                 widget.deleteLater()
 
-        sport_games = None
-        for sport_dict in shared.test_games:
-            if sport in sport_dict:
-                sport_games = sport_dict[sport]
-                break
+        ## Original code
+        # sport_games = None
+        # for sport_dict in shared.test_games:
+        #     if sport in sport_dict:
+        #         sport_games = sport_dict[sport]
+        #         break
+        ## End original code
+
+        sport_games = adm.scheduled_games(sport)
 
         if sport_games is None:
             print(f"No games found for {sport}")
@@ -103,20 +110,42 @@ class GameSelection(QWidget):
 
         first_game = None
 
+        ## Original code
+        # for game_key, game in sport_games.items():
+        #     date = game.get("date", None)
+        #     home = game.get("home", None)
+        #     home_score = game.get("home_score", None)
+        #     away = game.get("away", None)
+        #     away_score = game.get("away_score", None)
+        #     time = game.get("time", None)
+        #
+        #     if time is not None:
+        #         radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
+        #                                        away=away, away_score=away_score, time=time)
+        #
+        #         radio_button.setProperty("sport", sport)
+        #         radio_button.setProperty("game_key", game_key)
+        #
+        #         self.games_button_group.addButton(radio_button)
+        #         self.hbox.addWidget(radio_button)
+        #
+        #         radio_button.toggled.connect(self.on_button_toggled)
+        ## Original code
+
         for game_key, game in sport_games.items():
-            date = game.get("date", None)
-            home = game.get("home", None)
-            home_score = game.get("home_score", None)
-            away = game.get("away", None)
-            away_score = game.get("away_score", None)
-            time = game.get("time", None)
+            game_id = game["game_id"]
+            date = game.get("date")
+            home = game.get("home")
+            home_score = game.get("home_score")
+            away = game.get("away")
+            away_score = game.get("away_score")
+            status = game.get("status")
 
-            if time is not None:
+            if status is not None:
                 radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
-                                               away=away, away_score=away_score, time=time)
-
+                                               away=away, away_score=away_score, time=status)
                 radio_button.setProperty("sport", sport)
-                radio_button.setProperty("game_key", game_key)
+                radio_button.setProperty("game_key", str(game_id))
 
                 self.games_button_group.addButton(radio_button)
                 self.hbox.addWidget(radio_button)
@@ -127,6 +156,7 @@ class GameSelection(QWidget):
                     first_game = radio_button
 
         if first_game is not None:
+
             first_game.setChecked(True)
             game_key = first_game.property("game_key")
             sport = first_game.property("sport")

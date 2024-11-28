@@ -1,0 +1,68 @@
+{
+	"date": "2024-11-24",
+	"league": {
+		"id": "fd560107-a85b-4388-ab0d-655ad022aff7",
+		"name": "NHL",
+		"alias": "NHL"
+	},
+	"games": [
+		{
+			"id": "2d44778f-e868-4db1-918c-7d6d68fa9d74",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-25T00:00:00Z",
+			"home_points": 3,
+			"away_points": 2,
+			"sr_id": "sr:match:51246385",
+			"reference": "20333",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Mountain"
+			},
+			"venue": {
+				"id": "a84c7004-18b2-4c5d-a036-f0c368c08bc5",
+				"name": "Scotiabank Arena",
+				"capacity": 18819,
+				"address": "40 Bay Street",
+				"city": "Toronto",
+				"state": "ON",
+				"zip": "M5J 2X2",
+				"country": "CAN",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:6030",
+				"location": {
+					"lat": "43.64362911290751",
+					"lng": "-79.37914181738135"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "NHL Network",
+					"type": "TV",
+					"locale": "National",
+					"channel": "215"
+				},
+				{
+					"network": "Utah16",
+					"type": "TV",
+					"locale": "Away"
+				}
+			],
+			"home": {
+				"id": "441730a9-0f24-11e2-8525-18a905767e44",
+				"name": "Toronto Maple Leafs",
+				"alias": "TOR",
+				"sr_id": "sr:team:3693",
+				"reference": "10"
+			},
+			"away": {
+				"id": "715a1dba-4e9f-4158-8346-3473b6e3557f",
+				"name": "Utah Hockey Club",
+				"alias": "UTA",
+				"sr_id": "sr:team:1148725",
+				"reference": "59"
+			}
+		}
+	]
+}

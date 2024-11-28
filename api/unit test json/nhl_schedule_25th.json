@@ -1,0 +1,706 @@
+{
+	"date": "2024-11-25",
+	"league": {
+		"id": "fd560107-a85b-4388-ab0d-655ad022aff7",
+		"name": "NHL",
+		"alias": "NHL"
+	},
+	"games": [
+		{
+			"id": "3d2a76f5-f2d4-4b41-91fe-b6c96b72cccf",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:00:00Z",
+			"home_points": 5,
+			"away_points": 2,
+			"sr_id": "sr:match:51246391",
+			"reference": "20336",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Central"
+			},
+			"venue": {
+				"id": "c970f791-c3bf-411e-89c6-952695afd414",
+				"name": "Prudential Center",
+				"capacity": 16514,
+				"address": "25 Lafayette Street",
+				"city": "Newark",
+				"state": "NJ",
+				"zip": "07102",
+				"country": "USA",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:6048",
+				"location": {
+					"lat": "40.73380931921417",
+					"lng": "-74.17104444444301"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "MSGSN",
+					"type": "TV",
+					"locale": "Home",
+					"channel": "635"
+				},
+				{
+					"network": "FDSSO",
+					"type": "TV",
+					"locale": "Away",
+					"channel": "646-1"
+				}
+			],
+			"home": {
+				"id": "44174b0c-0f24-11e2-8525-18a905767e44",
+				"name": "New Jersey Devils",
+				"alias": "NJ",
+				"sr_id": "sr:team:3704",
+				"reference": "1"
+			},
+			"away": {
+				"id": "441643b7-0f24-11e2-8525-18a905767e44",
+				"name": "Nashville Predators",
+				"alias": "NSH",
+				"sr_id": "sr:team:3705",
+				"reference": "18"
+			}
+		},
+		{
+			"id": "3ecfb542-3573-445e-a79e-536fa3d5308d",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:00:00Z",
+			"home_points": 4,
+			"away_points": 5,
+			"sr_id": "sr:match:51246395",
+			"reference": "20338",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Pacific"
+			},
+			"venue": {
+				"id": "0a162e5b-8d59-42d8-b173-a131bf632ffb",
+				"name": "Wells Fargo Center",
+				"capacity": 19543,
+				"address": "3601 S Broad Street",
+				"city": "Philadelphia",
+				"state": "PA",
+				"zip": "19148",
+				"country": "USA",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:6068",
+				"location": {
+					"lat": "39.90112",
+					"lng": "-75.17196"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "NBCS-PH",
+					"type": "TV",
+					"locale": "Home"
+				},
+				{
+					"network": "SCRIPPS",
+					"type": "TV",
+					"locale": "Away"
+				}
+			],
+			"home": {
+				"id": "44179d47-0f24-11e2-8525-18a905767e44",
+				"name": "Philadelphia Flyers",
+				"alias": "PHI",
+				"sr_id": "sr:team:3699",
+				"reference": "4"
+			},
+			"away": {
+				"id": "42376e1c-6da8-461e-9443-cfcf0a9fcc4d",
+				"name": "Vegas Golden Knights",
+				"alias": "VGK",
+				"sr_id": "sr:team:344158",
+				"reference": "54"
+			}
+		},
+		{
+			"id": "453c6a76-85f9-4377-9cb7-6e7064108957",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:00:00Z",
+			"home_points": 6,
+			"away_points": 4,
+			"sr_id": "sr:match:51246397",
+			"reference": "20339",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Central"
+			},
+			"venue": {
+				"id": "1ea58cb6-6a28-4619-b010-747ecbc30aa7",
+				"name": "Lenovo Center",
+				"capacity": 18680,
+				"address": "1400 Edwards Mill Road",
+				"city": "Raleigh",
+				"state": "NC",
+				"zip": "27607",
+				"country": "USA",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:5956",
+				"location": {
+					"lat": "35.80345079214118",
+					"lng": "-78.72182325990354"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "Victory+",
+					"type": "Internet",
+					"locale": "Away"
+				},
+				{
+					"network": "FDSSO",
+					"type": "TV",
+					"locale": "Home",
+					"channel": "646-1"
+				}
+			],
+			"home": {
+				"id": "44182a9d-0f24-11e2-8525-18a905767e44",
+				"name": "Carolina Hurricanes",
+				"alias": "CAR",
+				"sr_id": "sr:team:3680",
+				"reference": "12"
+			},
+			"away": {
+				"id": "44157522-0f24-11e2-8525-18a905767e44",
+				"name": "Dallas Stars",
+				"alias": "DAL",
+				"sr_id": "sr:team:3684",
+				"reference": "25"
+			}
+		},
+		{
+			"id": "c256a78a-b5e5-4dc7-8e43-f27da4d4784f",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:00:00Z",
+			"home_points": 1,
+			"away_points": 4,
+			"sr_id": "sr:match:51246389",
+			"reference": "20335",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Eastern"
+			},
+			"venue": {
+				"id": "7cc8e88f-9196-4dbc-aa6a-d6f1a0550673",
+				"name": "Amerant Bank Arena",
+				"capacity": 19250,
+				"address": "1 Panther Parkway",
+				"city": "Sunrise",
+				"state": "FL",
+				"zip": "33323",
+				"country": "USA",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:6004",
+				"location": {
+					"lat": "26.15847",
+					"lng": "-80.32555"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "SCRIPPS",
+					"type": "TV",
+					"locale": "Home"
+				},
+				{
+					"network": "MNMT",
+					"type": "TV",
+					"locale": "Away",
+					"channel": "642"
+				}
+			],
+			"home": {
+				"id": "4418464d-0f24-11e2-8525-18a905767e44",
+				"name": "Florida Panthers",
+				"alias": "FLA",
+				"sr_id": "sr:team:3687",
+				"reference": "13"
+			},
+			"away": {
+				"id": "4417eede-0f24-11e2-8525-18a905767e44",
+				"name": "Washington Capitals",
+				"alias": "WSH",
+				"sr_id": "sr:team:3691",
+				"reference": "15"
+			}
+		},
+		{
+			"id": "e488576b-196d-4868-a82c-c719c54643a9",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:00:00Z",
+			"home_points": 2,
+			"away_points": 5,
+			"sr_id": "sr:match:51246393",
+			"reference": "20337",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Central"
+			},
+			"venue": {
+				"id": "bd8053e4-3bdf-4a70-914f-9f6d0051d66d",
+				"name": "Madison Square Garden",
+				"capacity": 18006,
+				"address": "4 Pennsylvania Plaza",
+				"city": "New York",
+				"state": "NY",
+				"zip": "10001",
+				"country": "USA",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:6054",
+				"location": {
+					"lat": "40.75046",
+					"lng": "-73.99344"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "MSG",
+					"type": "TV",
+					"locale": "Away",
+					"channel": "634"
+				},
+				{
+					"network": "FDSMW",
+					"type": "TV",
+					"locale": "Away",
+					"channel": "671"
+				}
+			],
+			"home": {
+				"id": "441781b9-0f24-11e2-8525-18a905767e44",
+				"name": "New York Rangers",
+				"alias": "NYR",
+				"sr_id": "sr:team:3701",
+				"reference": "3"
+			},
+			"away": {
+				"id": "441660ea-0f24-11e2-8525-18a905767e44",
+				"name": "St. Louis Blues",
+				"alias": "STL",
+				"sr_id": "sr:team:3695",
+				"reference": "19"
+			}
+		},
+		{
+			"id": "f025c4bd-db5f-4637-9c5f-0c98082281d4",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:00:00Z",
+			"home_points": 8,
+			"away_points": 2,
+			"sr_id": "sr:match:51246387",
+			"reference": "20334",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Mountain"
+			},
+			"venue": {
+				"id": "05aa49b2-f72d-4d42-ab30-f219d32ed97b",
+				"name": "Amalie Arena",
+				"capacity": 19092,
+				"address": "401 Channelside Drive",
+				"city": "Tampa",
+				"state": "FL",
+				"zip": "33602",
+				"country": "USA",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:6036",
+				"location": {
+					"lat": "27.94267",
+					"lng": "-82.45176"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "ALT2",
+					"type": "TV",
+					"locale": "Away",
+					"channel": "681-1"
+				},
+				{
+					"network": "FDSSUN",
+					"type": "TV",
+					"locale": "Home",
+					"channel": "653"
+				}
+			],
+			"home": {
+				"id": "4417d3cb-0f24-11e2-8525-18a905767e44",
+				"name": "Tampa Bay Lightning",
+				"alias": "TB",
+				"sr_id": "sr:team:3694",
+				"reference": "14"
+			},
+			"away": {
+				"id": "4415ce44-0f24-11e2-8525-18a905767e44",
+				"name": "Colorado Avalanche",
+				"alias": "COL",
+				"sr_id": "sr:team:3682",
+				"reference": "21"
+			}
+		},
+		{
+			"id": "2b5a8a3a-ed31-4900-904f-afc4f400c74f",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:30:00Z",
+			"home_points": 2,
+			"away_points": 4,
+			"sr_id": "sr:match:51246401",
+			"reference": "20341",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Eastern"
+			},
+			"venue": {
+				"id": "e256f8f5-5469-43b0-a95e-8d3adb3cb7ee",
+				"name": "UBS Arena",
+				"capacity": 17113,
+				"address": "2150 Hempstead Turnpike",
+				"city": "Belmont Park",
+				"state": "NY",
+				"zip": "11003",
+				"country": "USA",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:59880",
+				"location": {
+					"lat": "40.71180",
+					"lng": "-73.72587"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "MSGSN2",
+					"type": "TV",
+					"locale": "Home",
+					"channel": "635-2"
+				},
+				{
+					"network": "FDSDET",
+					"type": "TV",
+					"locale": "Away",
+					"channel": "663"
+				}
+			],
+			"home": {
+				"id": "441766b9-0f24-11e2-8525-18a905767e44",
+				"name": "New York Islanders",
+				"alias": "NYI",
+				"sr_id": "sr:team:3703",
+				"reference": "2"
+			},
+			"away": {
+				"id": "44169bb9-0f24-11e2-8525-18a905767e44",
+				"name": "Detroit Red Wings",
+				"alias": "DET",
+				"sr_id": "sr:team:3685",
+				"reference": "17"
+			}
+		},
+		{
+			"id": "b0f190a1-2c5e-4e67-bf92-c058c67030b4",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T00:30:00Z",
+			"home_points": 4,
+			"away_points": 3,
+			"sr_id": "sr:match:51246399",
+			"reference": "20340",
+			"time_zones": {
+				"venue": "US/Eastern",
+				"home": "US/Eastern",
+				"away": "US/Mountain"
+			},
+			"venue": {
+				"id": "e1e675a3-9c13-48b3-9e22-4c063dd9905d",
+				"name": "Canadian Tire Centre",
+				"capacity": 18572,
+				"address": "1000 Palladium Drive",
+				"city": "Ottawa",
+				"state": "ON",
+				"zip": "K2V 1A5",
+				"country": "CAN",
+				"time_zone": "US/Eastern",
+				"sr_id": "sr:venue:6066",
+				"location": {
+					"lat": "45.29703",
+					"lng": "-75.92677"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				}
+			],
+			"home": {
+				"id": "4416f5e2-0f24-11e2-8525-18a905767e44",
+				"name": "Ottawa Senators",
+				"alias": "OTT",
+				"sr_id": "sr:team:3700",
+				"reference": "9"
+			},
+			"away": {
+				"id": "44159241-0f24-11e2-8525-18a905767e44",
+				"name": "Calgary Flames",
+				"alias": "CGY",
+				"sr_id": "sr:team:3679",
+				"reference": "20"
+			}
+		},
+		{
+			"id": "8a1ec728-d147-4fee-91d2-0e17e03989f8",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T01:00:00Z",
+			"home_points": 1,
+			"away_points": 4,
+			"sr_id": "sr:match:51246403",
+			"reference": "20342",
+			"time_zones": {
+				"venue": "US/Central",
+				"home": "US/Central",
+				"away": "US/Central"
+			},
+			"venue": {
+				"id": "7e6f808b-eff8-42fd-a8e2-d35219f565bd",
+				"name": "Xcel Energy Center",
+				"capacity": 18064,
+				"address": "199 W Kellogg Boulevard",
+				"city": "St. Paul",
+				"state": "MN",
+				"zip": "55102",
+				"country": "USA",
+				"time_zone": "US/Central",
+				"sr_id": "sr:venue:6020",
+				"location": {
+					"lat": "44.94478",
+					"lng": "-93.10118"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "FDSN",
+					"type": "TV",
+					"locale": "Home",
+					"channel": "668"
+				},
+				{
+					"network": "FDSWI",
+					"type": "TV",
+					"locale": "Home",
+					"channel": "669"
+				}
+			],
+			"home": {
+				"id": "4416091c-0f24-11e2-8525-18a905767e44",
+				"name": "Minnesota Wild",
+				"alias": "MIN",
+				"sr_id": "sr:team:3689",
+				"reference": "30"
+			},
+			"away": {
+				"id": "44180e55-0f24-11e2-8525-18a905767e44",
+				"name": "Winnipeg Jets",
+				"alias": "WPG",
+				"sr_id": "sr:team:3676",
+				"reference": "52"
+			}
+		},
+		{
+			"id": "1160f580-ba7e-4e38-8a2a-7616530cd4fa",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T03:00:00Z",
+			"home_points": 2,
+			"away_points": 3,
+			"sr_id": "sr:match:51246405",
+			"reference": "20343",
+			"time_zones": {
+				"venue": "US/Pacific",
+				"home": "US/Pacific",
+				"away": "US/Pacific"
+			},
+			"venue": {
+				"id": "eb3866a7-4163-4517-bd42-d24e8c2522fe",
+				"name": "Honda Center",
+				"capacity": 17174,
+				"address": "2695 E Katella Avenue",
+				"city": "Anaheim",
+				"state": "CA",
+				"zip": "92806",
+				"country": "USA",
+				"time_zone": "US/Pacific",
+				"sr_id": "sr:venue:5934",
+				"location": {
+					"lat": "33.80785",
+					"lng": "-117.87654"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "Victory+",
+					"type": "Internet",
+					"locale": "Home"
+				},
+				{
+					"network": "KCOP-TV",
+					"type": "TV",
+					"locale": "Home"
+				},
+				{
+					"network": "KHN",
+					"type": "TV",
+					"locale": "Away"
+				},
+				{
+					"network": "KONG",
+					"type": "TV",
+					"locale": "Away"
+				}
+			],
+			"home": {
+				"id": "441862de-0f24-11e2-8525-18a905767e44",
+				"name": "Anaheim Ducks",
+				"alias": "ANA",
+				"sr_id": "sr:team:3675",
+				"reference": "24"
+			},
+			"away": {
+				"id": "1fb48e65-9688-4084-8868-02173525c3e1",
+				"name": "Seattle Kraken",
+				"alias": "SEA",
+				"sr_id": "sr:team:794340",
+				"reference": "55"
+			}
+		},
+		{
+			"id": "494bf6b3-2fbe-487a-b313-c1a247dce689",
+			"status": "closed",
+			"coverage": "full",
+			"scheduled": "2024-11-26T03:30:00Z",
+			"home_points": 7,
+			"away_points": 2,
+			"sr_id": "sr:match:51246407",
+			"reference": "20344",
+			"time_zones": {
+				"venue": "US/Pacific",
+				"home": "US/Pacific",
+				"away": "US/Pacific"
+			},
+			"venue": {
+				"id": "1da65282-af4c-4b81-a9de-344b76bb20b0",
+				"name": "SAP Center at San Jose",
+				"capacity": 17562,
+				"address": "525 W Santa Clara Street",
+				"city": "San Jose",
+				"state": "CA",
+				"zip": "95113",
+				"country": "USA",
+				"time_zone": "US/Pacific",
+				"sr_id": "sr:venue:6046",
+				"location": {
+					"lat": "37.33310526417009",
+					"lng": "-121.90202205986886"
+				}
+			},
+			"broadcasts": [
+				{
+					"network": "ESPN+",
+					"type": "Internet",
+					"locale": "National"
+				},
+				{
+					"network": "NBCS-CA",
+					"type": "TV",
+					"locale": "Home",
+					"channel": "698"
+				},
+				{
+					"network": "FDSW",
+					"type": "TV",
+					"locale": "Away",
+					"channel": "692"
+				}
+			],
+			"home": {
+				"id": "44155909-0f24-11e2-8525-18a905767e44",
+				"name": "San Jose Sharks",
+				"alias": "SJ",
+				"sr_id": "sr:team:3696",
+				"reference": "28"
+			},
+			"away": {
+				"id": "44151f7a-0f24-11e2-8525-18a905767e44",
+				"name": "Los Angeles Kings",
+				"alias": "LA",
+				"sr_id": "sr:team:3688",
+				"reference": "26"
+			}
+		}
+	]
+}
