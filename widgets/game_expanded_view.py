@@ -6,7 +6,7 @@ from labels.image import Image as Image
 from labels.small_text import SmallText as SmallText
 from labels.text_image_text import TextImageText as TextImageText
 from widgets.main_sport_select import SportSelection as MainSportSelection
-from common.shared import nba as nba, nfl as nfl, nhl as nhl, epl as epl
+from common.shared import nba as nba, nfl as nfl, nhl as nhl
 from labels.stats_label import StatsLabel as StatsLabel
 
 
@@ -67,7 +67,7 @@ class GameExpandedView(QWidget):
     def __init__(self):
         super().__init__()
         self.setStyleSheet("background: transparent;")
-        self.sport = epl
+        self.sport = nba
         self.game_key = 0
         self.home = None
         self.home_score = None
@@ -100,7 +100,7 @@ class GameExpandedView(QWidget):
     def update_game(self, game_key, sport_name):
         print(f"game_key = {game_key}, sport = {sport_name}")
 
-        sport_map = {"nba": nba, "nfl": nfl, "nhl": nhl, "epl": epl}
+        sport_map = {"nba": nba, "nfl": nfl, "nhl": nhl}
         sport = sport_map.get(sport_name.lower())
         if sport is None:
             print(f"Sport {sport_name} is unknown")

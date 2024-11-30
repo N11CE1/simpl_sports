@@ -7,8 +7,7 @@ MARGIN_SIZE = 100
 SPORTS_AND_POSITIONS = [
     ("nba", "NBA", (0, 0)),
     ("nfl", "NFL", (0, 1)),
-    ("nhl", "NHL", (1, 0)),
-    ("epl", "EPL", (1, 1))
+    ("nhl", "NHL", (0, 2))
 ]
 
 
