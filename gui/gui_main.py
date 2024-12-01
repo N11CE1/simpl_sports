@@ -54,8 +54,8 @@ class MainMenu(QWidget):
 
         self.sports_selection.sport_selected.connect(self.game_selection.update_games)
         self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
-        spoilers_button.spoiler_toggled.connect(self.game_selection.spoiler_toggled)
-        spoilers_button.spoiler_toggled.connect(self.game_expanded_view.spoiler_toggled)
+        # spoilers_button.spoiler_toggled.connect(self.game_selection.spoiler_toggled)
+        # spoilers_button.spoiler_toggled.connect(self.game_expanded_view.spoiler_toggled)
 
         self.sports_selection.emit_current_sport()
         top_spacer = QSpacerItem(360, 0)

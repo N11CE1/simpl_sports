@@ -85,11 +85,11 @@ def scheduled_games(sport):
         current_directory = os.path.dirname(os.path.realpath(__file__))
         if os.path.exists(os.path.join(current_directory, r"unit test json")) and os.path.isdir(os.path.join(current_directory, r"unit test json")):
             if sport == ac.app_leagues[0]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nba_schedule_24th.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nba_schedule_24th.json")
             elif sport == ac.app_leagues[1]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nfl_schedule_22-26.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nfl_schedule_22-26.json")
             elif sport == ac.app_leagues[2]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nhl_schedule_25th.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nhl_schedule_25th.json")
             elif sport == ac.app_leagues[3]:
                 json_file_path = ''
             else:
@@ -227,11 +227,11 @@ def game_box_score(game_id, sport):
                 os.path.join(current_directory, r"unit test json")):
 
             if sport == ac.app_leagues[0]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nba_box_score.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nba_box_score.json")
             elif sport == ac.app_leagues[1]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nfl_box_score.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nfl_box_score.json")
             elif sport == ac.app_leagues[2]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nhl_box_score.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nhl_box_score.json")
             elif sport == ac.app_leagues[3]:
                 json_file_path = ''
             else:
@@ -780,11 +780,11 @@ def get_standings(sport):
         if os.path.exists(os.path.join(current_directory, r"unit test json")) and os.path.isdir(
                 os.path.join(current_directory, r"unit test json")):
             if sport == ac.app_leagues[0]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nba_standings.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nba_standings.json")
             elif sport == ac.app_leagues[1]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nfl_standings.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nfl_standings.json")
             elif sport == ac.app_leagues[2]:
-                json_file_path = os.path.join(current_directory, r"unit test json\nhl_standings.json")
+                json_file_path = os.path.join(current_directory, r"unit test json/nhl_standings.json")
             elif sport == ac.app_leagues[3]:
                 json_file_path = ''
             else:
