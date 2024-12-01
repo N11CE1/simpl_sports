@@ -38,10 +38,11 @@ class MainMenu(QWidget):
 
         left_vbox = QVBoxLayout()
         top_hbox = QHBoxLayout()
+        top_vbox = QVBoxLayout()
         right_vbox = QVBoxLayout()
         spoiler_vbox = QVBoxLayout()
 
-        logo = Image("images/logo.png")
+        logo = Image("images/simple_sports_logo.png", 300, 165)
         week_selection = DropDownButton(week1="Week 1",week2="Week 2",week3="Week 3",week4="Week 4")
         spoilers_text = SmallText("Spoilers")
         spoilers_button = SpoilerToggle(x=42, y=22)
@@ -62,7 +63,10 @@ class MainMenu(QWidget):
         left_vbox.addWidget(self.sports_selection)
         spoiler_vbox.addWidget(spoilers_button)
         spoiler_vbox.addWidget(spoilers_text)
-        top_hbox.addWidget(week_selection)
+        dropdown_spacer = QSpacerItem(0, 0)
+        top_vbox.addSpacerItem(dropdown_spacer)
+        top_vbox.addWidget(week_selection)
+        top_hbox.addLayout(top_vbox)
         top_hbox.addSpacerItem(top_spacer)
         top_hbox.addLayout(spoiler_vbox)
         top_hbox.setAlignment(spoiler_vbox, Qt.AlignRight)
@@ -70,6 +74,8 @@ class MainMenu(QWidget):
         right_vbox.addLayout(top_hbox)
         right_vbox.addWidget(self.game_selection)
         right_vbox.addWidget(self.game_expanded_view)
+        right_vbox.setSpacing(0)
+        right_vbox.setContentsMargins(0, 0, 0, 0)
         self.main_layout.addLayout(left_vbox)
         self.main_layout.addLayout(right_vbox)
 

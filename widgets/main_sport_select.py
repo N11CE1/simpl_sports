@@ -8,7 +8,7 @@ class SportSelection(QWidget):
     sport_selected = pyqtSignal(str)
     SCROLL_AREA_STYLE = """  
             QScrollArea {
-            border: 2px solid #ccc;
+            border: 0px solid #ccc;
             border-radius: 10px;
             background: transparent;
             padding-right: 0px;

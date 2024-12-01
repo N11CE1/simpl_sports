@@ -1,14 +1,12 @@
 import collections.abc
 
 from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea, QFrame
-
-from api.api_data_manager import game_box_score
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea
 from labels.image import Image as Image
 from labels.small_text import SmallText as SmallText
 from labels.text_image_text import TextImageText as TextImageText
 from widgets.main_sport_select import SportSelection as MainSportSelection
-from common.shared import nba as nba, nfl as nfl, nhl as nhl, epl as epl, user_preferences
+from common.shared import nba as nba, nfl as nfl, nhl as nhl, user_preferences
 from labels.stats_label import StatsLabel as StatsLabel
 
 from api import data_operations as do
@@ -72,7 +70,7 @@ class GameExpandedView(QWidget):
     def __init__(self):
         super().__init__()
         self.setStyleSheet("background: transparent;")
-        self.sport = epl
+        self.sport = nba
         self.game_key = 0
         self.home = None
         self.home_score = None
@@ -106,7 +104,7 @@ class GameExpandedView(QWidget):
         print(f"game_key = {game_key}, sport = {sport_name}")
 
         ## Original Code
-        sport_map = {"nba": nba, "nfl": nfl, "nhl": nhl, "epl": epl}
+        sport_map = {"nba": nba, "nfl": nfl, "nhl": nhl}
         sport = sport_map.get(sport_name.lower())
         if sport is None:
             print(f"Sport {sport_name} is unknown")

@@ -26,4 +26,5 @@ class DropDownButton(QWidget):
         self.setLayout(layout)
 
     def on_selection_change(self):
+        print(self.combo.currentText())
         pass
