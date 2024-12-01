@@ -2,7 +2,7 @@ from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QButtonGroup, QRadioButton
 from common import shared
 from buttons.radio_sports_button import RadioSportsButton
-
+from api import datasets as da
 
 class SportSelection(QWidget):
     sport_selected = pyqtSignal(str)
@@ -108,6 +108,7 @@ class SportSelection(QWidget):
                 radio_button.setChecked(True)
                 default_sport = radio_button.text_label.text()
                 first_button = False
+                shared.current_sport = default_sport
                 self.sport_selected.emit(default_sport)
 
     def on_button_toggled(self, checked):
@@ -115,11 +116,13 @@ class SportSelection(QWidget):
             button = self.sender()
             if isinstance(button, RadioSportsButton):
                 sport = button.text_label.text()
+                shared.current_sport = sport
                 self.sport_selected.emit(sport)
 
     def emit_current_sport(self):
         checked_button = self.sports_button_group.checkedButton()
         if checked_button:
             sport = checked_button.text_label.text()
+            shared.current_sport = sport
             print(f"Emitting sport_selected signal for current sport: {sport}")
             self.sport_selected.emit(sport)

@@ -1,6 +1,10 @@
 from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QSpacerItem
+from debugpy.launcher.debuggee import process
 
+from buttons.radio_game_button import RadioGameButton
+from common import shared
+from common.shared import user_preferences
 from labels.image import Image as Image
 from labels.small_text import SmallText as SmallText
 from buttons.spoiler_toggle import SpoilerToggle as SpoilerToggle
@@ -10,6 +14,7 @@ from widgets.main_sport_select import SportSelection as SportSelection
 from widgets.game_expanded_view import GameExpandedView as GameExpandedView
 from buttons.dropdown_button import DropDownButton as DropDownButton
 
+from api.background_worker import Update_Games_Score
 
 class MainMenu(QWidget):
 
@@ -48,6 +53,8 @@ class MainMenu(QWidget):
 
         self.sports_selection.sport_selected.connect(self.game_selection.update_games)
         self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
+        spoilers_button.spoiler_toggled.connect(self.game_selection.spoiler_toggled)
+        spoilers_button.spoiler_toggled.connect(self.game_expanded_view.spoiler_toggled)
 
         self.sports_selection.emit_current_sport()
         top_spacer = QSpacerItem(360, 0)
@@ -66,6 +73,11 @@ class MainMenu(QWidget):
         self.main_layout.addLayout(left_vbox)
         self.main_layout.addLayout(right_vbox)
 
+        # Background task for updating schedule, game scores, and standings
+        self.proc_update_game_score = Update_Games_Score()
+        self.proc_update_game_score.update_ui.connect(self.update_from_worker)
+        self.proc_update_game_score.start()
+
     def clear_layout(self, layout):
         while layout.count():
             item = layout.takeAt(0)
@@ -77,5 +89,19 @@ class MainMenu(QWidget):
                 pass
 
     def emit_prefs_signal(self):
-        print("preferences button clicked")
+        # print("preferences button clicked")
         self.prefs_button_clicked.emit()
+
+    def emit_current_sport(self):
+        pass
+
+    def update_from_worker(self):
+        self.game_selection.update_ui_scores(shared.current_sport)
+
+    def closeEvent(self, event):
+        """Override closeEvent to clean up worker thread on application close."""
+        if self.proc_update_game_score is not None:
+            if self.proc_update_game_score.isRunning():
+                print("Worker thread is running. Stopping it now...")
+                self.proc_update_game_score.quit()
+        event.accept()
