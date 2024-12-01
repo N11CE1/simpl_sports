@@ -66,6 +66,28 @@ def save_league_info(league_data):
     finally:
         conn.close()
 
+# def save_game_schedule(data, sport):
+#     conn = connect_to_database()
+#     cursor = conn.cursor()
+#     try:
+#
+#         delete_query = f"DELETE FROM tbl_game_schedule where sport = ?"
+#         cursor.execute(delete_query, (sport,))
+#
+#         columns = ', '.join(data.columns)
+#         placeholders = ', '.join(['?'] * len(data.columns))
+#         insert_sql = f"INSERT INTO tbl_game_schedule ({columns}) VALUES ({placeholders})"
+#         data_to_insert = [tuple(row) for row in data.values]
+#         cursor.executemany(insert_sql, data_to_insert)
+#         conn.commit()
+#
+#
+#     except sqlite3.Error as e:
+#         print(f"SQLite error: {e}")
+#
+#     finally:
+#         conn.close()
+
 def save_team_info(team_data, league_id):
     conn = connect_to_database()
     cursor = conn.cursor()

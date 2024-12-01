@@ -1,0 +1,6138 @@
+{
+	"league": {
+		"id": "4353138d-4c22-4396-95d8-5f587d2df25c",
+		"name": "NBA",
+		"alias": "NBA"
+	},
+	"season": {
+		"id": "970c9b10-2985-4718-b89d-96cfdc0a5e98",
+		"year": 2024,
+		"type": "REG"
+	},
+	"conferences": [
+		{
+			"id": "7fe7e212-de01-4f8f-a31d-b9f0a95731e3",
+			"name": "WESTERN CONFERENCE",
+			"alias": "WESTERN",
+			"divisions": [
+				{
+					"id": "12bf14ba-eb16-4c6f-8275-e801b6947c1e",
+					"name": "Northwest",
+					"alias": "NORTHWEST",
+					"teams": [
+						{
+							"id": "583ecfff-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Thunder",
+							"market": "Oklahoma City",
+							"wins": 14,
+							"losses": 4,
+							"win_pct": 0.778,
+							"points_for": 114.61,
+							"points_against": 103.78,
+							"point_diff": 10.83,
+							"sr_id": "sr:team:3418",
+							"reference": "1610612760",
+							"games_behind": {
+								"league": 2.5,
+								"conference": 0,
+								"division": 0
+							},
+							"streak": {
+								"kind": "win",
+								"length": 3
+							},
+							"calc_rank": {
+								"div_rank": 1,
+								"conf_rank": 1
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "below_500",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "conference",
+									"wins": 11,
+									"losses": 4,
+									"win_pct": 0.733
+								},
+								{
+									"record_type": "division",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 13,
+									"losses": 4,
+									"win_pct": 0.765
+								},
+								{
+									"record_type": "home",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "last_10",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 6,
+									"losses": 2,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 13,
+									"losses": 1,
+									"win_pct": 0.929
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 11,
+									"losses": 3,
+									"win_pct": 0.786
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "pacific",
+									"wins": 5,
+									"losses": 1,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "road",
+									"wins": 6,
+									"losses": 2,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 13,
+									"losses": 4,
+									"win_pct": 0.765
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 12,
+									"losses": 1,
+									"win_pct": 0.923
+								},
+								{
+									"record_type": "three_points",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								}
+							]
+						},
+						{
+							"id": "583ed102-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Nuggets",
+							"market": "Denver",
+							"wins": 10,
+							"losses": 7,
+							"win_pct": 0.588,
+							"points_for": 117.77,
+							"points_against": 115.82,
+							"point_diff": 1.94,
+							"sr_id": "sr:team:3417",
+							"reference": "1610612743",
+							"games_behind": {
+								"league": 6,
+								"conference": 3.5,
+								"division": 3.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 2,
+								"conf_rank": 7
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "below_500",
+									"wins": 6,
+									"losses": 2,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 6,
+									"losses": 6,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "division",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "home",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "last_10",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 9,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 6,
+									"win_pct": 0.143
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 10,
+									"losses": 7,
+									"win_pct": 0.588
+								},
+								{
+									"record_type": "overtime",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "over_500",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "road",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 10,
+									"losses": 4,
+									"win_pct": 0.714
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "three_points",
+									"wins": 4,
+									"losses": 2,
+									"win_pct": 0.667
+								}
+							]
+						},
+						{
+							"id": "583eca2f-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Timberwolves",
+							"market": "Minnesota",
+							"wins": 8,
+							"losses": 10,
+							"win_pct": 0.444,
+							"points_for": 112.17,
+							"points_against": 111.33,
+							"point_diff": 0.83,
+							"sr_id": "sr:team:3426",
+							"reference": "1610612750",
+							"games_behind": {
+								"league": 8.5,
+								"conference": 6,
+								"division": 6
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 4
+							},
+							"calc_rank": {
+								"div_rank": 3,
+								"conf_rank": 12
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "below_500",
+									"wins": 3,
+									"losses": 6,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "conference",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "division",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "home",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "last_10",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 3,
+									"losses": 6,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 6,
+									"losses": 1,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 2,
+									"losses": 9,
+									"win_pct": 0.182
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 7,
+									"losses": 9,
+									"win_pct": 0.438
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "over_500",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "pacific",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "road",
+									"wins": 3,
+									"losses": 6,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 8,
+									"losses": 8,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "three_points",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								}
+							]
+						},
+						{
+							"id": "583ed056-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Trail Blazers",
+							"market": "Portland",
+							"wins": 7,
+							"losses": 12,
+							"win_pct": 0.368,
+							"points_for": 105.58,
+							"points_against": 114,
+							"point_diff": -8.42,
+							"sr_id": "sr:team:3414",
+							"reference": "1610612757",
+							"games_behind": {
+								"league": 10,
+								"conference": 7.5,
+								"division": 7.5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 2
+							},
+							"calc_rank": {
+								"div_rank": 4,
+								"conf_rank": 13
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "below_500",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 6,
+									"losses": 11,
+									"win_pct": 0.353
+								},
+								{
+									"record_type": "division",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "home",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 6,
+									"losses": 1,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 11,
+									"win_pct": 0.083
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 5,
+									"losses": 12,
+									"win_pct": 0.294
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 5,
+									"losses": 9,
+									"win_pct": 0.357
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "road",
+									"wins": 3,
+									"losses": 8,
+									"win_pct": 0.273
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 7,
+									"losses": 6,
+									"win_pct": 0.538
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 3,
+									"losses": 9,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								}
+							]
+						},
+						{
+							"id": "583ece50-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Jazz",
+							"market": "Utah",
+							"wins": 4,
+							"losses": 14,
+							"win_pct": 0.222,
+							"points_for": 109.39,
+							"points_against": 119.22,
+							"point_diff": -9.83,
+							"sr_id": "sr:team:3434",
+							"reference": "1610612762",
+							"games_behind": {
+								"league": 12.5,
+								"conference": 10,
+								"division": 10
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 2
+							},
+							"calc_rank": {
+								"div_rank": 5,
+								"conf_rank": 14
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "below_500",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "conference",
+									"wins": 2,
+									"losses": 13,
+									"win_pct": 0.133
+								},
+								{
+									"record_type": "division",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "home",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "last_10",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 14,
+									"win_pct": 0.176
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 0,
+									"losses": 12,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 0,
+									"losses": 8,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 4,
+									"losses": 14,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 6,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 4,
+									"losses": 11,
+									"win_pct": 0.267
+								},
+								{
+									"record_type": "southeast",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "southwest",
+									"wins": 2,
+									"losses": 5,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 1,
+									"losses": 8,
+									"win_pct": 0.111
+								},
+								{
+									"record_type": "three_points",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "1d29f94c-9587-494b-a232-feb20a40eb4c",
+					"name": "Southwest",
+					"alias": "SOUTHWEST",
+					"teams": [
+						{
+							"id": "583ecb3a-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Rockets",
+							"market": "Houston",
+							"wins": 14,
+							"losses": 6,
+							"win_pct": 0.7,
+							"points_for": 114.35,
+							"points_against": 105.85,
+							"point_diff": 8.5,
+							"sr_id": "sr:team:3412",
+							"reference": "1610612745",
+							"games_behind": {
+								"league": 3.5,
+								"conference": 1,
+								"division": 0
+							},
+							"streak": {
+								"kind": "win",
+								"length": 2
+							},
+							"calc_rank": {
+								"div_rank": 1,
+								"conf_rank": 2
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "below_500",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "central",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "conference",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "division",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 8,
+									"losses": 5,
+									"win_pct": 0.615
+								},
+								{
+									"record_type": "home",
+									"wins": 8,
+									"losses": 3,
+									"win_pct": 0.727
+								},
+								{
+									"record_type": "last_10",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 6,
+									"losses": 3,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 10,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 11,
+									"losses": 3,
+									"win_pct": 0.786
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 10,
+									"losses": 6,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "overtime",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "over_500",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "pacific",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "road",
+									"wins": 6,
+									"losses": 3,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 14,
+									"losses": 5,
+									"win_pct": 0.737
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "southwest",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 8,
+									"losses": 1,
+									"win_pct": 0.889
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								}
+							]
+						},
+						{
+							"id": "583eca88-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Grizzlies",
+							"market": "Memphis",
+							"wins": 12,
+							"losses": 7,
+							"win_pct": 0.632,
+							"points_for": 121,
+							"points_against": 112.68,
+							"point_diff": 8.32,
+							"sr_id": "sr:team:3415",
+							"reference": "1610612763",
+							"games_behind": {
+								"league": 5,
+								"conference": 2.5,
+								"division": 1.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 4
+							},
+							"calc_rank": {
+								"div_rank": 2,
+								"conf_rank": 4
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "below_500",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "central",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "conference",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "division",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 5,
+									"losses": 2,
+									"win_pct": 0.714
+								},
+								{
+									"record_type": "home",
+									"wins": 8,
+									"losses": 3,
+									"win_pct": 0.727
+								},
+								{
+									"record_type": "last_10",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 12,
+									"losses": 1,
+									"win_pct": 0.923
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 7,
+									"losses": 4,
+									"win_pct": 0.636
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 0,
+									"losses": 6,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 8,
+									"losses": 7,
+									"win_pct": 0.533
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 12,
+									"losses": 7,
+									"win_pct": 0.632
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 10,
+									"losses": 3,
+									"win_pct": 0.769
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								}
+							]
+						},
+						{
+							"id": "583ecf50-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Mavericks",
+							"market": "Dallas",
+							"wins": 11,
+							"losses": 8,
+							"win_pct": 0.579,
+							"points_for": 117.53,
+							"points_against": 111.32,
+							"point_diff": 6.21,
+							"sr_id": "sr:team:3411",
+							"reference": "1610612742",
+							"games_behind": {
+								"league": 6,
+								"conference": 3.5,
+								"division": 2.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 2
+							},
+							"calc_rank": {
+								"div_rank": 3,
+								"conf_rank": 8
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "below_500",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "conference",
+									"wins": 7,
+									"losses": 6,
+									"win_pct": 0.538
+								},
+								{
+									"record_type": "division",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 6,
+									"losses": 3,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "home",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 7,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 4,
+									"losses": 2,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 8,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 7,
+									"losses": 8,
+									"win_pct": 0.467
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 6,
+									"losses": 5,
+									"win_pct": 0.545
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 11,
+									"losses": 8,
+									"win_pct": 0.579
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "southwest",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 7,
+									"losses": 1,
+									"win_pct": 0.875
+								},
+								{
+									"record_type": "three_points",
+									"wins": 2,
+									"losses": 4,
+									"win_pct": 0.333
+								}
+							]
+						},
+						{
+							"id": "583ecd4f-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Spurs",
+							"market": "San Antonio",
+							"wins": 10,
+							"losses": 9,
+							"win_pct": 0.526,
+							"points_for": 110.26,
+							"points_against": 110,
+							"point_diff": 0.26,
+							"sr_id": "sr:team:3429",
+							"reference": "1610612759",
+							"games_behind": {
+								"league": 7,
+								"conference": 4.5,
+								"division": 3.5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 4,
+								"conf_rank": 10
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "below_500",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 9,
+									"losses": 9,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "division",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 5,
+									"losses": 1,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "home",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "last_10",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 2,
+									"losses": 5,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 9,
+									"losses": 2,
+									"win_pct": 0.818
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 6,
+									"losses": 2,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 4,
+									"losses": 8,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 7,
+									"losses": 9,
+									"win_pct": 0.438
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "pacific",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "road",
+									"wins": 2,
+									"losses": 5,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 10,
+									"losses": 7,
+									"win_pct": 0.588
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 6,
+									"losses": 5,
+									"win_pct": 0.545
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								}
+							]
+						},
+						{
+							"id": "583ecc9a-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Pelicans",
+							"market": "New Orleans",
+							"wins": 4,
+							"losses": 15,
+							"win_pct": 0.211,
+							"points_for": 103.53,
+							"points_against": 115.32,
+							"point_diff": -11.79,
+							"sr_id": "sr:team:5539",
+							"reference": "1610612740",
+							"games_behind": {
+								"league": 13,
+								"conference": 10.5,
+								"division": 9.5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 6
+							},
+							"calc_rank": {
+								"div_rank": 5,
+								"conf_rank": 15
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "below_500",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "central",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "conference",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "division",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "home",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "last_10",
+									"wins": 1,
+									"losses": 9,
+									"win_pct": 0.1
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 1,
+									"losses": 8,
+									"win_pct": 0.111
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 1,
+									"losses": 10,
+									"win_pct": 0.091
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 2,
+									"losses": 12,
+									"win_pct": 0.143
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 1,
+									"losses": 9,
+									"win_pct": 0.1
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 3,
+									"losses": 15,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 4,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 1,
+									"losses": 8,
+									"win_pct": 0.111
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 4,
+									"losses": 9,
+									"win_pct": 0.308
+								},
+								{
+									"record_type": "southeast",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 1,
+									"losses": 10,
+									"win_pct": 0.091
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "f074cb3e-90cf-42e1-8067-cdbcd99ec230",
+					"name": "Pacific",
+					"alias": "PACIFIC",
+					"teams": [
+						{
+							"id": "583ec825-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Warriors",
+							"market": "Golden State",
+							"wins": 12,
+							"losses": 6,
+							"win_pct": 0.667,
+							"points_for": 116.78,
+							"points_against": 109.61,
+							"point_diff": 7.17,
+							"sr_id": "sr:team:3428",
+							"reference": "1610612744",
+							"games_behind": {
+								"league": 4.5,
+								"conference": 2,
+								"division": 0
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 3
+							},
+							"calc_rank": {
+								"div_rank": 1,
+								"conf_rank": 3
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "below_500",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 9,
+									"losses": 4,
+									"win_pct": 0.692
+								},
+								{
+									"record_type": "division",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "home",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "last_10",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 10,
+									"losses": 1,
+									"win_pct": 0.909
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 2,
+									"losses": 5,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 9,
+									"losses": 6,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "over_500",
+									"wins": 8,
+									"losses": 5,
+									"win_pct": 0.615
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 12,
+									"losses": 4,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 6,
+									"losses": 1,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								}
+							]
+						},
+						{
+							"id": "583ecae2-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Lakers",
+							"market": "Los Angeles",
+							"wins": 11,
+							"losses": 7,
+							"win_pct": 0.611,
+							"points_for": 115.61,
+							"points_against": 116.56,
+							"point_diff": -0.94,
+							"sr_id": "sr:team:3427",
+							"reference": "1610612747",
+							"games_behind": {
+								"league": 5.5,
+								"conference": 3,
+								"division": 1
+							},
+							"streak": {
+								"kind": "win",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 2,
+								"conf_rank": 5
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 3,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "below_500",
+									"wins": 6,
+									"losses": 1,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "division",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 8,
+									"losses": 3,
+									"win_pct": 0.727
+								},
+								{
+									"record_type": "home",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "last_10",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 10,
+									"losses": 1,
+									"win_pct": 0.909
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 5,
+									"losses": 2,
+									"win_pct": 0.714
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 6,
+									"win_pct": 0.143
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 10,
+									"losses": 7,
+									"win_pct": 0.588
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 5,
+									"losses": 6,
+									"win_pct": 0.455
+								},
+								{
+									"record_type": "pacific",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 11,
+									"losses": 7,
+									"win_pct": 0.611
+								},
+								{
+									"record_type": "southeast",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "southwest",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "three_points",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								}
+							]
+						},
+						{
+							"id": "583ecdfb-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Clippers",
+							"market": "LA",
+							"wins": 12,
+							"losses": 8,
+							"win_pct": 0.6,
+							"points_for": 109.3,
+							"points_against": 106.95,
+							"point_diff": 2.35,
+							"sr_id": "sr:team:3425",
+							"reference": "1610612746",
+							"games_behind": {
+								"league": 5.5,
+								"conference": 3,
+								"division": 1
+							},
+							"streak": {
+								"kind": "win",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 3,
+								"conf_rank": 6
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "below_500",
+									"wins": 6,
+									"losses": 1,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 7,
+									"losses": 7,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "division",
+									"wins": 4,
+									"losses": 2,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 6,
+									"losses": 1,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "home",
+									"wins": 7,
+									"losses": 4,
+									"win_pct": 0.636
+								},
+								{
+									"record_type": "last_10",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 9,
+									"losses": 2,
+									"win_pct": 0.818
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 8,
+									"losses": 6,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 6,
+									"losses": 6,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 3,
+									"losses": 6,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 5,
+									"losses": 8,
+									"win_pct": 0.385
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 6,
+									"losses": 7,
+									"win_pct": 0.462
+								},
+								{
+									"record_type": "pacific",
+									"wins": 4,
+									"losses": 2,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "road",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 12,
+									"losses": 6,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 6,
+									"losses": 3,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "three_points",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								}
+							]
+						},
+						{
+							"id": "583ecfa8-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Suns",
+							"market": "Phoenix",
+							"wins": 10,
+							"losses": 8,
+							"win_pct": 0.556,
+							"points_for": 113.17,
+							"points_against": 114.39,
+							"point_diff": -1.22,
+							"sr_id": "sr:team:3416",
+							"reference": "1610612756",
+							"games_behind": {
+								"league": 6.5,
+								"conference": 4,
+								"division": 2
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 4,
+								"conf_rank": 9
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "below_500",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 8,
+									"losses": 5,
+									"win_pct": 0.615
+								},
+								{
+									"record_type": "division",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 6,
+									"losses": 3,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "home",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "last_10",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 9,
+									"losses": 2,
+									"win_pct": 0.818
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 7,
+									"losses": 4,
+									"win_pct": 0.636
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 6,
+									"win_pct": 0.143
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 9,
+									"losses": 7,
+									"win_pct": 0.563
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "over_500",
+									"wins": 7,
+									"losses": 7,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "pacific",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 10,
+									"losses": 6,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "southwest",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 2,
+									"losses": 5,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "three_points",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								}
+							]
+						},
+						{
+							"id": "583ed0ac-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Kings",
+							"market": "Sacramento",
+							"wins": 9,
+							"losses": 10,
+							"win_pct": 0.474,
+							"points_for": 114.11,
+							"points_against": 113.26,
+							"point_diff": 0.84,
+							"sr_id": "sr:team:3413",
+							"reference": "1610612758",
+							"games_behind": {
+								"league": 8,
+								"conference": 5.5,
+								"division": 3.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 5,
+								"conf_rank": 11
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "below_500",
+									"wins": 6,
+									"losses": 5,
+									"win_pct": 0.545
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 6,
+									"losses": 7,
+									"win_pct": 0.462
+								},
+								{
+									"record_type": "division",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "home",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "last_10",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 8,
+									"losses": 3,
+									"win_pct": 0.727
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 7,
+									"losses": 4,
+									"win_pct": 0.636
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 7,
+									"losses": 10,
+									"win_pct": 0.412
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "over_500",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "pacific",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "road",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 9,
+									"losses": 7,
+									"win_pct": 0.563
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "3960cfac-7361-4b30-bc25-8d393de6f62f",
+			"name": "EASTERN CONFERENCE",
+			"alias": "EASTERN",
+			"divisions": [
+				{
+					"id": "582d6502-9a93-4a8d-8785-69374d732875",
+					"name": "Atlantic",
+					"alias": "ATLANTIC",
+					"teams": [
+						{
+							"id": "583eccfa-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Celtics",
+							"market": "Boston",
+							"wins": 15,
+							"losses": 3,
+							"win_pct": 0.833,
+							"points_for": 120.22,
+							"points_against": 109.56,
+							"point_diff": 10.67,
+							"sr_id": "sr:team:3422",
+							"reference": "1610612738",
+							"games_behind": {
+								"league": 1.5,
+								"conference": 1.5,
+								"division": 0
+							},
+							"streak": {
+								"kind": "win",
+								"length": 6
+							},
+							"calc_rank": {
+								"div_rank": 1,
+								"conf_rank": 2
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 4,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "below_500",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "central",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "conference",
+									"wins": 13,
+									"losses": 2,
+									"win_pct": 0.867
+								},
+								{
+									"record_type": "division",
+									"wins": 4,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 11,
+									"losses": 1,
+									"win_pct": 0.917
+								},
+								{
+									"record_type": "home",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "last_10",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 8,
+									"losses": 1,
+									"win_pct": 0.889
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 9,
+									"losses": 1,
+									"win_pct": 0.9
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 6,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 6,
+									"losses": 2,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 12,
+									"losses": 3,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "overtime",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "over_500",
+									"wins": 7,
+									"losses": 1,
+									"win_pct": 0.875
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "road",
+									"wins": 8,
+									"losses": 1,
+									"win_pct": 0.889
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 15,
+									"losses": 3,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "southeast",
+									"wins": 5,
+									"losses": 1,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 9,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "three_points",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								}
+							]
+						},
+						{
+							"id": "583ec70e-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Knicks",
+							"market": "New York",
+							"wins": 10,
+							"losses": 8,
+							"win_pct": 0.556,
+							"points_for": 118.83,
+							"points_against": 113.67,
+							"point_diff": 5.17,
+							"sr_id": "sr:team:3421",
+							"reference": "1610612752",
+							"games_behind": {
+								"league": 6.5,
+								"conference": 6.5,
+								"division": 5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 2,
+								"conf_rank": 4
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "below_500",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "central",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "conference",
+									"wins": 8,
+									"losses": 5,
+									"win_pct": 0.615
+								},
+								{
+									"record_type": "division",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "home",
+									"wins": 5,
+									"losses": 2,
+									"win_pct": 0.714
+								},
+								{
+									"record_type": "last_10",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 5,
+									"losses": 2,
+									"win_pct": 0.714
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 10,
+									"losses": 3,
+									"win_pct": 0.769
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 8,
+									"losses": 3,
+									"win_pct": 0.727
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 0,
+									"losses": 5,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 2,
+									"losses": 5,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 6,
+									"losses": 8,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "road",
+									"wins": 5,
+									"losses": 6,
+									"win_pct": 0.455
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 10,
+									"losses": 7,
+									"win_pct": 0.588
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 8,
+									"losses": 5,
+									"win_pct": 0.615
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								}
+							]
+						},
+						{
+							"id": "583ec9d6-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Nets",
+							"market": "Brooklyn",
+							"wins": 9,
+							"losses": 10,
+							"win_pct": 0.474,
+							"points_for": 112.42,
+							"points_against": 114.37,
+							"point_diff": -1.95,
+							"sr_id": "sr:team:3436",
+							"reference": "1610612751",
+							"games_behind": {
+								"league": 8,
+								"conference": 8,
+								"division": 6.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 3
+							},
+							"calc_rank": {
+								"div_rank": 3,
+								"conf_rank": 8,
+								"conf_tiebreak": "conference_win_pct"
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 0,
+									"losses": 5,
+									"win_pct": 0
+								},
+								{
+									"record_type": "below_500",
+									"wins": 2,
+									"losses": 4,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "central",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "conference",
+									"wins": 3,
+									"losses": 9,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "division",
+									"wins": 0,
+									"losses": 5,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "home",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "last_10",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 5,
+									"losses": 1,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 4,
+									"losses": 9,
+									"win_pct": 0.308
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 6,
+									"losses": 7,
+									"win_pct": 0.462
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 9,
+									"losses": 10,
+									"win_pct": 0.474
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 7,
+									"losses": 6,
+									"win_pct": 0.538
+								},
+								{
+									"record_type": "pacific",
+									"wins": 3,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "road",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 9,
+									"losses": 8,
+									"win_pct": 0.529
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "southwest",
+									"wins": 3,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "three_points",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								}
+							]
+						},
+						{
+							"id": "583ecda6-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Raptors",
+							"market": "Toronto",
+							"wins": 5,
+							"losses": 14,
+							"win_pct": 0.263,
+							"points_for": 112.53,
+							"points_against": 116.58,
+							"point_diff": -4.05,
+							"sr_id": "sr:team:3433",
+							"reference": "1610612761",
+							"games_behind": {
+								"league": 12,
+								"conference": 12,
+								"division": 10.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 4,
+								"conf_rank": 13
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "below_500",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 5,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "conference",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "division",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 1,
+									"losses": 5,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "home",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 1,
+									"losses": 9,
+									"win_pct": 0.1
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 4,
+									"losses": 10,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 8,
+									"win_pct": 0.273
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 0,
+									"losses": 10,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 4,
+									"losses": 12,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "over_500",
+									"wins": 2,
+									"losses": 9,
+									"win_pct": 0.182
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "road",
+									"wins": 1,
+									"losses": 10,
+									"win_pct": 0.091
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 5,
+									"losses": 12,
+									"win_pct": 0.294
+								},
+								{
+									"record_type": "southeast",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 5,
+									"win_pct": 0.167
+								}
+							]
+						},
+						{
+							"id": "583ec87d-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "76ers",
+							"market": "Philadelphia",
+							"wins": 3,
+							"losses": 14,
+							"win_pct": 0.176,
+							"points_for": 104.77,
+							"points_against": 113.06,
+							"point_diff": -8.29,
+							"sr_id": "sr:team:3420",
+							"reference": "1610612755",
+							"games_behind": {
+								"league": 13,
+								"conference": 13,
+								"division": 11.5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 2
+							},
+							"calc_rank": {
+								"div_rank": 5,
+								"conf_rank": 14
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "below_500",
+									"wins": 2,
+									"losses": 5,
+									"win_pct": 0.286
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "conference",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "division",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "home",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "last_10",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 2,
+									"losses": 7,
+									"win_pct": 0.222
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 2,
+									"losses": 13,
+									"win_pct": 0.133
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 1,
+									"losses": 10,
+									"win_pct": 0.091
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 2,
+									"losses": 13,
+									"win_pct": 0.133
+								},
+								{
+									"record_type": "overtime",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "over_500",
+									"wins": 1,
+									"losses": 9,
+									"win_pct": 0.1
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 4,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 3,
+									"losses": 8,
+									"win_pct": 0.273
+								},
+								{
+									"record_type": "southeast",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 1,
+									"losses": 9,
+									"win_pct": 0.1
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "f3aaf23a-1ceb-46ef-8fef-9403692e801b",
+					"name": "Central",
+					"alias": "CENTRAL",
+					"teams": [
+						{
+							"id": "583ec773-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Cavaliers",
+							"market": "Cleveland",
+							"wins": 17,
+							"losses": 2,
+							"win_pct": 0.895,
+							"points_for": 123.47,
+							"points_against": 112.32,
+							"point_diff": 11.16,
+							"sr_id": "sr:team:3432",
+							"reference": "1610612739",
+							"games_behind": {
+								"league": 0,
+								"conference": 0,
+								"division": 0
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 1,
+								"conf_rank": 1
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 5,
+									"losses": 1,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "below_500",
+									"wins": 12,
+									"losses": 1,
+									"win_pct": 0.923
+								},
+								{
+									"record_type": "central",
+									"wins": 5,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "conference",
+									"wins": 13,
+									"losses": 2,
+									"win_pct": 0.867
+								},
+								{
+									"record_type": "division",
+									"wins": 5,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 12,
+									"losses": 2,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "home",
+									"wins": 10,
+									"losses": 1,
+									"win_pct": 0.909
+								},
+								{
+									"record_type": "last_10",
+									"wins": 8,
+									"losses": 2,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 9,
+									"losses": 1,
+									"win_pct": 0.9
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 7,
+									"losses": 1,
+									"win_pct": 0.875
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 16,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 7,
+									"losses": 1,
+									"win_pct": 0.875
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 9,
+									"losses": 1,
+									"win_pct": 0.9
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 17,
+									"losses": 2,
+									"win_pct": 0.895
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 5,
+									"losses": 1,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "pacific",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "road",
+									"wins": 7,
+									"losses": 1,
+									"win_pct": 0.875
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 17,
+									"losses": 2,
+									"win_pct": 0.895
+								},
+								{
+									"record_type": "southeast",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "southwest",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 10,
+									"losses": 1,
+									"win_pct": 0.909
+								},
+								{
+									"record_type": "three_points",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								}
+							]
+						},
+						{
+							"id": "583ecefd-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Bucks",
+							"market": "Milwaukee",
+							"wins": 9,
+							"losses": 9,
+							"win_pct": 0.5,
+							"points_for": 112.72,
+							"points_against": 112.33,
+							"point_diff": 0.39,
+							"sr_id": "sr:team:3410",
+							"reference": "1610612749",
+							"games_behind": {
+								"league": 7.5,
+								"conference": 7.5,
+								"division": 7.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 5
+							},
+							"calc_rank": {
+								"div_rank": 2,
+								"conf_rank": 5,
+								"conf_tiebreak": "head_to_head"
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 2,
+									"losses": 4,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "below_500",
+									"wins": 6,
+									"losses": 5,
+									"win_pct": 0.545
+								},
+								{
+									"record_type": "central",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "conference",
+									"wins": 7,
+									"losses": 8,
+									"win_pct": 0.467
+								},
+								{
+									"record_type": "division",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 4,
+									"losses": 2,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "home",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 3,
+									"win_pct": 0.7
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 9,
+									"losses": 4,
+									"win_pct": 0.692
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 5,
+									"losses": 3,
+									"win_pct": 0.625
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 0,
+									"losses": 5,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 8,
+									"losses": 9,
+									"win_pct": 0.471
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "over_500",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 8,
+									"losses": 7,
+									"win_pct": 0.533
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "three_points",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								}
+							]
+						},
+						{
+							"id": "583ec7cd-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Pacers",
+							"market": "Indiana",
+							"wins": 9,
+							"losses": 10,
+							"win_pct": 0.474,
+							"points_for": 114.79,
+							"points_against": 117.47,
+							"point_diff": -2.69,
+							"sr_id": "sr:team:3419",
+							"reference": "1610612754",
+							"games_behind": {
+								"league": 8,
+								"conference": 8,
+								"division": 8
+							},
+							"streak": {
+								"kind": "win",
+								"length": 3
+							},
+							"calc_rank": {
+								"div_rank": 3,
+								"conf_rank": 7,
+								"conf_tiebreak": "conference_win_pct"
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "below_500",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "conference",
+									"wins": 6,
+									"losses": 8,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "division",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "home",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "last_10",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 7,
+									"losses": 2,
+									"win_pct": 0.778
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 6,
+									"losses": 3,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 5,
+									"losses": 2,
+									"win_pct": 0.714
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 8,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 9,
+									"losses": 9,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "over_500",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 9,
+									"losses": 7,
+									"win_pct": 0.563
+								},
+								{
+									"record_type": "southeast",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "southwest",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								}
+							]
+						},
+						{
+							"id": "583ec5fd-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Bulls",
+							"market": "Chicago",
+							"wins": 8,
+							"losses": 12,
+							"win_pct": 0.4,
+							"points_for": 117.95,
+							"points_against": 123.55,
+							"point_diff": -5.6,
+							"sr_id": "sr:team:3409",
+							"reference": "1610612741",
+							"games_behind": {
+								"league": 9.5,
+								"conference": 9.5,
+								"division": 9.5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 4,
+								"div_tiebreak": "head_to_head",
+								"conf_rank": 10,
+								"conf_tiebreak": "head_to_head"
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "below_500",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "central",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "conference",
+									"wins": 7,
+									"losses": 5,
+									"win_pct": 0.583
+								},
+								{
+									"record_type": "division",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "home",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "last_10",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 6,
+									"losses": 3,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 9,
+									"win_pct": 0.357
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 2,
+									"losses": 9,
+									"win_pct": 0.182
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 7,
+									"losses": 12,
+									"win_pct": 0.368
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 4,
+									"losses": 9,
+									"win_pct": 0.308
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 6,
+									"losses": 6,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 8,
+									"losses": 10,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "southeast",
+									"wins": 4,
+									"losses": 1,
+									"win_pct": 0.8
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 5,
+									"losses": 9,
+									"win_pct": 0.357
+								},
+								{
+									"record_type": "three_points",
+									"wins": 3,
+									"losses": 0,
+									"win_pct": 1
+								}
+							]
+						},
+						{
+							"id": "583ec928-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Pistons",
+							"market": "Detroit",
+							"wins": 8,
+							"losses": 12,
+							"win_pct": 0.4,
+							"points_for": 109.5,
+							"points_against": 112,
+							"point_diff": -2.5,
+							"sr_id": "sr:team:3424",
+							"reference": "1610612765",
+							"games_behind": {
+								"league": 9.5,
+								"conference": 9.5,
+								"division": 9.5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 5,
+								"div_tiebreak": "head_to_head",
+								"conf_rank": 11,
+								"conf_tiebreak": "head_to_head"
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 4,
+									"losses": 2,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "below_500",
+									"wins": 6,
+									"losses": 4,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 4,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 7,
+									"losses": 10,
+									"win_pct": 0.412
+								},
+								{
+									"record_type": "division",
+									"wins": 0,
+									"losses": 4,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "home",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "last_10",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 8,
+									"losses": 4,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 6,
+									"losses": 7,
+									"win_pct": 0.462
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 9,
+									"win_pct": 0.357
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 0,
+									"losses": 8,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 1,
+									"losses": 5,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 5,
+									"losses": 12,
+									"win_pct": 0.294
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "over_500",
+									"wins": 2,
+									"losses": 8,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 7,
+									"win_pct": 0.364
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 7,
+									"losses": 9,
+									"win_pct": 0.438
+								},
+								{
+									"record_type": "southeast",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "three_points",
+									"wins": 3,
+									"losses": 3,
+									"win_pct": 0.5
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "54dc7348-c1d2-40d8-88b3-c4c0138e085d",
+					"name": "Southeast",
+					"alias": "SOUTHEAST",
+					"teams": [
+						{
+							"id": "583ed157-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Magic",
+							"market": "Orlando",
+							"wins": 13,
+							"losses": 7,
+							"win_pct": 0.65,
+							"points_for": 107.7,
+							"points_against": 102.9,
+							"point_diff": 4.8,
+							"sr_id": "sr:team:3437",
+							"reference": "1610612753",
+							"games_behind": {
+								"league": 4.5,
+								"conference": 4.5,
+								"division": 0
+							},
+							"streak": {
+								"kind": "win",
+								"length": 4
+							},
+							"calc_rank": {
+								"div_rank": 1,
+								"conf_rank": 3
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "below_500",
+									"wins": 9,
+									"losses": 1,
+									"win_pct": 0.9
+								},
+								{
+									"record_type": "central",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "conference",
+									"wins": 10,
+									"losses": 3,
+									"win_pct": 0.769
+								},
+								{
+									"record_type": "division",
+									"wins": 4,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 2,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 8,
+									"losses": 3,
+									"win_pct": 0.727
+								},
+								{
+									"record_type": "home",
+									"wins": 9,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "last_10",
+									"wins": 9,
+									"losses": 1,
+									"win_pct": 0.9
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 9,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 8,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 10,
+									"losses": 2,
+									"win_pct": 0.833
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 3,
+									"losses": 5,
+									"win_pct": 0.375
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "pacific",
+									"wins": 2,
+									"losses": 1,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 7,
+									"win_pct": 0.364
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 10,
+									"losses": 3,
+									"win_pct": 0.769
+								},
+								{
+									"record_type": "southeast",
+									"wins": 4,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 10,
+									"losses": 5,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								}
+							]
+						},
+						{
+							"id": "583ecea6-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Heat",
+							"market": "Miami",
+							"wins": 8,
+							"losses": 8,
+							"win_pct": 0.5,
+							"points_for": 110.38,
+							"points_against": 109.31,
+							"point_diff": 1.06,
+							"sr_id": "sr:team:3435",
+							"reference": "1610612748",
+							"games_behind": {
+								"league": 7.5,
+								"conference": 7.5,
+								"division": 3
+							},
+							"streak": {
+								"kind": "win",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 2,
+								"conf_rank": 6,
+								"conf_tiebreak": "head_to_head"
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "below_500",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "central",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "conference",
+									"wins": 6,
+									"losses": 5,
+									"win_pct": 0.545
+								},
+								{
+									"record_type": "division",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 4,
+									"losses": 7,
+									"win_pct": 0.364
+								},
+								{
+									"record_type": "home",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "last_10",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 3,
+									"losses": 4,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 5,
+									"losses": 4,
+									"win_pct": 0.556
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 7,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 5,
+									"losses": 2,
+									"win_pct": 0.714
+								},
+								{
+									"record_type": "neutral",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "northwest",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 3,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 8,
+									"win_pct": 0.111
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 3,
+									"losses": 6,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 3,
+									"losses": 8,
+									"win_pct": 0.273
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "over_500",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 4,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 6,
+									"losses": 7,
+									"win_pct": 0.462
+								},
+								{
+									"record_type": "southeast",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								}
+							]
+						},
+						{
+							"id": "583ecb8f-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Hawks",
+							"market": "Atlanta",
+							"wins": 8,
+							"losses": 11,
+							"win_pct": 0.421,
+							"points_for": 116.58,
+							"points_against": 121.16,
+							"point_diff": -4.58,
+							"sr_id": "sr:team:3423",
+							"reference": "1610612737",
+							"games_behind": {
+								"league": 9,
+								"conference": 9,
+								"division": 4.5
+							},
+							"streak": {
+								"kind": "win",
+								"length": 1
+							},
+							"calc_rank": {
+								"div_rank": 3,
+								"conf_rank": 9
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 3,
+									"losses": 1,
+									"win_pct": 0.75
+								},
+								{
+									"record_type": "below_500",
+									"wins": 1,
+									"losses": 6,
+									"win_pct": 0.143
+								},
+								{
+									"record_type": "central",
+									"wins": 1,
+									"losses": 3,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "conference",
+									"wins": 6,
+									"losses": 6,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "division",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 6,
+									"losses": 6,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "home",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "last_10",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 4,
+									"losses": 5,
+									"win_pct": 0.444
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 6,
+									"losses": 1,
+									"win_pct": 0.857
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 4,
+									"losses": 7,
+									"win_pct": 0.364
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 1,
+									"losses": 5,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 2,
+									"losses": 10,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 4,
+									"losses": 3,
+									"win_pct": 0.571
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 8,
+									"losses": 11,
+									"win_pct": 0.421
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 7,
+									"losses": 5,
+									"win_pct": 0.583
+								},
+								{
+									"record_type": "pacific",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "road",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 8,
+									"losses": 9,
+									"win_pct": 0.471
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "three_points",
+									"wins": 2,
+									"losses": 2,
+									"win_pct": 0.5
+								}
+							]
+						},
+						{
+							"id": "583ec97e-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Hornets",
+							"market": "Charlotte",
+							"wins": 6,
+							"losses": 12,
+							"win_pct": 0.333,
+							"points_for": 108.22,
+							"points_against": 113.11,
+							"point_diff": -4.89,
+							"sr_id": "sr:team:3430",
+							"reference": "1610612766",
+							"games_behind": {
+								"league": 10.5,
+								"conference": 10.5,
+								"division": 6
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 3
+							},
+							"calc_rank": {
+								"div_rank": 4,
+								"conf_rank": 12
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "below_500",
+									"wins": 4,
+									"losses": 6,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "central",
+									"wins": 4,
+									"losses": 2,
+									"win_pct": 0.667
+								},
+								{
+									"record_type": "conference",
+									"wins": 5,
+									"losses": 11,
+									"win_pct": 0.313
+								},
+								{
+									"record_type": "division",
+									"wins": 0,
+									"losses": 5,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 1,
+									"losses": 5,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "home",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10",
+									"wins": 3,
+									"losses": 7,
+									"win_pct": 0.3
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 5,
+									"losses": 5,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 3,
+									"losses": 6,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 5,
+									"losses": 7,
+									"win_pct": 0.417
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 3,
+									"losses": 10,
+									"win_pct": 0.231
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 3,
+									"losses": 6,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 5,
+									"losses": 10,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "overtime",
+									"wins": 1,
+									"losses": 1,
+									"win_pct": 0.5
+								},
+								{
+									"record_type": "over_500",
+									"wins": 2,
+									"losses": 6,
+									"win_pct": 0.25
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 6,
+									"losses": 8,
+									"win_pct": 0.429
+								},
+								{
+									"record_type": "southeast",
+									"wins": 0,
+									"losses": 5,
+									"win_pct": 0
+								},
+								{
+									"record_type": "southwest",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 1,
+									"losses": 6,
+									"win_pct": 0.143
+								},
+								{
+									"record_type": "three_points",
+									"wins": 3,
+									"losses": 2,
+									"win_pct": 0.6
+								}
+							]
+						},
+						{
+							"id": "583ec8d4-fb46-11e1-82cb-f4ce4684ea4c",
+							"name": "Wizards",
+							"market": "Washington",
+							"wins": 2,
+							"losses": 15,
+							"win_pct": 0.118,
+							"points_for": 107.77,
+							"points_against": 123.06,
+							"point_diff": -15.29,
+							"sr_id": "sr:team:3431",
+							"reference": "1610612764",
+							"games_behind": {
+								"league": 14,
+								"conference": 14,
+								"division": 9.5
+							},
+							"streak": {
+								"kind": "loss",
+								"length": 13
+							},
+							"calc_rank": {
+								"div_rank": 5,
+								"conf_rank": 15
+							},
+							"records": [
+								{
+									"record_type": "atlantic",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "below_500",
+									"wins": 0,
+									"losses": 6,
+									"win_pct": 0
+								},
+								{
+									"record_type": "central",
+									"wins": 0,
+									"losses": 4,
+									"win_pct": 0
+								},
+								{
+									"record_type": "conference",
+									"wins": 2,
+									"losses": 10,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "division",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "equal_rebounds",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "equal_turnovers",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "fewer_turnovers",
+									"wins": 1,
+									"losses": 4,
+									"win_pct": 0.2
+								},
+								{
+									"record_type": "home",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "last_10",
+									"wins": 0,
+									"losses": 10,
+									"win_pct": 0
+								},
+								{
+									"record_type": "last_10_home",
+									"wins": 1,
+									"losses": 8,
+									"win_pct": 0.111
+								},
+								{
+									"record_type": "last_10_road",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "leads_field_goal_pct",
+									"wins": 1,
+									"losses": 2,
+									"win_pct": 0.333
+								},
+								{
+									"record_type": "leads_rebounds",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "neutral",
+									"wins": 0,
+									"losses": 1,
+									"win_pct": 0
+								},
+								{
+									"record_type": "northwest",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "opponent_fewer_turnovers",
+									"wins": 1,
+									"losses": 10,
+									"win_pct": 0.091
+								},
+								{
+									"record_type": "opponent_leads_field_goal_pct",
+									"wins": 1,
+									"losses": 13,
+									"win_pct": 0.071
+								},
+								{
+									"record_type": "opponent_leads_rebounds",
+									"wins": 2,
+									"losses": 12,
+									"win_pct": 0.143
+								},
+								{
+									"record_type": "opponent_scores_100_or_more",
+									"wins": 2,
+									"losses": 15,
+									"win_pct": 0.118
+								},
+								{
+									"record_type": "overtime",
+									"wins": 0,
+									"losses": 0,
+									"win_pct": 0
+								},
+								{
+									"record_type": "over_500",
+									"wins": 2,
+									"losses": 9,
+									"win_pct": 0.182
+								},
+								{
+									"record_type": "pacific",
+									"wins": 0,
+									"losses": 2,
+									"win_pct": 0
+								},
+								{
+									"record_type": "road",
+									"wins": 1,
+									"losses": 7,
+									"win_pct": 0.125
+								},
+								{
+									"record_type": "scores_100_or_more",
+									"wins": 2,
+									"losses": 10,
+									"win_pct": 0.167
+								},
+								{
+									"record_type": "southeast",
+									"wins": 2,
+									"losses": 3,
+									"win_pct": 0.4
+								},
+								{
+									"record_type": "southwest",
+									"wins": 0,
+									"losses": 3,
+									"win_pct": 0
+								},
+								{
+									"record_type": "ten_points",
+									"wins": 1,
+									"losses": 14,
+									"win_pct": 0.067
+								},
+								{
+									"record_type": "three_points",
+									"wins": 1,
+									"losses": 0,
+									"win_pct": 1
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
