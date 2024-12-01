@@ -18,7 +18,7 @@ class Prefs:
         }
         self.spoilers = spoilers_enabled
 
-
+global current_sport
 global user_preferences
 user_preferences = Prefs()
 

@@ -1,0 +1,2900 @@
+{
+	"season": {
+		"id": "26a67dd0-dfc9-11ee-8f7c-27de425212d4",
+		"year": 2024,
+		"type": "REG",
+		"name": "REG"
+	},
+	"conferences": [
+		{
+			"id": "b1808e5f-d40b-47c0-8af8-5175c0fdcd26",
+			"name": "NFC",
+			"alias": "NFC",
+			"divisions": [
+				{
+					"id": "6dab3ca1-b9cb-403f-91dd-b2a3708ab060",
+					"name": "NFC East",
+					"alias": "NFC_EAST",
+					"teams": [
+						{
+							"id": "04aa1c9d-66da-489d-b16a-1dee3f2eec4d",
+							"name": "Giants",
+							"market": "New York",
+							"alias": "NYG",
+							"sr_id": "sr:competitor:4426",
+							"rank": {
+								"conference": 16,
+								"division": 4,
+								"clinched": "eliminated"
+							},
+							"streak": {
+								"type": "loss",
+								"length": 7,
+								"desc": "Lost 7"
+							},
+							"strength_of_schedule": {
+								"sos": 0.522,
+								"wins": 71,
+								"total": 136
+							},
+							"strength_of_victory": {
+								"sov": 0.409,
+								"wins": 9,
+								"total": 22
+							},
+							"wins": 2,
+							"losses": 10,
+							"ties": 0,
+							"win_pct": 0.167,
+							"points_for": 183,
+							"points_against": 279,
+							"records": [
+								{
+									"category": "conference",
+									"wins": 1,
+									"losses": 8,
+									"ties": 0,
+									"win_pct": 0.111,
+									"points_for": 137,
+									"points_against": 221
+								},
+								{
+									"category": "afc",
+									"wins": 1,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 46,
+									"points_against": 58
+								},
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 123,
+									"points_against": 129
+								},
+								{
+									"category": "home",
+									"wins": 0,
+									"losses": 6,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 60,
+									"points_against": 150
+								},
+								{
+									"category": "nfc",
+									"wins": 1,
+									"losses": 8,
+									"ties": 0,
+									"win_pct": 0.111,
+									"points_for": 137,
+									"points_against": 221
+								},
+								{
+									"category": "division",
+									"wins": 0,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 78,
+									"points_against": 123
+								}
+							]
+						},
+						{
+							"id": "22052ff7-c065-42ee-bc8f-c4691c50e624",
+							"name": "Commanders",
+							"market": "Washington",
+							"alias": "WAS",
+							"sr_id": "sr:competitor:4432",
+							"rank": {
+								"conference": 7,
+								"division": 2
+							},
+							"streak": {
+								"type": "loss",
+								"length": 3,
+								"desc": "Lost 3"
+							},
+							"strength_of_schedule": {
+								"sos": 0.431,
+								"wins": 59,
+								"total": 137
+							},
+							"strength_of_victory": {
+								"sov": 0.3,
+								"wins": 24,
+								"total": 80
+							},
+							"wins": 7,
+							"losses": 5,
+							"ties": 0,
+							"win_pct": 0.583,
+							"points_for": 334,
+							"points_against": 277,
+							"records": [
+								{
+									"category": "road",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 168,
+									"points_against": 162
+								},
+								{
+									"category": "conference",
+									"wins": 5,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.625,
+									"points_for": 212,
+									"points_against": 173
+								},
+								{
+									"category": "nfc",
+									"wins": 5,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.625,
+									"points_for": 212,
+									"points_against": 173
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 122,
+									"points_against": 104
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 166,
+									"points_against": 115
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 92,
+									"points_against": 100
+								}
+							]
+						},
+						{
+							"id": "386bdbf9-9eea-4869-bb9a-274b0bc66e80",
+							"name": "Eagles",
+							"market": "Philadelphia",
+							"alias": "PHI",
+							"sr_id": "sr:competitor:4428",
+							"rank": {
+								"conference": 2,
+								"division": 1
+							},
+							"streak": {
+								"type": "win",
+								"length": 7,
+								"desc": "Won 7"
+							},
+							"strength_of_schedule": {
+								"sos": 0.416,
+								"wins": 52,
+								"total": 125
+							},
+							"strength_of_victory": {
+								"sov": 0.398,
+								"wins": 41,
+								"total": 103
+							},
+							"wins": 9,
+							"losses": 2,
+							"ties": 0,
+							"win_pct": 0.818,
+							"points_for": 296,
+							"points_against": 199,
+							"records": [
+								{
+									"category": "nfc",
+									"wins": 6,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 211,
+									"points_against": 143
+								},
+								{
+									"category": "conference",
+									"wins": 6,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 211,
+									"points_against": 143
+								},
+								{
+									"category": "afc",
+									"wins": 3,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 85,
+									"points_against": 56
+								},
+								{
+									"category": "road",
+									"wins": 5,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.833,
+									"points_for": 167,
+									"points_against": 91
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.8,
+									"points_for": 129,
+									"points_against": 108
+								},
+								{
+									"category": "division",
+									"wins": 3,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 88,
+									"points_against": 27
+								}
+							]
+						},
+						{
+							"id": "e627eec7-bbae-4fa4-8e73-8e1d6bc5c060",
+							"name": "Cowboys",
+							"market": "Dallas",
+							"alias": "DAL",
+							"sr_id": "sr:competitor:4392",
+							"rank": {
+								"conference": 12,
+								"division": 3
+							},
+							"streak": {
+								"type": "win",
+								"length": 2,
+								"desc": "Won 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.522,
+								"wins": 72,
+								"total": 138
+							},
+							"strength_of_victory": {
+								"sov": 0.379,
+								"wins": 22,
+								"total": 58
+							},
+							"wins": 5,
+							"losses": 7,
+							"ties": 0,
+							"win_pct": 0.417,
+							"points_for": 248,
+							"points_against": 339,
+							"records": [
+								{
+									"category": "road",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 152,
+									"points_against": 132
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 88,
+									"points_against": 96
+								},
+								{
+									"category": "home",
+									"wins": 1,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.167,
+									"points_for": 96,
+									"points_against": 207
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 160,
+									"points_against": 243
+								},
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 160,
+									"points_against": 243
+								},
+								{
+									"category": "division",
+									"wins": 3,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 87,
+									"points_against": 95
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "2a46bf95-b036-4c6c-b69f-a80c4b6c46bf",
+					"name": "NFC South",
+					"alias": "NFC_SOUTH",
+					"teams": [
+						{
+							"id": "0d855753-ea21-4953-89f9-0e20aff9eb73",
+							"name": "Saints",
+							"market": "New Orleans",
+							"alias": "NO",
+							"sr_id": "sr:competitor:4425",
+							"rank": {
+								"conference": 13,
+								"division": 3
+							},
+							"streak": {
+								"type": "win",
+								"length": 2,
+								"desc": "Won 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.524,
+								"wins": 65,
+								"total": 124
+							},
+							"strength_of_victory": {
+								"sov": 0.378,
+								"wins": 17,
+								"total": 45
+							},
+							"wins": 4,
+							"losses": 7,
+							"ties": 0,
+							"win_pct": 0.364,
+							"points_for": 262,
+							"points_against": 260,
+							"records": [
+								{
+									"category": "afc",
+									"wins": 1,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 66,
+									"points_against": 99
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 196,
+									"points_against": 161
+								},
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 151,
+									"points_against": 140
+								},
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 196,
+									"points_against": 161
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 140,
+									"points_against": 127
+								},
+								{
+									"category": "road",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 111,
+									"points_against": 120
+								}
+							]
+						},
+						{
+							"id": "4254d319-1bc7-4f81-b4ab-b5e6f3402b69",
+							"name": "Buccaneers",
+							"market": "Tampa Bay",
+							"alias": "TB",
+							"sr_id": "sr:competitor:4388",
+							"rank": {
+								"conference": 9,
+								"division": 2
+							},
+							"streak": {
+								"type": "win",
+								"length": 1,
+								"desc": "Won 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.598,
+								"wins": 76,
+								"total": 127
+							},
+							"strength_of_victory": {
+								"sov": 0.569,
+								"wins": 33,
+								"total": 58
+							},
+							"wins": 5,
+							"losses": 6,
+							"ties": 0,
+							"win_pct": 0.455,
+							"points_for": 309,
+							"points_against": 273,
+							"records": [
+								{
+									"category": "home",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 154,
+									"points_against": 157
+								},
+								{
+									"category": "nfc",
+									"wins": 5,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.625,
+									"points_for": 247,
+									"points_against": 176
+								},
+								{
+									"category": "road",
+									"wins": 3,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.6,
+									"points_for": 155,
+									"points_against": 116
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 107,
+									"points_against": 94
+								},
+								{
+									"category": "afc",
+									"wins": 0,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 62,
+									"points_against": 97
+								},
+								{
+									"category": "conference",
+									"wins": 5,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.625,
+									"points_for": 247,
+									"points_against": 176
+								}
+							]
+						},
+						{
+							"id": "e6aa13a4-0055-48a9-bc41-be28dc106929",
+							"name": "Falcons",
+							"market": "Atlanta",
+							"alias": "ATL",
+							"sr_id": "sr:competitor:4393",
+							"rank": {
+								"conference": 4,
+								"division": 1
+							},
+							"streak": {
+								"type": "loss",
+								"length": 2,
+								"desc": "Lost 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.54,
+								"wins": 67,
+								"total": 124
+							},
+							"strength_of_victory": {
+								"sov": 0.463,
+								"wins": 31,
+								"total": 67
+							},
+							"wins": 6,
+							"losses": 5,
+							"ties": 0,
+							"win_pct": 0.545,
+							"points_for": 244,
+							"points_against": 274,
+							"records": [
+								{
+									"category": "division",
+									"wins": 4,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.8,
+									"points_for": 148,
+									"points_against": 120
+								},
+								{
+									"category": "afc",
+									"wins": 0,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 33,
+									"points_against": 78
+								},
+								{
+									"category": "road",
+									"wins": 3,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.6,
+									"points_for": 114,
+									"points_against": 125
+								},
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 130,
+									"points_against": 149
+								},
+								{
+									"category": "nfc",
+									"wins": 6,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 211,
+									"points_against": 196
+								},
+								{
+									"category": "conference",
+									"wins": 6,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 211,
+									"points_against": 196
+								}
+							]
+						},
+						{
+							"id": "f14bf5cc-9a82-4a38-bc15-d39f75ed5314",
+							"name": "Panthers",
+							"market": "Carolina",
+							"alias": "CAR",
+							"sr_id": "sr:competitor:4415",
+							"rank": {
+								"conference": 15,
+								"division": 4
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.457,
+								"wins": 58,
+								"total": 127
+							},
+							"strength_of_victory": {
+								"sov": 0.229,
+								"wins": 8,
+								"total": 35
+							},
+							"wins": 3,
+							"losses": 8,
+							"ties": 0,
+							"win_pct": 0.273,
+							"points_for": 194,
+							"points_against": 340,
+							"records": [
+								{
+									"category": "home",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 117,
+									"points_against": 167
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 53,
+									"points_against": 107
+								},
+								{
+									"category": "road",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 77,
+									"points_against": 173
+								},
+								{
+									"category": "nfc",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 90,
+									"points_against": 200
+								},
+								{
+									"category": "afc",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 104,
+									"points_against": 140
+								},
+								{
+									"category": "conference",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 90,
+									"points_against": 200
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "390d000d-9949-42e6-bf5e-b166dc463675",
+					"name": "NFC West",
+					"alias": "NFC_WEST",
+					"teams": [
+						{
+							"id": "2eff2a03-54d4-46ba-890e-2bc3925548f3",
+							"name": "Rams",
+							"market": "Los Angeles",
+							"alias": "LA",
+							"sr_id": "sr:competitor:4387",
+							"rank": {
+								"conference": 10,
+								"division": 3
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.543,
+								"wins": 69,
+								"total": 127
+							},
+							"strength_of_victory": {
+								"sov": 0.439,
+								"wins": 25,
+								"total": 57
+							},
+							"wins": 5,
+							"losses": 6,
+							"ties": 0,
+							"win_pct": 0.455,
+							"points_for": 233,
+							"points_against": 276,
+							"records": [
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 63,
+									"points_against": 85
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 63,
+									"points_against": 60
+								},
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 131,
+									"points_against": 143
+								},
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 170,
+									"points_against": 216
+								},
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 102,
+									"points_against": 133
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 170,
+									"points_against": 216
+								}
+							]
+						},
+						{
+							"id": "3d08af9e-c767-4f88-a7dc-b920c6d2b4a8",
+							"name": "Seahawks",
+							"market": "Seattle",
+							"alias": "SEA",
+							"sr_id": "sr:competitor:4430",
+							"rank": {
+								"conference": 3,
+								"division": 1
+							},
+							"streak": {
+								"type": "win",
+								"length": 2,
+								"desc": "Won 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.508,
+								"wins": 64,
+								"total": 126
+							},
+							"strength_of_victory": {
+								"sov": 0.464,
+								"wins": 32,
+								"total": 69
+							},
+							"wins": 6,
+							"losses": 5,
+							"ties": 0,
+							"win_pct": 0.545,
+							"points_for": 246,
+							"points_against": 244,
+							"records": [
+								{
+									"category": "road",
+									"wins": 3,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 106,
+									"points_against": 93
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 163,
+									"points_against": 170
+								},
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 163,
+									"points_against": 170
+								},
+								{
+									"category": "afc",
+									"wins": 3,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 83,
+									"points_against": 74
+								},
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 140,
+									"points_against": 151
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 80,
+									"points_against": 85
+								}
+							]
+						},
+						{
+							"id": "de760528-1dc0-416a-a978-b510d20692ff",
+							"name": "Cardinals",
+							"market": "Arizona",
+							"alias": "ARI",
+							"sr_id": "sr:competitor:4412",
+							"rank": {
+								"conference": 8,
+								"division": 2
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.563,
+								"wins": 71,
+								"total": 126
+							},
+							"strength_of_victory": {
+								"sov": 0.426,
+								"wins": 29,
+								"total": 68
+							},
+							"wins": 6,
+							"losses": 5,
+							"ties": 0,
+							"win_pct": 0.545,
+							"points_for": 244,
+							"points_against": 236,
+							"records": [
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 71,
+									"points_against": 49
+								},
+								{
+									"category": "afc",
+									"wins": 3,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 104,
+									"points_against": 82
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 140,
+									"points_against": 154
+								},
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 99,
+									"points_against": 134
+								},
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 140,
+									"points_against": 154
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 145,
+									"points_against": 102
+								}
+							]
+						},
+						{
+							"id": "f0e724b0-4cbf-495a-be47-013907608da9",
+							"name": "49ers",
+							"market": "San Francisco",
+							"alias": "SF",
+							"sr_id": "sr:competitor:4389",
+							"rank": {
+								"conference": 11,
+								"division": 4
+							},
+							"streak": {
+								"type": "loss",
+								"length": 2,
+								"desc": "Lost 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.544,
+								"wins": 68,
+								"total": 125
+							},
+							"strength_of_victory": {
+								"sov": 0.386,
+								"wins": 22,
+								"total": 57
+							},
+							"wins": 5,
+							"losses": 6,
+							"ties": 0,
+							"win_pct": 0.455,
+							"points_for": 260,
+							"points_against": 260,
+							"records": [
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 110,
+									"points_against": 132
+								},
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 150,
+									"points_against": 128
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 180,
+									"points_against": 200
+								},
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 180,
+									"points_against": 200
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 100,
+									"points_against": 95
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 80,
+									"points_against": 60
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "6dc1933f-ca90-46e6-aaf7-9b95cc44306a",
+					"name": "NFC North",
+					"alias": "NFC_NORTH",
+					"teams": [
+						{
+							"id": "33405046-04ee-4058-a950-d606f8c30852",
+							"name": "Vikings",
+							"market": "Minnesota",
+							"alias": "MIN",
+							"sr_id": "sr:competitor:4423",
+							"rank": {
+								"conference": 5,
+								"division": 2
+							},
+							"streak": {
+								"type": "win",
+								"length": 4,
+								"desc": "Won 4"
+							},
+							"strength_of_schedule": {
+								"sos": 0.441,
+								"wins": 56,
+								"total": 127
+							},
+							"strength_of_victory": {
+								"sov": 0.385,
+								"wins": 40,
+								"total": 104
+							},
+							"wins": 9,
+							"losses": 2,
+							"ties": 0,
+							"win_pct": 0.818,
+							"points_for": 274,
+							"points_against": 197,
+							"records": [
+								{
+									"category": "afc",
+									"wins": 5,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 113,
+									"points_against": 57
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.8,
+									"points_for": 130,
+									"points_against": 85
+								},
+								{
+									"category": "nfc",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 161,
+									"points_against": 140
+								},
+								{
+									"category": "road",
+									"wins": 5,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.833,
+									"points_for": 144,
+									"points_against": 112
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 90,
+									"points_against": 87
+								},
+								{
+									"category": "conference",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 161,
+									"points_against": 140
+								}
+							]
+						},
+						{
+							"id": "7b112545-38e6-483c-a55c-96cf6ee49cb8",
+							"name": "Bears",
+							"market": "Chicago",
+							"alias": "CHI",
+							"sr_id": "sr:competitor:4391",
+							"rank": {
+								"conference": 14,
+								"division": 4
+							},
+							"streak": {
+								"type": "loss",
+								"length": 6,
+								"desc": "Lost 6"
+							},
+							"strength_of_schedule": {
+								"sos": 0.507,
+								"wins": 70,
+								"total": 138
+							},
+							"strength_of_victory": {
+								"sov": 0.295,
+								"wins": 13,
+								"total": 44
+							},
+							"wins": 4,
+							"losses": 8,
+							"ties": 0,
+							"win_pct": 0.333,
+							"points_for": 241,
+							"points_against": 240,
+							"records": [
+								{
+									"category": "conference",
+									"wins": 2,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.286,
+									"points_for": 150,
+									"points_against": 148
+								},
+								{
+									"category": "nfc",
+									"wins": 2,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.286,
+									"points_for": 150,
+									"points_against": 148
+								},
+								{
+									"category": "division",
+									"wins": 0,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 66,
+									"points_against": 73
+								},
+								{
+									"category": "road",
+									"wins": 0,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 73,
+									"points_against": 110
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 91,
+									"points_against": 92
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.571,
+									"points_for": 168,
+									"points_against": 130
+								}
+							]
+						},
+						{
+							"id": "a20471b4-a8d9-40c7-95ad-90cc30e46932",
+							"name": "Packers",
+							"market": "Green Bay",
+							"alias": "GB",
+							"sr_id": "sr:competitor:4420",
+							"rank": {
+								"conference": 6,
+								"division": 3
+							},
+							"streak": {
+								"type": "win",
+								"length": 3,
+								"desc": "Won 3"
+							},
+							"strength_of_schedule": {
+								"sos": 0.518,
+								"wins": 71,
+								"total": 137
+							},
+							"strength_of_victory": {
+								"sov": 0.408,
+								"wins": 42,
+								"total": 103
+							},
+							"wins": 9,
+							"losses": 3,
+							"ties": 0,
+							"win_pct": 0.75,
+							"points_for": 318,
+							"points_against": 240,
+							"records": [
+								{
+									"category": "home",
+									"wins": 5,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.714,
+									"points_for": 185,
+									"points_against": 127
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 63,
+									"points_against": 74
+								},
+								{
+									"category": "nfc",
+									"wins": 4,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.571,
+									"points_for": 188,
+									"points_against": 150
+								},
+								{
+									"category": "afc",
+									"wins": 5,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 130,
+									"points_against": 90
+								},
+								{
+									"category": "conference",
+									"wins": 4,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.571,
+									"points_for": 188,
+									"points_against": 150
+								},
+								{
+									"category": "road",
+									"wins": 4,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.8,
+									"points_for": 133,
+									"points_against": 113
+								}
+							]
+						},
+						{
+							"id": "c5a59daa-53a7-4de0-851f-fb12be893e9e",
+							"name": "Lions",
+							"market": "Detroit",
+							"alias": "DET",
+							"sr_id": "sr:competitor:4419",
+							"rank": {
+								"conference": 1,
+								"division": 1
+							},
+							"streak": {
+								"type": "win",
+								"length": 10,
+								"desc": "Won 10"
+							},
+							"strength_of_schedule": {
+								"sos": 0.482,
+								"wins": 66,
+								"total": 137
+							},
+							"strength_of_victory": {
+								"sov": 0.484,
+								"wins": 61,
+								"total": 126
+							},
+							"wins": 11,
+							"losses": 1,
+							"ties": 0,
+							"win_pct": 0.917,
+							"points_for": 383,
+							"points_against": 203,
+							"records": [
+								{
+									"category": "nfc",
+									"wins": 7,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.875,
+									"points_for": 229,
+									"points_against": 154
+								},
+								{
+									"category": "conference",
+									"wins": 7,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.875,
+									"points_for": 229,
+									"points_against": 154
+								},
+								{
+									"category": "road",
+									"wins": 6,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 172,
+									"points_against": 94
+								},
+								{
+									"category": "division",
+									"wins": 3,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 78,
+									"points_against": 63
+								},
+								{
+									"category": "home",
+									"wins": 5,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.833,
+									"points_for": 211,
+									"points_against": 109
+								},
+								{
+									"category": "afc",
+									"wins": 4,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 154,
+									"points_against": 49
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "1bdefe12-6cb2-4d6a-b208-b04602ae79c3",
+			"name": "AFC",
+			"alias": "AFC",
+			"divisions": [
+				{
+					"id": "324decdd-aa1b-4074-8958-c009d8fac31a",
+					"name": "AFC West",
+					"alias": "AFC_WEST",
+					"teams": [
+						{
+							"id": "1f6dcffb-9823-43cd-9ff4-e7a8466749b5",
+							"name": "Chargers",
+							"market": "Los Angeles",
+							"alias": "LAC",
+							"sr_id": "sr:competitor:4429",
+							"rank": {
+								"conference": 6,
+								"division": 2
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.472,
+								"wins": 59,
+								"total": 125
+							},
+							"strength_of_victory": {
+								"sov": 0.329,
+								"wins": 26,
+								"total": 79
+							},
+							"wins": 7,
+							"losses": 4,
+							"ties": 0,
+							"win_pct": 0.636,
+							"points_for": 243,
+							"points_against": 175,
+							"records": [
+								{
+									"category": "nfc",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 67,
+									"points_against": 28
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 55,
+									"points_against": 43
+								},
+								{
+									"category": "conference",
+									"wins": 5,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.625,
+									"points_for": 176,
+									"points_against": 147
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 142,
+									"points_against": 109
+								},
+								{
+									"category": "afc",
+									"wins": 5,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.625,
+									"points_for": 176,
+									"points_against": 147
+								},
+								{
+									"category": "road",
+									"wins": 3,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.6,
+									"points_for": 101,
+									"points_against": 66
+								}
+							]
+						},
+						{
+							"id": "6680d28d-d4d2-49f6-aace-5292d3ec02c2",
+							"name": "Chiefs",
+							"market": "Kansas City",
+							"alias": "KC",
+							"sr_id": "sr:competitor:4422",
+							"rank": {
+								"conference": 1,
+								"division": 1,
+								"clinched": "playoff_berth"
+							},
+							"streak": {
+								"type": "win",
+								"length": 2,
+								"desc": "Won 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.456,
+								"wins": 62,
+								"total": 136
+							},
+							"strength_of_victory": {
+								"sov": 0.424,
+								"wins": 53,
+								"total": 125
+							},
+							"wins": 11,
+							"losses": 1,
+							"ties": 0,
+							"win_pct": 0.917,
+							"points_for": 289,
+							"points_against": 235,
+							"records": [
+								{
+									"category": "afc",
+									"wins": 6,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.857,
+									"points_for": 153,
+									"points_against": 136
+								},
+								{
+									"category": "home",
+									"wins": 6,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 144,
+									"points_against": 113
+								},
+								{
+									"category": "conference",
+									"wins": 6,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.857,
+									"points_for": 153,
+									"points_against": 136
+								},
+								{
+									"category": "nfc",
+									"wins": 5,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 136,
+									"points_against": 99
+								},
+								{
+									"category": "division",
+									"wins": 4,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 79,
+									"points_against": 61
+								},
+								{
+									"category": "road",
+									"wins": 5,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.833,
+									"points_for": 145,
+									"points_against": 122
+								}
+							]
+						},
+						{
+							"id": "7d4fcc64-9cb5-4d1b-8e75-8a906d1e1576",
+							"name": "Raiders",
+							"market": "Las Vegas",
+							"alias": "LV",
+							"sr_id": "sr:competitor:4390",
+							"rank": {
+								"conference": 16,
+								"division": 4,
+								"clinched": "eliminated"
+							},
+							"streak": {
+								"type": "loss",
+								"length": 8,
+								"desc": "Lost 8"
+							},
+							"strength_of_schedule": {
+								"sos": 0.572,
+								"wins": 79,
+								"total": 138
+							},
+							"strength_of_victory": {
+								"sov": 0.478,
+								"wins": 11,
+								"total": 23
+							},
+							"wins": 2,
+							"losses": 10,
+							"ties": 0,
+							"win_pct": 0.167,
+							"points_for": 223,
+							"points_against": 333,
+							"records": [
+								{
+									"category": "conference",
+									"wins": 2,
+									"losses": 8,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 186,
+									"points_against": 277
+								},
+								{
+									"category": "road",
+									"wins": 1,
+									"losses": 6,
+									"ties": 0,
+									"win_pct": 0.143,
+									"points_for": 129,
+									"points_against": 193
+								},
+								{
+									"category": "nfc",
+									"wins": 0,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 37,
+									"points_against": 56
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 8,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 186,
+									"points_against": 277
+								},
+								{
+									"category": "division",
+									"wins": 0,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 84,
+									"points_against": 131
+								},
+								{
+									"category": "home",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 94,
+									"points_against": 140
+								}
+							]
+						},
+						{
+							"id": "ce92bd47-93d5-4fe9-ada4-0fc681e6caa0",
+							"name": "Broncos",
+							"market": "Denver",
+							"alias": "DEN",
+							"sr_id": "sr:competitor:4418",
+							"rank": {
+								"conference": 7,
+								"division": 3
+							},
+							"streak": {
+								"type": "win",
+								"length": 2,
+								"desc": "Won 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.478,
+								"wins": 65,
+								"total": 136
+							},
+							"strength_of_victory": {
+								"sov": 0.316,
+								"wins": 25,
+								"total": 79
+							},
+							"wins": 7,
+							"losses": 5,
+							"ties": 0,
+							"win_pct": 0.583,
+							"points_for": 264,
+							"points_against": 202,
+							"records": [
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.6,
+									"points_for": 122,
+									"points_against": 74
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 119,
+									"points_against": 139
+								},
+								{
+									"category": "road",
+									"wins": 4,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.571,
+									"points_for": 142,
+									"points_against": 128
+								},
+								{
+									"category": "nfc",
+									"wins": 4,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.8,
+									"points_for": 145,
+									"points_against": 63
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 93,
+									"points_against": 76
+								},
+								{
+									"category": "afc",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 119,
+									"points_against": 139
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "b95cd27d-d631-4fe1-bc05-0ae47fc0b14b",
+					"name": "AFC East",
+					"alias": "AFC_EAST",
+					"teams": [
+						{
+							"id": "4809ecb0-abd3-451d-9c4a-92a90b83ca06",
+							"name": "Dolphins",
+							"market": "Miami",
+							"alias": "MIA",
+							"sr_id": "sr:competitor:4287",
+							"rank": {
+								"conference": 9,
+								"division": 2
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.453,
+								"wins": 62,
+								"total": 137
+							},
+							"strength_of_victory": {
+								"sov": 0.259,
+								"wins": 15,
+								"total": 58
+							},
+							"wins": 5,
+							"losses": 7,
+							"ties": 0,
+							"win_pct": 0.417,
+							"points_for": 232,
+							"points_against": 266,
+							"records": [
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 95,
+									"points_against": 125
+								},
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 137,
+									"points_against": 141
+								},
+								{
+									"category": "conference",
+									"wins": 4,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 162,
+									"points_against": 169
+								},
+								{
+									"category": "nfc",
+									"wins": 1,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 70,
+									"points_against": 97
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 86,
+									"points_against": 86
+								},
+								{
+									"category": "afc",
+									"wins": 4,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 162,
+									"points_against": 169
+								}
+							]
+						},
+						{
+							"id": "5fee86ae-74ab-4bdd-8416-42a9dd9964f3",
+							"name": "Jets",
+							"market": "New York",
+							"alias": "NYJ",
+							"sr_id": "sr:competitor:4427",
+							"rank": {
+								"conference": 12,
+								"division": 3
+							},
+							"streak": {
+								"type": "loss",
+								"length": 2,
+								"desc": "Lost 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.516,
+								"wins": 65,
+								"total": 126
+							},
+							"strength_of_victory": {
+								"sov": 0.371,
+								"wins": 13,
+								"total": 35
+							},
+							"wins": 3,
+							"losses": 8,
+							"ties": 0,
+							"win_pct": 0.273,
+							"points_for": 204,
+							"points_against": 242,
+							"records": [
+								{
+									"category": "nfc",
+									"wins": 0,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 42,
+									"points_against": 86
+								},
+								{
+									"category": "home",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 101,
+									"points_against": 77
+								},
+								{
+									"category": "afc",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 162,
+									"points_against": 156
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.375,
+									"points_for": 162,
+									"points_against": 156
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 66,
+									"points_against": 51
+								},
+								{
+									"category": "road",
+									"wins": 1,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.167,
+									"points_for": 103,
+									"points_against": 165
+								}
+							]
+						},
+						{
+							"id": "768c92aa-75ff-4a43-bcc0-f2798c2e1724",
+							"name": "Bills",
+							"market": "Buffalo",
+							"alias": "BUF",
+							"sr_id": "sr:competitor:4376",
+							"rank": {
+								"conference": 2,
+								"division": 1
+							},
+							"streak": {
+								"type": "win",
+								"length": 6,
+								"desc": "Won 6"
+							},
+							"strength_of_schedule": {
+								"sos": 0.48,
+								"wins": 61,
+								"total": 127
+							},
+							"strength_of_victory": {
+								"sov": 0.447,
+								"wins": 46,
+								"total": 103
+							},
+							"wins": 9,
+							"losses": 2,
+							"ties": 0,
+							"win_pct": 0.818,
+							"points_for": 320,
+							"points_against": 214,
+							"records": [
+								{
+									"category": "division",
+									"wins": 3,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 84,
+									"points_against": 57
+								},
+								{
+									"category": "conference",
+									"wins": 7,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.778,
+									"points_for": 255,
+									"points_against": 176
+								},
+								{
+									"category": "road",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 145,
+									"points_against": 118
+								},
+								{
+									"category": "afc",
+									"wins": 7,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.778,
+									"points_for": 255,
+									"points_against": 176
+								},
+								{
+									"category": "home",
+									"wins": 5,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 175,
+									"points_against": 96
+								},
+								{
+									"category": "nfc",
+									"wins": 2,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 65,
+									"points_against": 38
+								}
+							]
+						},
+						{
+							"id": "97354895-8c77-4fd4-a860-32e62ea7382a",
+							"name": "Patriots",
+							"market": "New England",
+							"alias": "NE",
+							"sr_id": "sr:competitor:4424",
+							"rank": {
+								"conference": 14,
+								"division": 4
+							},
+							"streak": {
+								"type": "loss",
+								"length": 2,
+								"desc": "Lost 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.382,
+								"wins": 52,
+								"total": 136
+							},
+							"strength_of_victory": {
+								"sov": 0.324,
+								"wins": 11,
+								"total": 34
+							},
+							"wins": 3,
+							"losses": 9,
+							"ties": 0,
+							"win_pct": 0.25,
+							"points_for": 197,
+							"points_against": 282,
+							"records": [
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.286,
+									"points_for": 99,
+									"points_against": 153
+								},
+								{
+									"category": "conference",
+									"wins": 2,
+									"losses": 6,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 123,
+									"points_against": 198
+								},
+								{
+									"category": "home",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 98,
+									"points_against": 129
+								},
+								{
+									"category": "nfc",
+									"wins": 1,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 74,
+									"points_against": 84
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 53,
+									"points_against": 95
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 6,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 123,
+									"points_against": 198
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "e447e7c0-5997-4bb7-bea3-aaae48aedcb8",
+					"name": "AFC South",
+					"alias": "AFC_SOUTH",
+					"teams": [
+						{
+							"id": "82cf9565-6eb9-4f01-bdbd-5aa0d472fcd9",
+							"name": "Colts",
+							"market": "Indianapolis",
+							"alias": "IND",
+							"sr_id": "sr:competitor:4421",
+							"rank": {
+								"conference": 8,
+								"division": 2
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.558,
+								"wins": 77,
+								"total": 138
+							},
+							"strength_of_victory": {
+								"sov": 0.404,
+								"wins": 23,
+								"total": 57
+							},
+							"wins": 5,
+							"losses": 7,
+							"ties": 0,
+							"win_pct": 0.417,
+							"points_for": 242,
+							"points_against": 274,
+							"records": [
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 101,
+									"points_against": 106
+								},
+								{
+									"category": "afc",
+									"wins": 4,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 192,
+									"points_against": 197
+								},
+								{
+									"category": "conference",
+									"wins": 4,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 192,
+									"points_against": 197
+								},
+								{
+									"category": "home",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 117,
+									"points_against": 133
+								},
+								{
+									"category": "nfc",
+									"wins": 1,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.25,
+									"points_for": 50,
+									"points_against": 77
+								},
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 125,
+									"points_against": 141
+								}
+							]
+						},
+						{
+							"id": "82d2d380-3834-4938-835f-aec541e5ece7",
+							"name": "Texans",
+							"market": "Houston",
+							"alias": "HOU",
+							"sr_id": "sr:competitor:4324",
+							"rank": {
+								"conference": 4,
+								"division": 1
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.489,
+								"wins": 68,
+								"total": 139
+							},
+							"strength_of_victory": {
+								"sov": 0.402,
+								"wins": 33,
+								"total": 82
+							},
+							"wins": 7,
+							"losses": 5,
+							"ties": 0,
+							"win_pct": 0.583,
+							"points_for": 285,
+							"points_against": 268,
+							"records": [
+								{
+									"category": "afc",
+									"wins": 5,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.714,
+									"points_for": 180,
+									"points_against": 161
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 139,
+									"points_against": 131
+								},
+								{
+									"category": "nfc",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 105,
+									"points_against": 107
+								},
+								{
+									"category": "conference",
+									"wins": 5,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.714,
+									"points_for": 180,
+									"points_against": 161
+								},
+								{
+									"category": "road",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 146,
+									"points_against": 137
+								},
+								{
+									"category": "division",
+									"wins": 3,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 103,
+									"points_against": 99
+								}
+							]
+						},
+						{
+							"id": "d26a1ca5-722d-4274-8f97-c92e49c96315",
+							"name": "Titans",
+							"market": "Tennessee",
+							"alias": "TEN",
+							"sr_id": "sr:competitor:367364",
+							"rank": {
+								"conference": 13,
+								"division": 3
+							},
+							"streak": {
+								"type": "win",
+								"length": 1,
+								"desc": "Won 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.563,
+								"wins": 72,
+								"total": 128
+							},
+							"strength_of_victory": {
+								"sov": 0.417,
+								"wins": 15,
+								"total": 36
+							},
+							"wins": 3,
+							"losses": 8,
+							"ties": 0,
+							"win_pct": 0.273,
+							"points_for": 202,
+							"points_against": 290,
+							"records": [
+								{
+									"category": "home",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 81,
+									"points_against": 114
+								},
+								{
+									"category": "nfc",
+									"wins": 0,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 58,
+									"points_against": 129
+								},
+								{
+									"category": "afc",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 144,
+									"points_against": 161
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 49,
+									"points_against": 47
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.429,
+									"points_for": 144,
+									"points_against": 161
+								},
+								{
+									"category": "road",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 121,
+									"points_against": 176
+								}
+							]
+						},
+						{
+							"id": "f7ddd7fa-0bae-4f90-bc8e-669e4d6cf2de",
+							"name": "Jaguars",
+							"market": "Jacksonville",
+							"alias": "JAC",
+							"sr_id": "sr:competitor:4386",
+							"rank": {
+								"conference": 15,
+								"division": 4
+							},
+							"streak": {
+								"type": "loss",
+								"length": 4,
+								"desc": "Lost 4"
+							},
+							"strength_of_schedule": {
+								"sos": 0.578,
+								"wins": 74,
+								"total": 128
+							},
+							"strength_of_victory": {
+								"sov": 0.333,
+								"wins": 8,
+								"total": 24
+							},
+							"wins": 2,
+							"losses": 9,
+							"ties": 0,
+							"win_pct": 0.182,
+							"points_for": 208,
+							"points_against": 316,
+							"records": [
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 57,
+									"points_against": 58
+								},
+								{
+									"category": "conference",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 129,
+									"points_against": 159
+								},
+								{
+									"category": "nfc",
+									"wins": 0,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 79,
+									"points_against": 157
+								},
+								{
+									"category": "road",
+									"wins": 0,
+									"losses": 6,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 92,
+									"points_against": 206
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 129,
+									"points_against": 159
+								},
+								{
+									"category": "home",
+									"wins": 2,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.4,
+									"points_for": 116,
+									"points_against": 110
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "eb60da78-4eb5-4184-971e-2c5cd4ab4988",
+					"name": "AFC North",
+					"alias": "AFC_NORTH",
+					"teams": [
+						{
+							"id": "ad4ae08f-d808-42d5-a1e6-e9bc4e34d123",
+							"name": "Bengals",
+							"market": "Cincinnati",
+							"alias": "CIN",
+							"sr_id": "sr:competitor:4416",
+							"rank": {
+								"conference": 10,
+								"division": 3
+							},
+							"streak": {
+								"type": "loss",
+								"length": 2,
+								"desc": "Lost 2"
+							},
+							"strength_of_schedule": {
+								"sos": 0.492,
+								"wins": 63,
+								"total": 128
+							},
+							"strength_of_victory": {
+								"sov": 0.217,
+								"wins": 10,
+								"total": 46
+							},
+							"wins": 4,
+							"losses": 7,
+							"ties": 0,
+							"win_pct": 0.364,
+							"points_for": 297,
+							"points_against": 296,
+							"records": [
+								{
+									"category": "road",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 158,
+									"points_against": 140
+								},
+								{
+									"category": "home",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 139,
+									"points_against": 156
+								},
+								{
+									"category": "afc",
+									"wins": 2,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.286,
+									"points_for": 196,
+									"points_against": 190
+								},
+								{
+									"category": "nfc",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 101,
+									"points_against": 106
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 93,
+									"points_against": 90
+								},
+								{
+									"category": "conference",
+									"wins": 2,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0.286,
+									"points_for": 196,
+									"points_against": 190
+								}
+							]
+						},
+						{
+							"id": "cb2f9f1f-ac67-424e-9e72-1475cb0ed398",
+							"name": "Steelers",
+							"market": "Pittsburgh",
+							"alias": "PIT",
+							"sr_id": "sr:competitor:4345",
+							"rank": {
+								"conference": 3,
+								"division": 1
+							},
+							"streak": {
+								"type": "loss",
+								"length": 1,
+								"desc": "Lost 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.43,
+								"wins": 55,
+								"total": 128
+							},
+							"strength_of_victory": {
+								"sov": 0.452,
+								"wins": 42,
+								"total": 93
+							},
+							"wins": 8,
+							"losses": 3,
+							"ties": 0,
+							"win_pct": 0.727,
+							"points_for": 252,
+							"points_against": 186,
+							"records": [
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.75,
+									"points_for": 89,
+									"points_against": 75
+								},
+								{
+									"category": "road",
+									"wins": 4,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 134,
+									"points_against": 107
+								},
+								{
+									"category": "afc",
+									"wins": 5,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.714,
+									"points_for": 163,
+									"points_against": 111
+								},
+								{
+									"category": "conference",
+									"wins": 5,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.714,
+									"points_for": 163,
+									"points_against": 111
+								},
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.8,
+									"points_for": 118,
+									"points_against": 79
+								},
+								{
+									"category": "division",
+									"wins": 1,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 37,
+									"points_against": 40
+								}
+							]
+						},
+						{
+							"id": "d5a2eb42-8065-4174-ab79-0a6fa820e35e",
+							"name": "Browns",
+							"market": "Cleveland",
+							"alias": "CLE",
+							"sr_id": "sr:competitor:4417",
+							"rank": {
+								"conference": 11,
+								"division": 4
+							},
+							"streak": {
+								"type": "win",
+								"length": 1,
+								"desc": "Won 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.46,
+								"wins": 58,
+								"total": 126
+							},
+							"strength_of_victory": {
+								"sov": 0.529,
+								"wins": 18,
+								"total": 34
+							},
+							"wins": 3,
+							"losses": 8,
+							"ties": 0,
+							"win_pct": 0.273,
+							"points_for": 186,
+							"points_against": 267,
+							"records": [
+								{
+									"category": "afc",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 111,
+									"points_against": 124
+								},
+								{
+									"category": "conference",
+									"wins": 3,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 111,
+									"points_against": 124
+								},
+								{
+									"category": "road",
+									"wins": 1,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.2,
+									"points_for": 77,
+									"points_against": 122
+								},
+								{
+									"category": "nfc",
+									"wins": 0,
+									"losses": 5,
+									"ties": 0,
+									"win_pct": 0,
+									"points_for": 75,
+									"points_against": 143
+								},
+								{
+									"category": "home",
+									"wins": 2,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.333,
+									"points_for": 109,
+									"points_against": 145
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.667,
+									"points_for": 67,
+									"points_against": 64
+								}
+							]
+						},
+						{
+							"id": "ebd87119-b331-4469-9ea6-d51fe3ce2f1c",
+							"name": "Ravens",
+							"market": "Baltimore",
+							"alias": "BAL",
+							"sr_id": "sr:competitor:4413",
+							"rank": {
+								"conference": 5,
+								"division": 2
+							},
+							"streak": {
+								"type": "win",
+								"length": 1,
+								"desc": "Won 1"
+							},
+							"strength_of_schedule": {
+								"sos": 0.526,
+								"wins": 72,
+								"total": 137
+							},
+							"strength_of_victory": {
+								"sov": 0.527,
+								"wins": 48,
+								"total": 91
+							},
+							"wins": 8,
+							"losses": 4,
+							"ties": 0,
+							"win_pct": 0.667,
+							"points_for": 364,
+							"points_against": 294,
+							"records": [
+								{
+									"category": "home",
+									"wins": 4,
+									"losses": 1,
+									"ties": 0,
+									"win_pct": 0.8,
+									"points_for": 164,
+									"points_against": 103
+								},
+								{
+									"category": "afc",
+									"wins": 5,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.556,
+									"points_for": 265,
+									"points_against": 215
+								},
+								{
+									"category": "division",
+									"wins": 2,
+									"losses": 2,
+									"ties": 0,
+									"win_pct": 0.5,
+									"points_for": 116,
+									"points_against": 119
+								},
+								{
+									"category": "nfc",
+									"wins": 3,
+									"losses": 0,
+									"ties": 0,
+									"win_pct": 1,
+									"points_for": 99,
+									"points_against": 79
+								},
+								{
+									"category": "conference",
+									"wins": 5,
+									"losses": 4,
+									"ties": 0,
+									"win_pct": 0.556,
+									"points_for": 265,
+									"points_against": 215
+								},
+								{
+									"category": "road",
+									"wins": 4,
+									"losses": 3,
+									"ties": 0,
+									"win_pct": 0.571,
+									"points_for": 200,
+									"points_against": 191
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"_comment": "Generation started @ 2024-12-01 05:40:44 UTC ended @ 2024-12-01 05:40:44 UTC"
+}

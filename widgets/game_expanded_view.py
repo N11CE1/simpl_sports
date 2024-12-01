@@ -1,16 +1,19 @@
 import collections.abc
 
 from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea, QFrame
+
+from api.api_data_manager import game_box_score
 from labels.image import Image as Image
 from labels.small_text import SmallText as SmallText
 from labels.text_image_text import TextImageText as TextImageText
 from widgets.main_sport_select import SportSelection as MainSportSelection
-from common.shared import nba as nba, nfl as nfl, nhl as nhl, epl as epl
+from common.shared import nba as nba, nfl as nfl, nhl as nhl, epl as epl, user_preferences
 from labels.stats_label import StatsLabel as StatsLabel
-from api import api_data_manager as adm
+
 from api import data_operations as do
 from api import api_constants as ac
+from api import datasets as da
 
 class GameExpandedView(QWidget):
     SCROLL_AREA_STYLE = """  
@@ -99,7 +102,7 @@ class GameExpandedView(QWidget):
     def _style_scroll_area(self, scroll_area):
         scroll_area.setStyleSheet(self.SCROLL_AREA_STYLE)
 
-    def update_game(self, game_key, sport_name):
+    def update_game(self, game_key, sport_name, status):
         print(f"game_key = {game_key}, sport = {sport_name}")
 
         ## Original Code
@@ -163,7 +166,27 @@ class GameExpandedView(QWidget):
 
         if sport_name in (ac.app_leagues[0], ac.app_leagues[1], ac.app_leagues[2]):
 
-            game_box_score = adm.game_box_score(game_key, sport_name)
+            if status.lower() in ("In Progress".lower(), "Half-time".lower()):
+                # game_box_score = adm.game_box_score(game_key, sport_name)
+                game_box_score = da.get_box_score(game_key, sport_name)
+            else:
+                game_box_score = da.get_static_games(game_key, sport_name)
+
+            # game_box_score = da.get_static_games(game_key, sport_name)
+
+            # if status in ("In Progress", "Half-time", "Closed"):
+            #     game_box_score = da.get_box_score(game_key, sport_name)
+            # else:
+            #     game_box_score = da.get_static_games(game_key, sport_name)
+
+
+            # if status.lower() in ("In Progress".lower(), "Half-time".lower()):
+            #     box_score = da.get_box_score(game_key, sport)
+            #     home_score = box_score.get("home_score")
+            #     away_score = box_score.get("away_score")
+            # else:
+            #     home_score = game.get("home_score")
+            #     away_score = game.get("away_score"
 
             if game_box_score is None:
                 print(f"No game found for key {game_key}")
@@ -175,23 +198,42 @@ class GameExpandedView(QWidget):
                     home_image = do.get_team_image(short_name=game_box_score.get('home'), sportsdb_id=sport_name)
                     away_image = do.get_team_image(short_name=game_box_score.get('away'), sportsdb_id=sport_name)
                 else:
-                    df_home_team_info = do.get_team_info(name=game_box_score.get('home'), sportsdb_id=sport_name)
-                    df_away_team_info = do.get_team_info(name=game_box_score.get('away'), sportsdb_id=sport_name)
-                    home_image = do.get_team_image(name=game_box_score.get('home'), sportsdb_id=sport_name)
-                    away_image = do.get_team_image(name=game_box_score.get('away'), sportsdb_id=sport_name)
+                    df_home_team_info = do.get_team_info(name=game_box_score.get('home_name'), sportsdb_id=sport_name)
+                    df_away_team_info = do.get_team_info(name=game_box_score.get('away_name'), sportsdb_id=sport_name)
+                    home_image = do.get_team_image(name=game_box_score.get('home_name'), sportsdb_id=sport_name)
+                    away_image = do.get_team_image(name=game_box_score.get('away_name'), sportsdb_id=sport_name)
 
-                self.home = df_home_team_info.loc[0, 'name'] if not df_home_team_info.empty else game_box_score.get('home')
-                self.home_score = game_box_score.get('home_score')
-                self.away = df_away_team_info.loc[0, 'name'] if not df_away_team_info.empty else game_box_score.get('away')
-                self.away_score = game_box_score.get('away_score')
-                print(self.home, self.home_score, self.away, self.away_score)
+                self.status = game_box_score.get('status')
+
+                score_home = game_box_score.get('home_score')
+                score_away = game_box_score.get('away_score')
+                show_leader_boards = True
+
+                if user_preferences.spoilers == False:
+                    if status.lower() in ("In Progress".lower(), "Half-time".lower()):
+                        score_home = "--"
+                        score_away = "--"
+                        show_leader_boards = False
+
+
+                self.home = df_home_team_info.loc[0, 'name'] if not df_home_team_info.empty else game_box_score.get('home_name')
+                self.home_score = score_home
+                self.away = df_away_team_info.loc[0, 'name'] if not df_away_team_info.empty else game_box_score.get('away_name')
+                self.away_score = score_away
+                # print(self.home, self.home_score, self.away, self.away_score)
 
                 self.home_team = TextImageText(str(self.home), home_image, str(self.home_score))
+                self.home_team.setProperty("location", "home")
+                self.home_team.setProperty("home_score", str(game_box_score.get('home_score')))
                 self.vs = Image("images/vs image.png")
                 self.away_team = TextImageText(str(self.away), away_image, str(self.away_score))
+                self.away_team.setProperty("location", "away")
+                self.away_team.setProperty("away_score", str(game_box_score.get('away_score')))
                 self.score_view.addWidget(self.home_team)
                 self.score_view.addWidget(self.vs)
                 self.score_view.addWidget(self.away_team)
+
+                # if show_leader_boards:
 
                 if sport_name in (ac.app_leagues[0], ac.app_leagues[2]):
                     params = {}
@@ -203,19 +245,50 @@ class GameExpandedView(QWidget):
 
                     params["header"] = params_header
                     a = 0
-                    for key, player in game_box_score["home_leader_boards"].items():
-                        params[f'param{a}'] = f"{player["name"].ljust(25)}{player["points"].ljust(5)}{player["rebounds"].ljust(5)}{player["assists"].ljust(5)}"
-                        a += 1
+                    if game_box_score["home_leader_boards"] is not None:
+                        for key, player in game_box_score["home_leader_boards"].items():
+                            params[f'param{a}'] = f"{player["name"].ljust(25)}{player["points"].ljust(5)}{player["rebounds"].ljust(5)}{player["assists"].ljust(5)}"
+                            a += 1
 
-                    self.stat1 = StatsLabel(title="Home Team Leaderboards", **params)
-                    self.stats.addWidget(self.stat1, 0, 0)
+                        self.stat1 = StatsLabel(title="Home Team Leaderboards", **params)
+                        self.stats.addWidget(self.stat1, 0, 0)
 
                     params = {}
                     params["Header"] = params_header
                     a = 0
-                    for key, player in game_box_score["away_leader_boards"].items():
-                        params[f'param{a}'] = f"{player["name"].ljust(25)}{player["points"].ljust(5)}{player["rebounds"].ljust(5)}{player["assists"].ljust(5)}"
-                        a += 1
+                    if game_box_score["away_leader_boards"] is not None:
+                        for key, player in game_box_score["away_leader_boards"].items():
+                            params[f'param{a}'] = f"{player["name"].ljust(25)}{player["points"].ljust(5)}{player["rebounds"].ljust(5)}{player["assists"].ljust(5)}"
+                            a += 1
 
-                    self.stat2 = StatsLabel(title="Away Team Leaderboards", **params)
-                    self.stats.addWidget(self.stat2, 0, 1)
+                        self.stat2 = StatsLabel(title="Away Team Leaderboards", **params)
+                        self.stats.addWidget(self.stat2, 0, 1)
+
+                if show_leader_boards == False:
+                    self.spoiler_toggled(False)
+
+
+
+
+    def spoiler_toggled(self, state):
+        # Find all QPushButton widgets in the form
+        textImagetext = self.findChildren(TextImageText)
+
+        for textImagetext in textImagetext:
+            if self.status in ("In Progress", "Half-time"):
+                if state:
+                    if textImagetext.property("location") == "home":
+                        textImagetext.text2.setText(textImagetext.property("home_score"))
+                    else:
+                        textImagetext.text2.setText(textImagetext.property("away_score"))
+                else:
+                    textImagetext.text2.setText("--")
+                    textImagetext.text2.setText("--")
+
+        frames = self.findChildren(QFrame)  # Find all QFrame widgets
+        for frame in frames:
+            if frame.objectName() == 'StatsLabel':
+                if user_preferences.spoilers:
+                    frame.show()
+                else:
+                    frame.hide()
