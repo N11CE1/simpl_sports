@@ -1,17 +1,22 @@
 import collections.abc
 
 from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea, QFrame, QSizePolicy
+
+from graph.graph_team_record_analysis import StatsChart
 from labels.image import Image as Image
 from labels.small_text import SmallText as SmallText
 from labels.text_image_text import TextImageText as TextImageText
 from widgets.main_sport_select import SportSelection as MainSportSelection
 from common.shared import nba as nba, nfl as nfl, nhl as nhl, user_preferences
+from common.shared import current_game as current_game
 from labels.stats_label import StatsLabel as StatsLabel
+from graph.graph_team_record_analysis import StatsChart
 
 from api import data_operations as do
 from api import api_constants as ac
 from api import datasets as da
+
 
 class GameExpandedView(QWidget):
     SCROLL_AREA_STYLE = """  
@@ -76,6 +81,7 @@ class GameExpandedView(QWidget):
         self.home_score = None
         self.away = None
         self.away_score = None
+        self.stats_chart = None
         self.main_layout = QVBoxLayout()
         self.setLayout(self.main_layout)
         scroll_area = self._create_styled_scroll_area()
@@ -100,56 +106,19 @@ class GameExpandedView(QWidget):
     def _style_scroll_area(self, scroll_area):
         scroll_area.setStyleSheet(self.SCROLL_AREA_STYLE)
 
-    def update_game(self, game_key, sport_name, status):
+    def update_game(self, game_key, sport_name, status, stat_graph):
         print(f"game_key = {game_key}, sport = {sport_name}")
+
+        if self.stats_chart:
+            self.score_and_stats.removeWidget(self.stats_chart)
+            self.stats_chart.deleteLater()
+            self.stats_chart = None
 
         ## Original Code
         sport_map = {"nba": nba, "nfl": nfl, "nhl": nhl}
         sport = sport_map.get(sport_name.lower())
         if sport is None:
             print(f"Sport {sport_name} is unknown")
-
-        # while self.score_view.count():
-        #     item = self.score_view.takeAt(0)
-        #     widget = item.widget()
-        #     if widget:
-        #         widget.deleteLater()
-        # while self.stats.count():
-        #     item = self.stats.takeAt(0)
-        #     widget = item.widget()
-        #     if widget:
-        #         widget.deleteLater()
-
-        # if isinstance(sport, collections.abc.Mapping) and game_key in sport:
-        #     game = sport[game_key]
-        #     self.home = game.get('home')
-        #     self.home_score = game.get('home_score')
-        #     self.away = game.get('away')
-        #     self.away_score = game.get('away_score')
-        #     print(self.home, self.home_score, self.away, self.away_score)
-        # else:
-        #     print(f"No game found for key {game_key}")
-        #     return
-
-        # self.home_team = TextImageText(self.home, "images/logo.png", self.home_score)
-        # self.vs = Image("images/logo.png")
-        # self.away_team = TextImageText(self.away, "images/logo.png", self.away_score)
-        # self.score_view.addWidget(self.home_team)
-        # self.score_view.addWidget(self.vs)
-        # self.score_view.addWidget(self.away_team)
-
-        # self.stat1 = StatsLabel(title="Stat 1", line1="line1", line2="line2")
-        # self.stat2 = StatsLabel(title="Stat 2", line1="line1", line2="line2", line3="line3")
-        # self.stat3 = StatsLabel(title="Stat 3", line1="line1", line2="line2", line3="line3", line4="line4")
-        # self.stat4 = StatsLabel(titles="Stat 4", line1="line1", line2="line2", line3="line3",
-        #                         line4="line4", line5="line5")
-        #
-        # self.stats.addWidget(self.stat1, 0, 0)
-        # self.stats.addWidget(self.stat2, 0, 1)
-        # self.stats.addWidget(self.stat3, 1, 0)
-        # self.stats.addWidget(self.stat4, 1, 1)
-
-        ## End of Original Code
 
         while self.score_view.count():
             item = self.score_view.takeAt(0)
@@ -265,6 +234,14 @@ class GameExpandedView(QWidget):
                 if show_leader_boards == False:
                     self.spoiler_toggled(False)
 
+        if stat_graph:
+            self.stats_chart = stat_graph
+            self.stats_chart.setParent(self)  # Set the parent to this widget
+            self.stats_chart.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+            self.stats_chart.setMinimumSize(400, 600)
+            self.score_and_stats.addWidget(self.stats_chart)
+        else:
+            print("No statistics data available.")
 
 
 

@@ -6,15 +6,15 @@ from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup, QFr
 from streamlit import radio
 
 from buttons.radio_game_button import RadioGameButton
-from common import shared
 from api import api_data_manager as adm
 from api import datasets as da
 from api import api_constants as ac
 from common.shared import user_preferences
+from common import shared
 from graph.graph_team_record_analysis import StatsChart
 
 class GameSelection(QWidget):
-    game_selected = pyqtSignal(str, str, str)
+    game_selected = pyqtSignal(str, str, str, object)
     SCROLL_AREA_STYLE = """
             QScrollArea {
                 border: 2px solid #ccc;
@@ -64,6 +64,7 @@ class GameSelection(QWidget):
 
     def __init__(self):
         super().__init__()
+        self.stat_graph = None
         self.setStyleSheet("background: transparent;")
         self.main_layout = QHBoxLayout()
         self.setLayout(self.main_layout)
@@ -205,7 +206,7 @@ class GameSelection(QWidget):
             status = first_game.time_label.text()
             if game_key is not None and sport is not None:
                 # print(f"Default game selected: {game_key}, sport: {sport}")
-                self.game_selected.emit(game_key, sport, status)
+                self.game_selected.emit(game_key, sport, status, stat_graph)
 
     def on_button_toggled(self, checked):
         if checked:
@@ -213,11 +214,26 @@ class GameSelection(QWidget):
             game_key = button.property('game_key')
             sport = button.property('sport')
             status = button.time_label.text()
+            home_team_id = button.property('home_team_id')
+            away_team_id = button.property('away_team_id')
+            home_team_name = button.home_label.text()
+            away_team_name = button.away_label.text()
 
             if game_key is not None and sport is not None:
-                # print(f"Game Selection updated for {game_key}, sport: {sport}")
-                self.game_selected.emit(game_key, sport, status)
-                self.show_graph(button, sport)
+                # Create the StatsChart instance
+                df_home_team_stats = da.get_team_stats(home_team_id, sport)
+                df_away_team_stats = da.get_team_stats(away_team_id, sport)
+
+                if df_home_team_stats is not None and df_away_team_stats is not None:
+                    stat_graph = StatsChart(
+                        home_team_name, away_team_name,
+                        df_home_team_stats, df_away_team_stats, sport
+                    )
+                else:
+                    stat_graph = None
+
+                # Emit the signal with the StatsChart instance
+                self.game_selected.emit(game_key, sport, status, stat_graph)
             else:
                 print(f"No games found for {game_key}, {sport}")
 
@@ -313,7 +329,12 @@ class GameSelection(QWidget):
             df_away_team_stats = da.get_team_stats(away_team_id, sport)
 
             if len(df_home_team_stats) > 0 and len(df_away_team_stats) > 0:
-                self.stat_graph = StatsChart(home_team_name, away_team_name, df_home_team_stats, df_away_team_stats, sport)
-                self.stat_graph.show()
+                self.stat_graph = StatsChart(home_team_name, away_team_name, df_home_team_stats, df_away_team_stats,
+                                             sport)
+                global graph
+                graph = self.stat_graph
+                # print(shared.current_game)
+                #
+                # self.stat_graph.show()
             else:
                 print("No statistics data.")
