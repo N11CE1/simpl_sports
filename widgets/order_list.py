@@ -79,7 +79,6 @@ class OrderList(QListWidget):
             self.data_dict[index] = unique_key
         print("dictionary:", self.data_dict)
 
-
     def get_order_list(self):
         return self.data_dict
 
