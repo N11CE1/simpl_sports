@@ -20,7 +20,7 @@ game_status = {
     "unnecessary": "Unnecessary"
 }
 
-env = "test" # This is for switching the environment from test to live
+env = "live" # This is for switching the environment from test to live
 
 ## Utility Functions
 def find_items(data, target_key):
@@ -85,11 +85,11 @@ def scheduled_games(sport):
         current_directory = os.path.dirname(os.path.realpath(__file__))
         if os.path.exists(os.path.join(current_directory, r"unit test json")) and os.path.isdir(os.path.join(current_directory, r"unit test json")):
             if sport == ac.app_leagues[0]:
-                json_file_path = os.path.join(current_directory, r"unit test json/nba_schedule_24th.json")
+                json_file_path = os.path.join(current_directory, r"unit test json\nba_schedule_24th.json")
             elif sport == ac.app_leagues[1]:
-                json_file_path = os.path.join(current_directory, r"unit test json/nfl_schedule_22-26.json")
+                json_file_path = os.path.join(current_directory, r"unit test json\nfl_schedule_22-26.json")
             elif sport == ac.app_leagues[2]:
-                json_file_path = os.path.join(current_directory, r"unit test json/nhl_schedule_25th.json")
+                json_file_path = os.path.join(current_directory, r"unit test json\nhl_schedule_25th.json")
             elif sport == ac.app_leagues[3]:
                 json_file_path = ''
             else:
