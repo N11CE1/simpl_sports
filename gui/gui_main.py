@@ -25,6 +25,7 @@ class MainMenu(QWidget):
         self.sports_selection = None
         self.game_selection = None
         self.game_expanded_view = None
+        self.proc_update_game_score = None  # Add variable declaration
         self.init_ui()
 
     def init_ui(self):
@@ -77,10 +78,11 @@ class MainMenu(QWidget):
         self.main_layout.addLayout(right_vbox)
 
         if shared.user_preferences.sports_order:
-            # Background task for updating schedule, game scores, and standings
-            self.proc_update_game_score = Update_Games_Score()
-            self.proc_update_game_score.update_ui.connect(self.update_from_worker)
-            self.proc_update_game_score.start()
+            if self.proc_update_game_score is None or not self.proc_update_game_score.isRunning():
+                # Background task for updating schedule, game scores, and standings
+                self.proc_update_game_score = Update_Games_Score()
+                self.proc_update_game_score.update_ui.connect(self.update_from_worker)
+                self.proc_update_game_score.start()
 
     def clear_layout(self, layout):
         while layout.count():

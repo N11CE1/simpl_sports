@@ -287,7 +287,10 @@ class GameSelection(QWidget):
             button.time_label.setText(status)
 
             if button.isChecked():
-                self.game_selected.emit(game_id, sport, status)
+                try:
+                    self.game_selected.emit(game_id, sport, status)
+                except Exception as e:
+                    print("Too quick try again in a few seconds")
 
     def show_graph(self, button, sport):
         if button:
