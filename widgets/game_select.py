@@ -3,7 +3,6 @@ import time
 import pandas as pd
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QScrollArea, QButtonGroup, QFrame
-from streamlit import radio
 
 from buttons.radio_game_button import RadioGameButton
 from api import api_data_manager as adm

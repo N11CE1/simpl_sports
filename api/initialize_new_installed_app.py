@@ -21,7 +21,8 @@ class LoadingWindow(QDialog):
         self.loading_text = QLabel(self)
         self.loading_text.setAlignment(Qt.AlignCenter | Qt.AlignTop)
         self.loading_text.setText("Loading items...")
-        self.loading_text.setStyleSheet("font-size: 20px;")
+        self.loading_text.setStyleSheet("font-size: 20px;"
+                                        "color: black;")
 
         self.listView = QListView(self)
         self.model = QStringListModel()
