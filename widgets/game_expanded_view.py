@@ -243,9 +243,10 @@ class GameExpandedView(QWidget):
         else:
             print("No statistics data available.")
 
-
+        self.spoiler_toggled(user_preferences.spoilers)
 
     def spoiler_toggled(self, state):
+        print("spoiler_toggled method called in GameExpandedView")
         # Find all QPushButton widgets in the form
         textImagetext = self.findChildren(TextImageText)
 

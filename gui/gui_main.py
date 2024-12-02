@@ -1,7 +1,6 @@
 from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QSpacerItem
 from debugpy.launcher.debuggee import process
-
 from buttons.radio_game_button import RadioGameButton
 from common import shared
 from common.shared import user_preferences
@@ -13,8 +12,8 @@ from widgets.game_select import GameSelection as GameSelection
 from widgets.main_sport_select import SportSelection as SportSelection
 from widgets.game_expanded_view import GameExpandedView as GameExpandedView
 from buttons.dropdown_button import DropDownButton as DropDownButton
-
 from api.background_worker import Update_Games_Score
+
 
 class MainMenu(QWidget):
 
@@ -43,7 +42,6 @@ class MainMenu(QWidget):
         spoiler_vbox = QVBoxLayout()
 
         logo = Image("images/simple_sports_logo.png", 300, 165)
-        week_selection = DropDownButton(week1="Week 1",week2="Week 2",week3="Week 3",week4="Week 4")
         spoilers_text = SmallText("Spoilers")
         spoilers_button = SpoilerToggle(x=42, y=22)
         prefs_button = PictureButton("images/settings.png", 48, 48, self.emit_prefs_signal)
@@ -54,18 +52,17 @@ class MainMenu(QWidget):
 
         self.sports_selection.sport_selected.connect(self.game_selection.update_games)
         self.game_selection.game_selected.connect(self.game_expanded_view.update_game)
-        # spoilers_button.spoiler_toggled.connect(self.game_selection.spoiler_toggled)
-        # spoilers_button.spoiler_toggled.connect(self.game_expanded_view.spoiler_toggled)
+        spoilers_button.spoiler_toggled.connect(self.game_selection.spoiler_toggled)
+        spoilers_button.spoiler_toggled.connect(self.game_expanded_view.spoiler_toggled)
 
         self.sports_selection.emit_current_sport()
-        top_spacer = QSpacerItem(360, 0)
+        top_spacer = QSpacerItem(600, 0)
         left_vbox.addWidget(logo, alignment=Qt.AlignLeft)
         left_vbox.addWidget(self.sports_selection)
         spoiler_vbox.addWidget(spoilers_button)
         spoiler_vbox.addWidget(spoilers_text)
         dropdown_spacer = QSpacerItem(0, 0)
         top_vbox.addSpacerItem(dropdown_spacer)
-        top_vbox.addWidget(week_selection)
         top_hbox.addLayout(top_vbox)
         top_hbox.addSpacerItem(top_spacer)
         top_hbox.addLayout(spoiler_vbox)
@@ -79,10 +76,11 @@ class MainMenu(QWidget):
         self.main_layout.addLayout(left_vbox)
         self.main_layout.addLayout(right_vbox)
 
-        # Background task for updating schedule, game scores, and standings
-        self.proc_update_game_score = Update_Games_Score()
-        self.proc_update_game_score.update_ui.connect(self.update_from_worker)
-        self.proc_update_game_score.start()
+        if shared.user_preferences.sports_order:
+            # Background task for updating schedule, game scores, and standings
+            self.proc_update_game_score = Update_Games_Score()
+            self.proc_update_game_score.update_ui.connect(self.update_from_worker)
+            self.proc_update_game_score.start()
 
     def clear_layout(self, layout):
         while layout.count():
@@ -102,7 +100,7 @@ class MainMenu(QWidget):
         pass
 
     def update_from_worker(self):
-        self.game_selection.update_ui_scores(shared.current_sport)
+            self.game_selection.update_ui_scores(shared.current_sport)
 
     def closeEvent(self, event):
         """Override closeEvent to clean up worker thread on application close."""

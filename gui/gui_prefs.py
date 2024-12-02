@@ -40,6 +40,7 @@ class PreferencesSelection(QWidget):
         question = CustomLabel("What sports do you want to follow?", 40, "black")
         question.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
         question.setStyleSheet("""
+                color: black;
                 font-size: 30px;
                 border: 2px #D9D9D9;
                 border-radius: 10px;

@@ -100,15 +100,6 @@ class GameSelection(QWidget):
                 self.games_button_group.removeButton(widget)
                 widget.deleteLater()
 
-        ## Original code
-        # sport_games = None
-        # for sport_dict in shared.test_games:
-        #     if sport in sport_dict:
-        #         sport_games = sport_dict[sport]
-        #         break
-        ## End original code
-
-        # sport_games = adm.scheduled_games(sport)
         sport_games = None
         if sport == ac.app_leagues[0]:
             sport_games = da.nba_scheduled_games
@@ -124,28 +115,6 @@ class GameSelection(QWidget):
             return
 
         first_game = None
-
-        ## Original code
-        # for game_key, game in sport_games.items():
-        #     date = game.get("date", None)
-        #     home = game.get("home", None)
-        #     home_score = game.get("home_score", None)
-        #     away = game.get("away", None)
-        #     away_score = game.get("away_score", None)
-        #     time = game.get("time", None)
-        #
-        #     if time is not None:
-        #         radio_button = RadioGameButton(date=date, home=home, home_score=home_score,
-        #                                        away=away, away_score=away_score, time=time)
-        #
-        #         radio_button.setProperty("sport", sport)
-        #         radio_button.setProperty("game_key", game_key)
-        #
-        #         self.games_button_group.addButton(radio_button)
-        #         self.hbox.addWidget(radio_button)
-        #
-        #         radio_button.toggled.connect(self.on_button_toggled)
-        ## Original code
 
         for game_key, game in sport_games.items():
             game_id = game["game_id"]
@@ -206,7 +175,10 @@ class GameSelection(QWidget):
             status = first_game.time_label.text()
             if game_key is not None and sport is not None:
                 # print(f"Default game selected: {game_key}, sport: {sport}")
-                self.game_selected.emit(game_key, sport, status, stat_graph)
+                self.game_selected.emit(game_key, sport, status)
+
+        if user_preferences.spoilers:
+            self.spoiler_toggled(self)
 
     def on_button_toggled(self, checked):
         if checked:

@@ -105,7 +105,7 @@ class SportSelection(QWidget):
             radio_button.toggled.connect(self.on_button_toggled)
 
             if first_button:
-                radio_button.setChecked(True)
+                # radio_button.setChecked(True)
                 default_sport = radio_button.text_label.text()
                 first_button = False
                 shared.current_sport = default_sport
