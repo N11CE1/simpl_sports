@@ -267,7 +267,7 @@ class Update_Games_Score(QThread):
             print("API calls done. Background thread is going to sleep for 5 minutes. Good night!")
 
             self.update_ui.emit()
-            time.sleep(3600)
+            time.sleep(120)
 
         print("Task stopped!")
         self.sport.emit("Task stopped!")
