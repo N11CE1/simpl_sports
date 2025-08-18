@@ -1,0 +1,7 @@
+{
+  "name": "My Project",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}
